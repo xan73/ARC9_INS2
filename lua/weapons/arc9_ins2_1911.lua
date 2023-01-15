@@ -174,7 +174,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-3.73, -5, 2.1) * 0.875,
+    Pos = Vector(-1.87, 0, 0.45),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(-4, 0, -8),
@@ -183,11 +183,11 @@ SWEP.IronSights = {
     Magnification = 1.1,
 }
 
-SWEP.SprintAng = Angle(30, -15, 0)
-SWEP.SprintPos = Vector(5, -1, 2)
+SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = Vector(0, 0, 0)
 
 SWEP.ViewModelFOVBase = 55
-SWEP.ActivePos = Vector(0, 2, -1)
+SWEP.ActivePos = Vector(0, 2, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(0, -1, -2)
@@ -252,29 +252,26 @@ SWEP.ExitSightsSound = ARC9FAS.SightLower
 SWEP.FiremodeSound = ARC9FAS.Switch
 
 SWEP.Animations = {
+    ["ready"] = {
+        Source = "base_ready",
+    },
     ["draw"] = {
-        Source = "draw",
-        EventTable = {
-            {s = ARC9FAS.Deploy, t = 0},
-        }
+        Source = "base_draw",
     },
     ["draw_empty"] = {
-        Source = "draw_empty",
-        EventTable = {
-            {s = ARC9FAS.Deploy, t = 0},
-        }
+        Source = "base_draw_empty",
     },
     ["holster"] = {
         Source = "holster",
-        EventTable = {
-            {s = ARC9FAS.Holster, t = 0},
-        }
+    },
+    ["idle"] = {
+        Source = "base_idle",
+    },
+    ["idle_empty"] = {
+        Source = "empty_idle",
     },
     ["holster_empty"] = {
         Source = "holster_empty",
-        EventTable = {
-            {s = ARC9FAS.Holster, t = 0},
-        }
     },
     ["idle_iron_empty"] = {
         Source = "idle_empty_iron"
@@ -290,71 +287,38 @@ SWEP.Animations = {
         Source = "idle_iron_empty"
     },
     ["exit_sights"] = {
-        Source = "idle",
+        Source = "base_idle",
         Mult = 3
     },
     ["fire"] = {
         Source = {
-            "fire1",
-            "fire2",
-            "fire3"
+            "base_fire",
+            "base_fire2",
+            "base_fire3"
         }
     },
     ["fire_empty"] = {
-        Source = "fire_last"
+        Source = "base_firelast"
     },
     ["fire_iron"] = {
-        Source = "fire_iron"
+        Source = {
+            "iron_fire_1",     
+            "iron_fire_2",       
+            "iron_fire_3"
+        }
     },
     ["fire_iron_empty"] = {
-        Source = "fire_last_iron"
+        Source = "iron_firelast"
     },
     ["reload"] = {
-        Source = "reload",
-        EventTable = {
-            {s = ARC9FAS.Cloth_Movement, t = 0},
-            {s = path .. "magout.wav", t = 10 / 30},
-            {s = ARC9FAS.MagPouch_Pistol, t = 19 / 30},
-            {s = ARC9FAS.Cloth_Movement, t = 24 / 30},
-            {s = path .. "magin_partial.wav", t = 24 / 30},
-            {s = path .. "magin.wav", t = 31 / 30},
-        },
+        Source = "base_reload"
     },
     ["reload_empty"] = {
-        Source = "reload_empty",
-        EventTable = {
-            {s = ARC9FAS.Cloth_Movement, t = 0},
-            {s = path .. "magout_empty.wav", t = 8 / 37},
-            {s = ARC9FAS.MagPouch_Pistol, t = 19 / 37},
-            {s = path .. "magin_partial.wav", t = 24 / 37},
-            {s = path .. "magin.wav", t = 31 / 37},
-            {s = ARC9FAS.Cloth_Movement, t = 30 / 37},
-            {s = path .. "sliderelease.wav", t = 43 / 37},
-        },
+        Source = "base_reloadempty"
     },
-    ["reload_proficient"] = {
-        Source = "reload_nomen",
-        EventTable = {
-            {s = ARC9FAS.Cloth_Movement, t = 0},
-            {s = path .. "magout.wav", t = 8 / 45},
-            {s = ARC9FAS.MagPouch_Pistol, t = 19 / 45},
-            {s = ARC9FAS.Cloth_Movement, t = 45 / 45},
-            {s = path .. "magin_partial.wav", t = 24 / 45},
-            {s = path .. "magin.wav", t = 31 / 45},
-        },
-    },
-    ["reload_empty_proficient"] = {
-        Source = "reload_empty_nomen",
-        EventTable = {
-            {s = ARC9FAS.Cloth_Movement, t = 0},
-            {s = path .. "magout_empty.wav", t = 8 / 45},
-            {s = ARC9FAS.MagPouch_Pistol, t = 19 / 45},
-            {s = ARC9FAS.Cloth_Movement, t = 45 / 45},
-            {s = path .. "magin_partial.wav", t = 24 / 45},
-            {s = path .. "magin.wav", t = 31 / 45},
-            {s = path .. "sliderelease.wav", t = 43 / 45},
-        },
-    },
+    ["sprint"] = {
+        Source = "base_sprint"
+    }
 }
 
 SWEP.SuppressCumulativeShoot = true
@@ -369,7 +333,7 @@ SWEP.Attachments = {
     {
         PrintName = "MUZZLE",
         Category = "fas_supp_pistol",
-        Bone = "Suppressor_BONE",
+        Bone = "muzzle",
         Pos = Vector(-10.5, 0, 0) * 0.875,
         Ang = Angle(0, 0, -90),
     },

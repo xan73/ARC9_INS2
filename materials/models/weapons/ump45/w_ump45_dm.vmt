@@ -1,0 +1,13 @@
+VertexLitGeneric
+{
+	"$basetexture"			"models\weapons\ump45\w_ump45_dm"
+	"$bumpmap"              "dev\flat_normal"
+
+	$phong 				"1"
+	$PhongAlbedoTint 		"1"	
+	$BasemapLuminancePhongMask	"1"
+	
+	$phongexponent 			"70"
+	$phongboost 			"20"
+	$phongfresnelranges		"[1 1 1]"
+}

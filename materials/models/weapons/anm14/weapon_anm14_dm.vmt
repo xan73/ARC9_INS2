@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\weapons\anm14\weapon_anm14_dm"
+	"$bumpmap" 			"models\weapons\anm14\weapon_anm14_nm"
+	"$phongexponenttexture"		"models\weapons\anm14\weapon_anm14_gm"
+
+	$envmap 			env_cubemap
+	$envmaptint 			"[.008 .008 .008]"
+
+	$phong 				"1"
+	$PhongAlbedoTint 		"1"	
+	$BasemapLuminancePhongMask	"1"
+	
+	$phongexponent 			"40"
+	$phongboost 			"700"
+	$phongfresnelranges		"[.2 1 3]"
+}

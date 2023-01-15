@@ -1,0 +1,24 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\weapons\1911\weapon_m1911_dm"
+	"$bumpmap" 			"models\weapons\1911\weapon_m1911_nm"
+        "$color"			"[1.2 1.2 1.2]"
+
+//	"$selfillum"                    "1"
+//	"$selfillummask"                "models\weapons\m9\weapon_m9_si"
+
+
+	"$phong"                        "1"
+	"$phongalbedotint"              "1"
+	"$phongtint"                    "[.67 .9 1]"
+
+	"$phongboost"                   ".65"
+	"$phongexponent"                "34"
+	"$phongfresnelranges"           "[1.5 8 20]"
+
+//	"$phongexponenttexture"         "models\weapons\m1911\weapon_m1911_exp"
+
+	"$envmap"                       "env_cubemap"
+	"$normalmapalphaenvmapmask"	"1"
+	"$envmaptint"                   "[0.1 0.1 0.1]"
+}

@@ -1,0 +1,24 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\weapons\molotov\weapon_molotov_dm"
+	"$bumpmap" 			"models\weapons\molotov\weapon_molotov_nm"
+	"$phongexponenttexture"		"models\weapons\toz\weapon_toz_gm"
+
+        "$nocull" 1
+        "$model" 1
+		
+	$detail		"models\player\char_burned"
+	$detailscale 2
+
+
+//	$envmap 			env_cubemap
+//	$envmaptint 			"[.03 .03 .03]"
+
+	$phong 				"1"
+	$PhongAlbedoTint 		"1"
+	$BasemapLuminancePhongMask	"1"
+
+	$phongexponent 			"20"
+	$phongboost 			"50"
+	$phongfresnelranges		"[.2 1 3]"
+}

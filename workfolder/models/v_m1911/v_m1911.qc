@@ -10,6 +10,7 @@ $bodygroup "Weapon"
 $bodygroup "attachment"
 {
 	studio "a_magazine_1911_8.smd"
+	studio "a_magazine_1911_15.smd"
 }
 
 

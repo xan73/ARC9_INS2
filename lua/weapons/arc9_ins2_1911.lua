@@ -16,18 +16,18 @@ SWEP.Trivia = {
     Calibre = ".45 ACP",
     Mechanism = "Short Recoil",
     Origin = "United States of America",
-    Year = "1924"
+    Year = "1911"
 }
 
 SWEP.Credits = {
-    Author = "Arctic",
-    Assets = "Firearms: Source Team",
+    Author = "xan",
+    Assets = "New World Interactive",
 }
 
-SWEP.Description = [[Legendary American pistol, chambered in .45 ACP. Excellent stopping power in a compact package.]]
+SWEP.Description = [[The WM1911 is a single-action, semi-automatic, magazine-fed, recoil-operated pistol chambered for the .45 ACP cartridge. It was designed by John Browning and served as the standard-issue sidearm for the United States Armed Forces from 1911 to 1986.]]
 
 SWEP.ViewModel = "models/weapons/v_m1911.mdl"
-SWEP.WorldModel = "models/weapons/w_pist_p228.mdl"
+SWEP.WorldModel = "models/weapons/w_m1911.mdl"
 
 SWEP.Slot = 1
 
@@ -252,6 +252,16 @@ SWEP.ExitSightsSound = ARC9FAS.SightLower
 
 SWEP.FiremodeSound = ARC9FAS.Switch
 
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if anim == "reload" and attached["ins2_1911_extmag"] then
+        return "base_reload_extmag"
+    elseif anim == "reload_empty" then
+        return "base_reloadempty_extmag"
+    end
+end
+
 SWEP.Animations = {
     ["ready"] = { Source = "base_ready" },
     ["draw"] = { Source = "base_draw" },
@@ -313,6 +323,11 @@ SWEP.SuppressDefaultEvents = true
 -------------------------- ATTACHMENTS
 
 SWEP.AttachmentElements = {
+    ["ins2_1911_extmag"] = {
+        Bodygroups = {
+            {1,1},
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -339,11 +354,10 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        Category = "ins2_1911_mag",
+        Category = "ins2_1911_extmag",
         Bone = "magazine",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Installed = "ins2_1911_mag"
     },    
     {
         PrintName = "AMMO",

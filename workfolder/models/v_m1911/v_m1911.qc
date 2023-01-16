@@ -7,6 +7,11 @@ $bodygroup "Weapon"
 	studio "M1911_reference.smd"
 }
 
+$bodygroup "attachment"
+{
+	studio "a_magazine_1911_8.smd"
+}
+
 
 $surfaceprop "default"
 

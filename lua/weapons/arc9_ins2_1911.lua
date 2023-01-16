@@ -96,7 +96,7 @@ SWEP.BarrelLength = 8
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 1.1
+SWEP.Recoil = 0.8
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 1 -- Multiplier for vertical recoil
@@ -104,8 +104,8 @@ SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
-SWEP.RecoilRandomUp = 0.5
-SWEP.RecoilRandomSide = 0.5
+SWEP.RecoilRandomUp = 0.1
+SWEP.RecoilRandomSide = 0.2
 
 SWEP.RecoilDissipationRate = 50 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil pattern starts to reset.
@@ -188,14 +188,14 @@ SWEP.RestPos = Vector(0, 0, -8)
 SWEP.RestAng = Angle(0, 45, 0)
 
 SWEP.ViewModelFOVBase = 55
-SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(0, 5, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(0, -1, -2)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(14, 16, 4)
+SWEP.CustomizePos = Vector(14, 25, 2)
 SWEP.CustomizeSnapshotFOV = 100
 
 SWEP.BipodPos = Vector(0, 0, 0)
@@ -318,8 +318,8 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     {
         PrintName = "MUZZLE",
-        Category = "ins2_1911_mag",
-        Bone = "A_Muzzle",
+        Category = "",
+        Bone = "weapon",
         Pos = Vector(-10.5, 0, 0) * 0.875,
         Ang = Angle(0, 0, -90),
     },
@@ -337,12 +337,13 @@ SWEP.Attachments = {
         Pos = Vector(-2, -2, 0) * 0.875,
         Ang = Angle(0, 0, 0),
     },
+    {
         PrintName = "Magazine",
-        Category = "eft_57_mag",
-        Bone = "mod_magazine",
+        Category = "ins2_1911_mag",
+        Bone = "magazine",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Installed = "eft_57_mag"
+        Installed = "ins2_1911_mag"
     },    
     {
         PrintName = "AMMO",
@@ -364,7 +365,6 @@ SWEP.Attachments = {
         Category = "stickers",
     },
 
-{
 sound.Add({
 	name = 			"Weapon_M1911.Magrelease",
 	channel = 		CHAN_ITEM,

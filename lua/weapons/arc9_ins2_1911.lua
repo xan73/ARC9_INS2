@@ -76,7 +76,7 @@ SWEP.PhysBulletDrag = 1.15
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 8 -- Self-explanatory.
+SWEP.ClipSize = 7 -- Self-explanatory.
 SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 
 SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
@@ -183,11 +183,11 @@ SWEP.IronSights = {
     Magnification = 1.1,
 }
 
-SWEP.SprintAng = Angle(0, 0, 0)
-SWEP.SprintPos = Vector(0, 0, 0)
+SWEP.RestPos = Vector(0, 0, -8)
+SWEP.RestAng = Angle(0, 45, 0)
 
 SWEP.ViewModelFOVBase = 55
-SWEP.ActivePos = Vector(0, 2, 0)
+SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(0, -1, -2)
@@ -232,14 +232,14 @@ SWEP.CamCoolView = true
 
 -------------------------- SOUNDS
 
-local path = "weapons/arc9_fas/1911/1911_"
-local common = "weapons/arc9_fas/"
+local path = "weapons/m1911/"
+local common = "weapons/"
 
 
-SWEP.ShootSound = path .. "fire1.wav"
-SWEP.DistantShootSound = "^" .. path .. "distance_fire1.wav"
-SWEP.ShootSoundSilenced = path .. "suppressed_fire1.wav"
-SWEP.DryFireSound = common .. "empty/hammer_pistol.wav"
+SWEP.ShootSound = path .. "m1911_fp.wav"
+SWEP.DistantShootSound = path .. "m1911_dist.wav"
+SWEP.ShootSoundSilenced = path .. "m1911_suppressed_fp.wav"
+SWEP.DryFireSound = path .. "handling/m1911_empty.wav"
 
 SWEP.DryFireSingleAction = false
 
@@ -252,24 +252,12 @@ SWEP.ExitSightsSound = ARC9FAS.SightLower
 SWEP.FiremodeSound = ARC9FAS.Switch
 
 SWEP.Animations = {
-    ["ready"] = {
-        Source = "base_ready",
-    },
-    ["draw"] = {
-        Source = "base_draw",
-    },
-    ["draw_empty"] = {
-        Source = "base_draw_empty",
-    },
-    ["holster"] = {
-        Source = "holster",
-    },
-    ["idle"] = {
-        Source = "base_idle",
-    },
-    ["idle_empty"] = {
-        Source = "empty_idle",
-    },
+    ["ready"] = { Source = "base_ready" },
+    ["draw"] = { Source = "base_draw" },
+    ["draw_empty"] = { Source = "base_draw_empty" },
+    ["holster"] = { Source = "base_holster" },
+    ["idle"] = { Source = "base_idle" },
+    ["idle_empty"] = { Source = "empty_idle" },
     ["holster_empty"] = {
         Source = "holster_empty",
     },
@@ -316,9 +304,6 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "base_reloadempty"
     },
-    ["sprint"] = {
-        Source = "base_sprint"
-    }
 }
 
 SWEP.SuppressCumulativeShoot = true
@@ -333,7 +318,7 @@ SWEP.Attachments = {
     {
         PrintName = "MUZZLE",
         Category = "fas_supp_pistol",
-        Bone = "muzzle",
+        Bone = "A_Muzzle",
         Pos = Vector(-10.5, 0, 0) * 0.875,
         Ang = Angle(0, 0, -90),
     },
@@ -370,4 +355,53 @@ SWEP.Attachments = {
         StickerModel = "models/weapons/arc9_fas/stickers/m1911_a.mdl",
         Category = "stickers",
     },
+
+sound.Add({
+	name = 			"Weapon_M1911.Magrelease",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/m1911/handling/m1911_magrelease.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_M1911.Magout",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/m1911/handling/m1911_magout.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_M1911.Magin",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/m1911/handling/m1911_magin.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_M1911.Maghit",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/m1911/handling/m1911_maghit.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_M1911.Boltrelease",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/m1911/handling/m1911_boltrelease.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_M1911.Boltback",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/m1911/handling/m1911_boltback.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_M1911.empty",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/m1911/handling/m1911_empty.wav"
+    }), 
+    sound.Add({
+	name = 			"Weapon_M1911.safety",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/m1911/handling/m1911_safety.wav"
+    }),
 }

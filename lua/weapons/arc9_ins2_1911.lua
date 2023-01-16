@@ -364,6 +364,7 @@ SWEP.Attachments = {
         Category = "stickers",
     },
 
+{
 sound.Add({
 	name = 			"Weapon_M1911.Magrelease",
 	channel = 		CHAN_ITEM,

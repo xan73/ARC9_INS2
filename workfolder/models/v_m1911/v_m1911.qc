@@ -13,8 +13,9 @@ $bodygroup "attachment"
 	studio "a_magazine_1911_15.smd"
 }
 
-$attachment "suppressor"
+$bodygroup "suppressor"
 {
+	blank
 	studio "a_suppressor_pistol.smd"
 }
 

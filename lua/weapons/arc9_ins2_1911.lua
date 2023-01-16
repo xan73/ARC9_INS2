@@ -330,7 +330,7 @@ SWEP.AttachmentElements = {
     },
     ["ins2_pistol_sup"] = {
         Bodygroups = {
-            {2,0},
+            {2,1},
         },
     },
 }

@@ -7,7 +7,6 @@ $bodygroup "suppressor"
 	studio "a_suppressor_pistol.smd"
 }
 
-$bonemerge "A_Muzzle"
 
 $surfaceprop "default"
 

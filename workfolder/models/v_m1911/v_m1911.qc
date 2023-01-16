@@ -13,6 +13,12 @@ $bodygroup "attachment"
 	studio "a_magazine_1911_15.smd"
 }
 
+$attachment "suppressor"
+{
+	studio "a_suppressor_pistol.smd"
+}
+
+
 $surfaceprop "default"
 
 $contents "solid"

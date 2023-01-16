@@ -329,7 +329,9 @@ SWEP.AttachmentElements = {
         },
     },
     ["ins2_pistol_sup"] = {
-        AttachmentQCA = 2
+        Bodygroups = {
+            {2,0},
+        },
     },
 }
 

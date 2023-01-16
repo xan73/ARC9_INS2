@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "New World Interactive",
 }
 
-SWEP.Description = [[The WM1911 is a single-action, semi-automatic, magazine-fed, recoil-operated pistol chambered for the .45 ACP cartridge. It was designed by John Browning and served as the standard-issue sidearm for the United States Armed Forces from 1911 to 1986.]]
+SWEP.Description = [[The M1911 is a single-action, semi-automatic, magazine-fed, recoil-operated pistol chambered for the .45 ACP cartridge. It was designed by John Browning and served as the standard-issue sidearm for the United States Armed Forces from 1911 to 1986.]]
 
 SWEP.ViewModel = "models/weapons/v_m1911.mdl"
 SWEP.WorldModel = "models/weapons/w_m1911.mdl"
@@ -34,7 +34,7 @@ SWEP.Slot = 1
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos = Vector(-11, 4, -5),
-    TPIKPos = Vector(-18, 4, -4),
+    TPIKPos = Vector(-10, 4, -4),
     Ang = Angle(-5, 0, 180),
     Scale = 1
 }
@@ -184,8 +184,8 @@ SWEP.IronSights = {
     Magnification = 1.1,
 }
 
-SWEP.RestPos = Vector(0, 0, -8)
-SWEP.RestAng = Angle(0, 45, 0)
+SWEP.RestPos = Vector(0, 1, -2)
+SWEP.RestAng = Angle(25, -5, 0)
 
 SWEP.ViewModelFOVBase = 55
 SWEP.ActivePos = Vector(0, 5, 0)
@@ -218,9 +218,8 @@ SWEP.AnimDraw = false
 
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/weapons/arc9_fas/shells/45acp.mdl"
+SWEP.ShellModel = "models/weapons/shells/45apc.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
-SWEP.ShellScale = 1
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
 SWEP.ShellSounds = ARC9.PistolShellSoundsTable
@@ -228,6 +227,7 @@ SWEP.ShellSounds = ARC9.PistolShellSoundsTable
 SWEP.AfterShotParticle = "barrel_smoke_plume"
 
 SWEP.CamQCA = 1
+SWEP.CaseEffectQCA = 3 -- QC Attachment for shell ejection.
 SWEP.CamQCA_Mult = 1
 SWEP.CamCoolView = true
 
@@ -328,15 +328,18 @@ SWEP.AttachmentElements = {
             {1,1},
         },
     },
+    ["ins2_pistol_sup"] = {
+        AttachmentQCA = 2
+    },
 }
 
 SWEP.Attachments = {
     {
-        PrintName = "MUZZLE",
-        Category = "",
-        Bone = "weapon",
-        Pos = Vector(-10.5, 0, 0) * 0.875,
-        Ang = Angle(0, 0, -90),
+        PrintName = "Muzzle",
+        Category = "ins2_pistol_sup",
+        Bone = "A_Muzzle",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "RAIL",

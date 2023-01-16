@@ -7,6 +7,8 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 ATT.ClipSize = 15
 
-ATT.ReloadTimeMult = 0.5
+ATT.ReloadTimeMult = 1.05
+ATT.AimDownSightsTimeMult = 1.05
+ATT.SprintToFireTimeMult = 1.05
 
 ATT.Category = {"ins2_1911_extmag"}

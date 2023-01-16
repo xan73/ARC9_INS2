@@ -104,8 +104,8 @@ SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
-SWEP.RecoilRandomUp = 0.1
-SWEP.RecoilRandomSide = 0.1
+SWEP.RecoilRandomUp = 0.5
+SWEP.RecoilRandomSide = 0.5
 
 SWEP.RecoilDissipationRate = 50 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil pattern starts to reset.
@@ -145,7 +145,8 @@ SWEP.Spread = 0
 
 -------------------------- HANDLING
 
-SWEP.FreeAimRadius = 2.5 -- In degrees, how much this gun can free aim in hip fire.
+SWEP.FreeAimRadius = 5
+SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.Sway = 4 -- How much the gun sways.
 
@@ -317,7 +318,7 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     {
         PrintName = "MUZZLE",
-        Category = "fas_supp_pistol",
+        Category = "ins2_1911_mag",
         Bone = "A_Muzzle",
         Pos = Vector(-10.5, 0, 0) * 0.875,
         Ang = Angle(0, 0, -90),
@@ -336,6 +337,13 @@ SWEP.Attachments = {
         Pos = Vector(-2, -2, 0) * 0.875,
         Ang = Angle(0, 0, 0),
     },
+        PrintName = "Magazine",
+        Category = "eft_57_mag",
+        Bone = "mod_magazine",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Installed = "eft_57_mag"
+    },    
     {
         PrintName = "AMMO",
         Category = "fas_ammo_bullet",

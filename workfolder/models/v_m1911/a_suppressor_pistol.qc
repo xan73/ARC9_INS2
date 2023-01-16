@@ -14,7 +14,7 @@ $contents "solid"
 
 $illumposition 0 -3.208 0.006
 
-$cdmaterials "materials\models\weapons\upgrades\"
+$cdmaterials "models\weapons\upgrades\"
 
 $attachment "suppressor" "A_Suppressor" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "A_Suppressor" 0 6.5 0 rotate 0 90 90

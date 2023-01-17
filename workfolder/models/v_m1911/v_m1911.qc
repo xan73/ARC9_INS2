@@ -27,6 +27,7 @@ $contents "solid"
 $illumposition 3.071 -2.698 -10.91
 
 $cdmaterials "models\weapons\1911\"
+$cdmaterials "models\weapons\upgrades\"
 
 $attachment "muzzle" "A_Muzzle" 0 0 0 rotate 0 0 0
 $attachment "muzzle_supp" "A_Muzzle_Supp" 0 0 0 rotate 0 0 0

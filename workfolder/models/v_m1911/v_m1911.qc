@@ -14,12 +14,6 @@ $bodygroup "attachment"
 	studio "a_magazine_1911_15.smd"
 }
 
-$bodygroup "suppressor"
-{
-	blank
-	studio "a_suppressor_pistol.smd"
-}
-
 $bodygroup "slide"
 {
 	studio "defaultslide.smd"

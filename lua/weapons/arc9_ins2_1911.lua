@@ -265,12 +265,13 @@ end
 SWEP.Animations = {
     ["ready"] = { Source = "base_ready" },
     ["draw"] = { Source = "base_draw" },
+    ["draw"] = { Source = "empty_draw" },
     ["draw_empty"] = { Source = "base_draw_empty" },
     ["holster"] = { Source = "base_holster" },
     ["idle"] = { Source = "base_idle" },
     ["idle_empty"] = { Source = "empty_idle" },
     ["holster_empty"] = {
-        Source = "holster_empty",
+        Source = "empty_holster",
     },
     ["idle_iron_empty"] = {
         Source = "idle_empty_iron"
@@ -328,11 +329,6 @@ SWEP.AttachmentElements = {
             {1,1},
         },
     },
-    ["ins2_pistol_sup"] = {
-        Bodygroups = {
-            {2,1},
-        },
-    },
     ["ins2_m45_frame"] = {
         Bodygroups = {
             {0,1},
@@ -340,17 +336,17 @@ SWEP.AttachmentElements = {
     },
     ["ins2_m45_slide"] = {
         Bodygroups = {
-            {3,1},
+            {2,1},
         },
     },
     ["ins2_m45_grip"] = {
         Bodygroups = {
-            {5,1},
+            {4,1},
         },
     },
     ["ins2_m45_trigger"] = {
         Bodygroups = {
-            {4,1},
+            {3,1},
         },
     },
 }
@@ -366,9 +362,9 @@ SWEP.Attachments = {
     {
         PrintName = "RAIL",
         Category = {"fas_pistol_rail", "fas_tactical"},
-        Bone = "Frame_BONE",
-        Pos = Vector(6.2, -1.5, 0),
-        Ang = Angle(0, 0, -90),
+        Bone = "weapon",
+        Pos = Vector(0, 3, -1),
+        Ang = Angle(0, -90, 0),
     },
     {
         PrintName = "Frame",

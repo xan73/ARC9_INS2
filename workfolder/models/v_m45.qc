@@ -1,41 +1,10 @@
 // Created by Crowbar 0.71
 
-$modelname "weapons\v_m1911.mdl"
+$modelname "weapons\v_m45.mdl"
 
 $bodygroup "Weapon"
 {
-	studio "M1911_reference.smd"
 	studio "M45_reference.smd"
-}
-
-$bodygroup "attachment"
-{
-	studio "a_magazine_1911_8.smd"
-	studio "a_magazine_1911_15.smd"
-}
-
-$bodygroup "suppressor"
-{
-	blank
-	studio "a_suppressor_pistol.smd"
-}
-
-$bodygroup "slide"
-{
-	studio "defaultslide.smd"
-	studio "m45slide.smd"
-}
-
-$bodygroup "trigger"
-{
-	studio "m1911trigger.smd"
-	studio "m45trigger.smd"
-}
-
-$bodygroup "grips"
-{
-	studio "m1911grip.smd"
-	studio "m45grip.smd"
 }
 
 
@@ -46,7 +15,6 @@ $contents "solid"
 $illumposition 3.071 -2.698 -10.91
 
 $cdmaterials "models\weapons\1911\"
-$cdmaterials "models\weapons\upgrades\"
 
 $attachment "muzzle" "A_Muzzle" 0 0 0 rotate 0 0 0
 $attachment "muzzle_supp" "A_Muzzle_Supp" 0 0 0 rotate 0 0 0
@@ -119,20 +87,79 @@ $definebone "Spine1" "Spine" 6.363438 -0.005069 0 0 0 0 0 0 0 0 0 0
 $definebone "Neck" "Spine1" 6.363437 -0.002057 0 0 0 0 0 0 0 0 0 0
 $definebone "Weapon" "" -1.854 -12.689224 -1.679833 0 0 0 0 0 0 0 0 0
 $definebone "Slide" "Weapon" 0 0 0.450238 0 0 0 0 0 0 0 0 0
-$definebone "A_Muzzle" "Weapon" -0.000402 -4.750546 0.578216 -0.000036 -90.000016 90.000016 0 0 0 0 0 0
+$definebone "Hammer" "Weapon" -0.000728 2.541037 0.054098 0 0 -74.296926 0 0 0 0 0 0
+$definebone "A_Muzzle" "Weapon" -0.000402 -4.77663 0.578216 -0.000036 -90.000016 90.000016 0 0 0 0 0 0
 $definebone "A_Eject" "Weapon" -0.071259 0.863061 0.72823 -49.088535 180.000005 180.000005 0 0 0 0 0 0
 $definebone "A_Underbarrel" "Weapon" -0.043033 -3.234785 -0.594402 0 -89.999982 0 0 0 0 0 0 0
 $definebone "Trigger" "Weapon" -0.000868 0.469067 -0.948344 0 0 0 0 0 0 0 0 0
 $definebone "SlideRel" "Weapon" 0.470866 -0.117823 -0.10797 0 0 0 0 0 0 0 0 0
 $definebone "A_Muzzle_Ironsight" "Weapon" 1.854 -5.311968 1.679834 0 -90.000098 0 0 0 0 0 0 0
-$definebone "Hammer" "Weapon" -0.000728 2.585443 0.07097 0 0 -71.458436 0 0 0 0 0 0
 $definebone "Barrel" "Weapon" -0.003946 -0.184176 -0.122081 0 0 0 0 0 0 0 0 0
-$definebone "A_Suppressor" "Barrel" 0.004509 -4.240453 0.697307 0 179.999964 0 0 0 0 0 0 0
 $definebone "A_Muzzle_Supp" "Barrel" 0.004509 -9.177518 0.701474 0 -89.999982 90.000037 0 0 0 0 0 0
+$definebone "A_Suppressor" "Barrel" 0.004509 -4.25451 0.697307 0 179.999964 0 0 0 0 0 0 0
 $definebone "Magazine" "Weapon" -0.001172 1.943367 -1.750156 0 0 0 0 0 0 0 0 0
 $definebone "Bullets" "Magazine" 0.000442 -0.625317 1.970429 0 0 0.000057 0 0 0 0 0 0
 
-$Include "ins2.qci"
+$bonemerge "L Clavicle"
+$bonemerge "L UpperArm"
+$bonemerge "L Forearm"
+$bonemerge "L Hand"
+$bonemerge "L Finger0"
+$bonemerge "L Finger01"
+$bonemerge "L Finger02"
+$bonemerge "L Finger1"
+$bonemerge "L Finger11"
+$bonemerge "L Finger12"
+$bonemerge "L Finger2"
+$bonemerge "L Finger21"
+$bonemerge "L Finger22"
+$bonemerge "L Finger3"
+$bonemerge "L Finger31"
+$bonemerge "L Finger32"
+$bonemerge "L Finger4"
+$bonemerge "L Finger41"
+$bonemerge "L Finger42"
+$bonemerge "L ForeTwist"
+$bonemerge "L ForeTwist1"
+$bonemerge "L ForeTwist2"
+$bonemerge "L ForeTwist3"
+$bonemerge "L ForeTwist4"
+$bonemerge "L ForeTwist5"
+$bonemerge "L ForeTwist6"
+$bonemerge "R Clavicle"
+$bonemerge "R UpperArm"
+$bonemerge "R Forearm"
+$bonemerge "R Hand"
+$bonemerge "R Finger0"
+$bonemerge "R Finger01"
+$bonemerge "R Finger02"
+$bonemerge "R Finger1"
+$bonemerge "R Finger11"
+$bonemerge "R Finger12"
+$bonemerge "R Finger2"
+$bonemerge "R Finger21"
+$bonemerge "R Finger22"
+$bonemerge "R Finger3"
+$bonemerge "R Finger31"
+$bonemerge "R Finger32"
+$bonemerge "R Finger4"
+$bonemerge "R Finger41"
+$bonemerge "R Finger42"
+$bonemerge "R ForeTwist"
+$bonemerge "R ForeTwist1"
+$bonemerge "R ForeTwist2"
+$bonemerge "R ForeTwist3"
+$bonemerge "R ForeTwist4"
+$bonemerge "R ForeTwist5"
+$bonemerge "R ForeTwist6"
+$bonemerge "Weapon"
+$bonemerge "Hammer"
+$bonemerge "A_Underbarrel"
+$bonemerge "Trigger"
+$bonemerge "Barrel"
+$bonemerge "A_Suppressor"
+$bonemerge "Magazine"
+
 
 $sectionframes 30 30
 
@@ -199,31 +226,31 @@ $weightlist "weights_empty_layer" {
 	 "Neck" 0
 	 "Weapon" 0
 	 "Slide" 1
+	 "Hammer" 0
 	 "A_Muzzle" 0
 	 "A_Eject" 0
 	 "A_Underbarrel" 0
 	 "Trigger" 0
 	 "SlideRel" 1
 	 "A_Muzzle_Ironsight" 0
-	 "Hammer" 0
 	 "Barrel" 1
-	 "A_Suppressor" 1
 	 "A_Muzzle_Supp" 1
+	 "A_Suppressor" 1
 	 "Magazine" 0
 	 "Bullets" 1
 }
 
-$animation "slide_empty_corrective_animation" "v_m1911_anims\slide_empty_corrective_animation.smd" {
+$animation "slide_empty_corrective_animation" "v_m45_anims\slide_empty_corrective_animation.smd" {
 }
 
-$animation "@delta_iron_corrective_animation" "v_m1911_anims\@delta_iron_corrective_animation.smd" {
+$animation "@delta_iron_corrective_animation" "v_m45_anims\@delta_iron_corrective_animation.smd" {
 }
 
-$animation "slide_base" "v_m1911_anims\slide_base.smd" {
+$animation "slide_base" "v_m45_anims\slide_base.smd" {
 	fps 30
 }
 
-$animation "slide_empty" "v_m1911_anims\slide_empty.smd" {
+$animation "slide_empty" "v_m45_anims\slide_empty.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "slide_empty_corrective_animation" 0
@@ -231,7 +258,7 @@ $animation "slide_empty" "v_m1911_anims\slide_empty.smd" {
 }
 
 $sequence "menu" {
-	"v_m1911_anims\menu.smd"
+	"v_m45_anims\menu.smd"
 	activity "ACT_VM_MENU" 1
 	fadein 0.2
 	fadeout 0.2
@@ -250,7 +277,7 @@ $sequence "empty_layer" {
 }
 
 $sequence "idle" {
-	"v_m1911_anims\idle.smd"
+	"v_m45_anims\idle.smd"
 	fadein 0.2
 	fadeout 0.2
 	hidden
@@ -261,7 +288,7 @@ $sequence "idle" {
 }
 
 $sequence "delta_iron" {
-	"v_m1911_anims\delta_iron.smd"
+	"v_m45_anims\delta_iron.smd"
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "@delta_iron_corrective_animation" 0
@@ -271,22 +298,21 @@ $sequence "delta_iron" {
 }
 
 $sequence "base_idle" {
-	"v_m1911_anims\base_idle.smd"
+	"v_m45_anims\base_idle.smd"
 	activity "ACT_VM_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
 	fps 30
-	loop
 	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
 $sequence "base_ready" {
-	"v_m1911_anims\base_ready.smd"
+	"v_m45_anims\base_ready.smd"
 	activity "ACT_VM_READY" 1
 	{ event 5004 0 "Universal.PistolDraw" }
-	{ event 5004 9 "Weapon_M1911.Boltback" }
-	{ event 5004 19 "Weapon_M1911.Boltrelease" }
+	{ event 5004 9 "Weapon_M45.Boltback" }
+	{ event 5004 19 "Weapon_M45.Boltrelease" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -296,7 +322,7 @@ $sequence "base_ready" {
 }
 
 $sequence "base_draw" {
-	"v_m1911_anims\base_draw.smd"
+	"v_m45_anims\base_draw.smd"
 	activity "ACT_VM_DRAW" 1
 	{ event 5004 0 "Universal.PistolDraw" }
 	fadein 0.2
@@ -308,7 +334,7 @@ $sequence "base_draw" {
 }
 
 $sequence "base_holster" {
-	"v_m1911_anims\base_holster.smd"
+	"v_m45_anims\base_holster.smd"
 	activity "ACT_VM_HOLSTER" 1
 	{ event 5004 0 "Universal.PistolHolster" }
 	fadein 0.2
@@ -319,7 +345,7 @@ $sequence "base_holster" {
 }
 
 $sequence "base_down" {
-	"v_m1911_anims\base_down.smd"
+	"v_m45_anims\base_down.smd"
 	activity "ACT_VM_DOWN" 1
 	fadein 0.2
 	fadeout 0.2
@@ -330,7 +356,7 @@ $sequence "base_down" {
 }
 
 $sequence "base_crawl" {
-	"v_m1911_anims\base_crawl.smd"
+	"v_m45_anims\base_crawl.smd"
 	activity "ACT_VM_CRAWL" 1
 	{ event 5004 0 "Universal.LeftCrawl" }
 	{ event 5004 22 "Universal.RightCrawl" }
@@ -343,7 +369,7 @@ $sequence "base_crawl" {
 }
 
 $sequence "base_fire" {
-	"v_m1911_anims\base_fire.smd"
+	"v_m45_anims\base_fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
@@ -356,7 +382,7 @@ $sequence "base_fire" {
 }
 
 $sequence "base_fire2" {
-	"v_m1911_anims\base_fire2.smd"
+	"v_m45_anims\base_fire2.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
@@ -369,7 +395,7 @@ $sequence "base_fire2" {
 }
 
 $sequence "base_fire3" {
-	"v_m1911_anims\base_fire3.smd"
+	"v_m45_anims\base_fire3.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
@@ -382,7 +408,7 @@ $sequence "base_fire3" {
 }
 
 $sequence "base_firelast" {
-	"v_m1911_anims\base_firelast.smd"
+	"v_m45_anims\base_firelast.smd"
 	activity "ACT_VM_SHOOTLAST" 1
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
@@ -395,9 +421,9 @@ $sequence "base_firelast" {
 }
 
 $sequence "base_dryfire" {
-	"v_m1911_anims\base_dryfire.smd"
+	"v_m45_anims\base_dryfire.smd"
 	activity "ACT_VM_DRYFIRE" 1
-	{ event 5004 0 "Weapon_M1911.Empty" }
+	{ event 5004 0 "Weapon_M45.Empty" }
 	fadein 0.2
 	fadeout 0.2
 	snap
@@ -407,12 +433,12 @@ $sequence "base_dryfire" {
 }
 
 $sequence "base_reload" {
-	"v_m1911_anims\base_reload.smd"
+	"v_m45_anims\base_reload.smd"
 	activity "ACT_VM_RELOAD" 1
-	{ event 5004 0 "Weapon_M1911.Magrelease" }
-	{ event 5004 7 "Weapon_M1911.Magout" }
-	{ event 5004 35 "Weapon_M1911.Magin" }
-	{ event 5004 58 "Weapon_M1911.MagHit" }
+	{ event 5004 0 "Weapon_M45.Magrelease" }
+	{ event 5004 7 "Weapon_M45.Magout" }
+	{ event 5004 35 "Weapon_M45.Magin" }
+	{ event 5004 58 "Weapon_M45.MagHit" }
 	{ event 46 58 "" }
 	fadein 0.2
 	fadeout 0.2
@@ -422,14 +448,14 @@ $sequence "base_reload" {
 }
 
 $sequence "base_reloadempty" {
-	"v_m1911_anims\base_reloadempty.smd"
+	"v_m45_anims\base_reloadempty.smd"
 	activity "ACT_VM_RELOADEMPTY" 1
-	{ event 5004 0 "Weapon_M1911.Magrelease" }
-	{ event 5004 7 "Weapon_M1911.Magout" }
-	{ event 5004 35 "Weapon_M1911.Magin" }
-	{ event 5004 58 "Weapon_M1911.MagHit" }
+	{ event 5004 0 "Weapon_M45.Magrelease" }
+	{ event 5004 7 "Weapon_M45.Magout" }
+	{ event 5004 35 "Weapon_M45.Magin" }
+	{ event 5004 58 "Weapon_M45.MagHit" }
 	{ event 46 58 "" }
-	{ event 5004 71 "Weapon_M1911.Boltrelease" }
+	{ event 5004 71 "Weapon_M45.Boltrelease" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -438,12 +464,12 @@ $sequence "base_reloadempty" {
 }
 
 $sequence "base_reload_extmag" {
-	"v_m1911_anims\base_reload_extmag.smd"
+	"v_m45_anims\base_reload_extmag.smd"
 	activity "ACT_VM_RELOAD_MAG1" 1
-	{ event 5004 0 "Weapon_M1911.Magrelease" }
-	{ event 5004 7 "Weapon_M1911.Magout" }
-	{ event 5004 35 "Weapon_M1911.Magin" }
-	{ event 5004 58 "Weapon_M1911.MagHit" }
+	{ event 5004 0 "Weapon_M45.Magrelease" }
+	{ event 5004 7 "Weapon_M45.Magout" }
+	{ event 5004 35 "Weapon_M45.Magin" }
+	{ event 5004 58 "Weapon_M45.MagHit" }
 	{ event 46 58 "" }
 	fadein 0.2
 	fadeout 0.2
@@ -453,14 +479,14 @@ $sequence "base_reload_extmag" {
 }
 
 $sequence "base_reloadempty_extmag" {
-	"v_m1911_anims\base_reloadempty_extmag.smd"
+	"v_m45_anims\base_reloadempty_extmag.smd"
 	activity "ACT_VM_RELOADEMPTY_MAG1" 1
-	{ event 5004 0 "Weapon_M1911.Magrelease" }
-	{ event 5004 7 "Weapon_M1911.Magout" }
-	{ event 5004 35 "Weapon_M1911.Magin" }
-	{ event 5004 58 "Weapon_M1911.MagHit" }
+	{ event 5004 0 "Weapon_M45.Magrelease" }
+	{ event 5004 7 "Weapon_M45.Magout" }
+	{ event 5004 35 "Weapon_M45.Magin" }
+	{ event 5004 58 "Weapon_M45.MagHit" }
 	{ event 46 58 "" }
-	{ event 5004 71 "Weapon_M1911.Boltrelease" }
+	{ event 5004 71 "Weapon_M45.Boltrelease" }
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -469,7 +495,7 @@ $sequence "base_reloadempty_extmag" {
 }
 
 $sequence "base_sprint" {
-	"v_m1911_anims\base_sprint.smd"
+	"v_m45_anims\base_sprint.smd"
 	activity "ACT_VM_SPRINT" 1
 	fadein 0.2
 	fadeout 0.2
@@ -480,7 +506,7 @@ $sequence "base_sprint" {
 }
 
 $sequence "empty_idle" {
-	"v_m1911_anims\empty_idle.smd"
+	"v_m45_anims\empty_idle.smd"
 	activity "ACT_VM_IDLE_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2
@@ -492,7 +518,7 @@ $sequence "empty_idle" {
 }
 
 $sequence "empty_draw" {
-	"v_m1911_anims\empty_draw.smd"
+	"v_m45_anims\empty_draw.smd"
 	activity "ACT_VM_DRAW_EMPTY" 1
 	{ event 5004 0 "Universal.PistolDraw" }
 	fadein 0.2
@@ -504,7 +530,7 @@ $sequence "empty_draw" {
 }
 
 $sequence "empty_holster" {
-	"v_m1911_anims\empty_holster.smd"
+	"v_m45_anims\empty_holster.smd"
 	activity "ACT_VM_HOLSTER_EMPTY" 1
 	{ event 5004 0 "Universal.PistolHolster" }
 	fadein 0.2
@@ -516,7 +542,7 @@ $sequence "empty_holster" {
 }
 
 $sequence "empty_down" {
-	"v_m1911_anims\empty_down.smd"
+	"v_m45_anims\empty_down.smd"
 	activity "ACT_VM_DOWN_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2
@@ -528,7 +554,7 @@ $sequence "empty_down" {
 }
 
 $sequence "empty_crawl" {
-	"v_m1911_anims\empty_crawl.smd"
+	"v_m45_anims\empty_crawl.smd"
 	activity "ACT_VM_CRAWL_EMPTY" 1
 	{ event 5004 0 "Universal.LeftCrawl" }
 	{ event 5004 22 "Universal.RightCrawl" }
@@ -542,7 +568,7 @@ $sequence "empty_crawl" {
 }
 
 $sequence "empty_sprint" {
-	"v_m1911_anims\empty_sprint.smd"
+	"v_m45_anims\empty_sprint.smd"
 	activity "ACT_VM_SPRINT_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2
@@ -554,7 +580,7 @@ $sequence "empty_sprint" {
 }
 
 $sequence "iron_down" {
-	"v_m1911_anims\iron_down.smd"
+	"v_m45_anims\iron_down.smd"
 	activity "ACT_VM_IDOWN" 1
 	fadein 0.2
 	fadeout 0.2
@@ -565,7 +591,7 @@ $sequence "iron_down" {
 }
 
 $sequence "empty_iron_down" {
-	"v_m1911_anims\empty_iron_down.smd"
+	"v_m45_anims\empty_iron_down.smd"
 	activity "ACT_VM_IDOWN_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2
@@ -577,7 +603,7 @@ $sequence "empty_iron_down" {
 }
 
 $sequence "iron_fire_1" {
-	"v_m1911_anims\iron_fire_1.smd"
+	"v_m45_anims\iron_fire_1.smd"
 	activity "ACT_VM_ISHOOT" 1
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
@@ -590,7 +616,7 @@ $sequence "iron_fire_1" {
 }
 
 $sequence "iron_fire_2" {
-	"v_m1911_anims\iron_fire_2.smd"
+	"v_m45_anims\iron_fire_2.smd"
 	activity "ACT_VM_ISHOOT" 1
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
@@ -603,7 +629,7 @@ $sequence "iron_fire_2" {
 }
 
 $sequence "iron_fire_3" {
-	"v_m1911_anims\iron_fire_3.smd"
+	"v_m45_anims\iron_fire_3.smd"
 	activity "ACT_VM_ISHOOT" 1
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
@@ -616,7 +642,7 @@ $sequence "iron_fire_3" {
 }
 
 $sequence "iron_firelast" {
-	"v_m1911_anims\iron_firelast.smd"
+	"v_m45_anims\iron_firelast.smd"
 	activity "ACT_VM_ISHOOT_LAST" 1
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
@@ -629,19 +655,19 @@ $sequence "iron_firelast" {
 }
 
 $sequence "iron_dryfire" {
-	"v_m1911_anims\iron_dryfire.smd"
+	"v_m45_anims\iron_dryfire.smd"
 	activity "ACT_VM_ISHOOTDRY" 1
-	{ event 5004 0 "Weapon_M1911.Empty" }
+	{ event 5004 0 "Weapon_M45.Empty" }
 	fadein 0.2
 	fadeout 0.2
 	snap
 	fps 30
-	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 1
-	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 0
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 1
 }
 
 $sequence "iron_empty" {
-	"v_m1911_anims\iron_empty.smd"
+	"v_m45_anims\iron_empty.smd"
 	activity "ACT_VM_IIDLE_EMPTY" 1
 	fadein 0.2
 	fadeout 0.2

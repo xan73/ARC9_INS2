@@ -333,6 +333,26 @@ SWEP.AttachmentElements = {
             {2,1},
         },
     },
+    ["ins2_m45_frame"] = {
+        Bodygroups = {
+            {0,2},
+        },
+    },
+    ["ins2_m45_slide"] = {
+        Bodygroups = {
+            {3,2},
+        },
+    },
+    ["ins2_m45_grip"] = {
+        Bodygroups = {
+            {5,2},
+        },
+    },
+    ["ins2_m45_trigger"] = {
+        Bodygroups = {
+            {4,2},
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -347,14 +367,35 @@ SWEP.Attachments = {
         PrintName = "RAIL",
         Category = {"fas_pistol_rail", "fas_tactical"},
         Bone = "Frame_BONE",
-        Pos = Vector(6.2, -1.5, 0) * 0.875,
+        Pos = Vector(6.2, -1.5, 0),
         Ang = Angle(0, 0, -90),
     },
     {
-        PrintName = "PERK",
-        Category = "fas_perk",
-        Bone = "Frame_BONE",
-        Pos = Vector(-2, -2, 0) * 0.875,
+        PrintName = "Frame",
+        Category = "ins2_m45_frame",
+        Bone = "Weapon",
+        Pos = Vector(-2, -2, 0),
+        Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Trigger",
+        Category = "ins2_m45_trigger",
+        Bone = "Weapon",
+        Pos = Vector(-2, -2, 0),
+        Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Grip",
+        Category = "ins2_m45_grip",
+        Bone = "Weapon",
+        Pos = Vector(-2, -2, 0),
+        Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Slide",
+        Category = "ins2_m45_slide",
+        Bone = "Weapon",
+        Pos = Vector(-2, -2, 0),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -368,7 +409,7 @@ SWEP.Attachments = {
         PrintName = "AMMO",
         Category = "fas_ammo_bullet",
         Bone = "Frame_BONE",
-        Pos = Vector(1, -1, 0) * 0.875,
+        Pos = Vector(1, -1, 0),
         Ang = Angle(0, 0, 0),
     },
     {

@@ -2,7 +2,7 @@
 
 $modelname "weapons\v_m1911.mdl"
 
-$bodygroup "Weapon"
+$bodygroup "frame"
 {
 	studio "M1911_reference.smd"
 	studio "M45_reference.smd"

@@ -335,22 +335,22 @@ SWEP.AttachmentElements = {
     },
     ["ins2_m45_frame"] = {
         Bodygroups = {
-            {0,2},
+            {0,1},
         },
     },
     ["ins2_m45_slide"] = {
         Bodygroups = {
-            {3,2},
+            {3,1},
         },
     },
     ["ins2_m45_grip"] = {
         Bodygroups = {
-            {5,2},
+            {5,1},
         },
     },
     ["ins2_m45_trigger"] = {
         Bodygroups = {
-            {4,2},
+            {4,1},
         },
     },
 }
@@ -374,35 +374,35 @@ SWEP.Attachments = {
         PrintName = "Frame",
         Category = "ins2_m45_frame",
         Bone = "Weapon",
-        Pos = Vector(-2, -2, 0),
+        Pos = Vector(0, -2, -0.5),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Trigger",
         Category = "ins2_m45_trigger",
         Bone = "Weapon",
-        Pos = Vector(-2, -2, 0),
+        Pos = Vector(0, 0, -1),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Grip",
         Category = "ins2_m45_grip",
         Bone = "Weapon",
-        Pos = Vector(-2, -2, 0),
+        Pos = Vector(0, -2.5, -2),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Slide",
         Category = "ins2_m45_slide",
-        Bone = "Weapon",
-        Pos = Vector(-2, -2, 0),
+        Bone = "Slide",
+        Pos = Vector(0, 0, 0.2),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Magazine",
         Category = "ins2_1911_extmag",
         Bone = "magazine",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(0, -1, -2),
         Ang = Angle(0, 0, 0),
     },    
     {

@@ -2,7 +2,7 @@ local ATT = {}
 
 ATT.PrintName = "Pistol Laser Sight"
 ATT.CompactName = "Laser"
-ATT.Icon = Material("entities/.png", "mips smooth")
+ATT.Icon = Material("entities/pistollasr.png", "mips smooth")
 ATT.Description = [[Lightweight, easy-to-use laser aiming system with strong integrated laser pointer. Improves hip fire.]]
 ATT.MenuCategory = "ARC9 - Insurgency"
 ATT.Category = "ins2_pistol_laser_lights"
@@ -38,7 +38,7 @@ ATT = {}
 
 ATT.PrintName = "Steiner DBAL-A2"
 ATT.CompactName = "DBAL-A2"
-ATT.Icon = Material("entities/", "mips smooth")
+ATT.Icon = Material("entities/pistolflash.png", "mips smooth")
 ATT.Description = [[Tactical flashlight capable of illuminating targets. Projects a clear, bright light.]]
 ATT.MenuCategory = "ARC9 - Gunsmith Arms Source"
 ATT.Category = "ins2_pistol_laser_lights"
@@ -76,7 +76,7 @@ ATT = {}
 
 ATT.PrintName = "Compact Pistol Flashlight"
 ATT.CompactName = "Pistol Flashlight"
-ATT.Icon = Material("entities/", "mips smooth")
+ATT.Icon = Material("entities/pistolfm9.png", "mips smooth")
 ATT.Description = [[Tactical flashlight capable of illuminating targets. Projects a clear, bright light.]]
 ATT.MenuCategory = "ARC9 - Gunsmith Arms Source"
 ATT.Category = "ins2_pistol_laser_lights"
@@ -86,6 +86,17 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0.34, 0, 0.05)
 
 ATT.SprintToFireTimeMult = 1.025
+
+ATT.CustomPros = {
+    ["- Quicker identification of targets."] = "",
+    ["- Lights up dark areas for greater visability."] = "",
+    ["- Can blind enemy opponents if aimed at eyes."] = "",
+}
+
+ATT.CustomCons = {
+    ["- The light may give away your position."] = "",
+    ["- NVG Incompatable."] = "",
+}
 
 ATT.ToggleOnF = true -- This attachment is toggleable with the flashlight key.
 ATT.ToggleStats = {

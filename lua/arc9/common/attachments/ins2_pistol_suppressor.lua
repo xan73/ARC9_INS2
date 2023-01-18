@@ -1,6 +1,6 @@
 ATT.PrintName = "Pistol Suppressor"
 ATT.CompactName = "Supp."
-ATT.Icon = Material("entities/", "mips smooth")
+ATT.Icon = Material("entities/pistolsup.png", "mips smooth")
 ATT.Description = [[Reduce a weapon's sound print to increase stealth. Negates the muzzle flash of the weapon, making follow-up shots easier.]]
 
 ATT.MenuCategory = "ARC9 - INS2 Attachments"

@@ -8,3 +8,8 @@ workfiles :)
 
 current: 
 1911 attachment
+
+Big thanks to:
+CurlySparkle
+Arctic
+Palindrone

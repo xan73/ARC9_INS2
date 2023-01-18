@@ -265,8 +265,7 @@ end
 SWEP.Animations = {
     ["ready"] = { Source = "base_ready" },
     ["draw"] = { Source = "base_draw" },
-    ["draw"] = { Source = "empty_draw" },
-    ["draw_empty"] = { Source = "base_draw_empty" },
+    ["draw_empty"] = { Source = "empty_draw" },
     ["holster"] = { Source = "base_holster" },
     ["idle"] = { Source = "base_idle" },
     ["idle_empty"] = { Source = "empty_idle" },
@@ -329,6 +328,16 @@ SWEP.AttachmentElements = {
             {1,1},
         },
     },
+    ["ins2_m45_extmag"] = {
+        Bodygroups = {
+            {1,3},
+        },
+    },
+    ["ins2_m45_mag"] = {
+        Bodygroups = {
+            {1,2},
+        },
+    },
     ["ins2_m45_frame"] = {
         Bodygroups = {
             {0,1},
@@ -349,21 +358,26 @@ SWEP.AttachmentElements = {
             {3,1},
         },
     },
+    ["ins2_pistol_suppressor"] = {
+        Bodygroups = {
+            {5,1},
+        },
+    },
 }
 
 SWEP.Attachments = {
     {
         PrintName = "Muzzle",
-        Category = "ins2_pistol_sup",
+        Category = {"ins2_pistol_suppressor"},
         Bone = "A_Muzzle",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "RAIL",
-        Category = {"fas_pistol_rail", "fas_tactical"},
+        Category = {"ins2_pistol_laser_lights"},
         Bone = "weapon",
-        Pos = Vector(0, 3, -1),
+        Pos = Vector(0, 4, -0.7),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -396,7 +410,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        Category = "ins2_1911_extmag",
+        Category = {"ins2_1911_extmag", "ins2_m45_extmag", "ins2_m45_mag"},
         Bone = "magazine",
         Pos = Vector(0, -1, -2),
         Ang = Angle(0, 0, 0),

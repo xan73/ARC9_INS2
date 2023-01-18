@@ -12,6 +12,8 @@ $bodygroup "attachment"
 {
 	studio "a_magazine_1911_8.smd"
 	studio "a_magazine_1911_15.smd"
+	studio "a_magazine_m45_8.smd"
+	studio "a_magazine_m45_15.smd"
 }
 
 $bodygroup "slide"
@@ -32,6 +34,11 @@ $bodygroup "grips"
 	studio "m45grip.smd"
 }
 
+$bodygroup "suppressor"
+{
+	blank
+	studio "a_suppressor_pistol.smd"
+}
 
 $surfaceprop "default"
 

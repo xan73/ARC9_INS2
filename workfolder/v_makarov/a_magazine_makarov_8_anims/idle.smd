@@ -1,0 +1,11 @@
+// Created by Crowbar 0.71
+version 1
+nodes
+  0 "Magazine" -1
+  1 "MAG_STANDARD" 0
+end
+skeleton
+  time 0
+    0 -1.909180 -10.273438 -2.939453 0.000000 0.000000 -0.000001
+    1 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+end

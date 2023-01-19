@@ -104,8 +104,8 @@ SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
-SWEP.RecoilRandomUp = 0.1
-SWEP.RecoilRandomSide = 0.2
+SWEP.RecoilRandomUp = 0.7
+SWEP.RecoilRandomSide = 0.75
 
 SWEP.RecoilDissipationRate = 50 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil pattern starts to reset.
@@ -374,7 +374,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "RAIL",
+        PrintName = "Tactical",
         Category = {"ins2_pistol_laser_lights"},
         Bone = "weapon",
         Pos = Vector(0, 4, -0.7),
@@ -425,9 +425,9 @@ SWEP.Attachments = {
     {
         PrintName = "CHARM",
         Category = "charm",
-        Bone = "Frame_BONE",
-        Pos = Vector(5, -1.6, -0.45),
-        Ang = Angle(0, 0, -90),
+        Bone = "Slide",
+        Pos = Vector(0.4, 0, 0),
+        Ang = Angle(0, -90, 0),
     },
     {
         PrintName = "STICKER",

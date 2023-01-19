@@ -36,11 +36,11 @@ ARC9.LoadAttachment(ATT, "ins2_laserm9")
 
 ATT = {}
 
-ATT.PrintName = "Steiner DBAL-A2"
-ATT.CompactName = "DBAL-A2"
+ATT.PrintName = "Pistol Flashlight"
+ATT.CompactName = "Flashlight"
 ATT.Icon = Material("entities/pistolflash.png", "mips smooth")
 ATT.Description = [[Tactical flashlight capable of illuminating targets. Projects a clear, bright light.]]
-ATT.MenuCategory = "ARC9 - Gunsmith Arms Source"
+ATT.MenuCategory = "ARC9 - Insurgency"
 ATT.Category = "ins2_pistol_laser_lights"
 
 ATT.Model = "models/weapons/upgrades/a_flashlight_mak.mdl"
@@ -78,8 +78,8 @@ ATT.PrintName = "Compact Pistol Flashlight"
 ATT.CompactName = "Pistol Flashlight"
 ATT.Icon = Material("entities/pistolfm9.png", "mips smooth")
 ATT.Description = [[Tactical flashlight capable of illuminating targets. Projects a clear, bright light.]]
-ATT.MenuCategory = "ARC9 - Gunsmith Arms Source"
-ATT.Category = "ins2_pistol_laser_lights"
+ATT.MenuCategory = "ARC9 - Insurgency"
+ATT.Category = "ins2_m9_flashlight"
 
 ATT.Model = "models/weapons/upgrades/a_flashlight_m9.mdl"
 ATT.Scale = 1

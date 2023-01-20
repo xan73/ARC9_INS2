@@ -1,6 +1,6 @@
 ATT.PrintName = "M45 Slide"
 ATT.CompactName = "M45"
-ATT.Icon = Material("entities/", "mips smooth")
+ATT.Icon = Material("entities/m45slide.png", "mips smooth")
 ATT.Description = [["oil"]]
 
 ATT.SortOrder = 0

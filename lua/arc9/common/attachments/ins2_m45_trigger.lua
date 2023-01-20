@@ -1,6 +1,6 @@
 ATT.PrintName = "Tuned Trigger"
 ATT.CompactName = "M45"
-ATT.Icon = Material("entities/", "mips smooth")
+ATT.Icon = Material("entities/m45trigger.png", "mips smooth")
 ATT.Description = [["oil"]]
 
 ATT.SortOrder = 0

@@ -1,7 +1,7 @@
-ATT.PrintName = "M45"
-ATT.CompactName = "M45"
-ATT.Icon = Material("entities/", "mips smooth")
-ATT.Description = [[Standard magazine for the M45. Extendend the capacity to 8.]]
+ATT.PrintName = "PMM"
+ATT.CompactName = "PMM"
+ATT.Icon = Material("entities/pmmmag.png", "mips smooth")
+ATT.Description = [[Standard magazine for the PMM.]]
 
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - INS2 Attachments"

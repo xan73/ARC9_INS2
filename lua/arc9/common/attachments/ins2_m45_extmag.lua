@@ -1,6 +1,6 @@
 ATT.PrintName = "M45 Extended Magazine"
 ATT.CompactName = "15RND M45"
-ATT.Icon = Material("entities/", "mips smooth")
+ATT.Icon = Material("entities/m45extmag.png", "mips smooth")
 ATT.Description = [[Bridges the gap between the higher capacity pistols. Has minor downsides. M45.]]
 
 ATT.SortOrder = 0

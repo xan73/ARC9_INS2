@@ -1,6 +1,6 @@
 ATT.PrintName = "M45"
 ATT.CompactName = "M45"
-ATT.Icon = Material("entities/", "mips smooth")
+ATT.Icon = Material("entities/m45mag.png", "mips smooth")
 ATT.Description = [[Standard magazine for the M45. Extendend the capacity to 8.]]
 
 ATT.SortOrder = 0

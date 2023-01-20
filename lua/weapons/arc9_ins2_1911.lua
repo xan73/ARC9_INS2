@@ -145,10 +145,10 @@ SWEP.Spread = 0
 
 -------------------------- HANDLING
 
-SWEP.FreeAimRadius = 5
+SWEP.FreeAimRadius = 6
 SWEP.FreeAimRadiusMultSights = 0
 
-SWEP.Sway = 4 -- How much the gun sways.
+SWEP.Sway = 3 -- How much the gun sways.
 
 SWEP.SwayMultMidAir = 4
 SWEP.SwayMultMove = 1.75

@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS2"
 SWEP.SubCategory = "Pistols"
 
-SWEP.PrintName = "makarov"
+SWEP.PrintName = "Makarov"
 
 SWEP.Class = "Pistol"
 
@@ -44,8 +44,8 @@ SWEP.DefaultBodygroups = "0000000000000000000000"
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 40 -- Damage done at point blank range
-SWEP.DamageMin = 13 -- Damage done at maximum range
+SWEP.DamageMax = 23 -- Damage done at point blank range
+SWEP.DamageMin = 10 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
@@ -83,7 +83,7 @@ SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 300
+SWEP.RPM = 350
 
 SWEP.Firemodes = {
     {
@@ -91,7 +91,7 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.BarrelLength = 8
+SWEP.BarrelLength = 6
 
 -------------------------- RECOIL
 
@@ -145,10 +145,10 @@ SWEP.Spread = 0
 
 -------------------------- HANDLING
 
-SWEP.FreeAimRadius = 5
+SWEP.FreeAimRadius = 6
 SWEP.FreeAimRadiusMultSights = 0
 
-SWEP.Sway = 4 -- How much the gun sways.
+SWEP.Sway = 2.5 -- How much the gun sways.
 
 SWEP.SwayMultMidAir = 4
 SWEP.SwayMultMove = 1.75
@@ -195,7 +195,7 @@ SWEP.CrouchPos = Vector(0, -1, -2)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(14, 25, 2)
+SWEP.CustomizePos = Vector(12, 25, 2)
 SWEP.CustomizeSnapshotFOV = 100
 
 SWEP.BipodPos = Vector(0, 0, 0)
@@ -218,7 +218,7 @@ SWEP.AnimDraw = false
 
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/weapons/shells/45apc.mdl"
+SWEP.ShellModel = "models/weapons/shells/9x19.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 

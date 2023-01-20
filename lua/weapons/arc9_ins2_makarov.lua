@@ -369,6 +369,16 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
+        PrintName = "Optic",
+        Category = {"csgo_optics_pistols_alt","eft_optic_small"},
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(90, 0, -90),
+        Bone = "Slide",
+        Scale = 1,
+		CorrectiveAng = Angle(1.6, 0.2, 0),
+        ExtraSightDistance = 10
+    },
+    {
         PrintName = "Tactical",
         Category = {"ins2_pistol_laser_lights"},
         Bone = "weapon",

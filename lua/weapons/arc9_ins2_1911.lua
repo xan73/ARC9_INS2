@@ -375,9 +375,9 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Category = {"ins2_pistol_laser_lights"},
+        Category = {"ins2_pistol_laser_lights", "eft_um3"},
         Bone = "weapon",
-        Pos = Vector(0, 4, -0.7),
+        Pos = Vector(0, 3.7, -0.7),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -405,7 +405,7 @@ SWEP.Attachments = {
         PrintName = "Slide",
         Category = "ins2_m45_slide",
         Bone = "Slide",
-        Pos = Vector(0, 0, 0.2),
+        Pos = Vector(0, -2, 0.2),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -416,9 +416,9 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },    
     {
-        PrintName = "AMMO",
-        Category = "fas_ammo_bullet",
-        Bone = "Frame_BONE",
+        PrintName = "Caliber",
+        Category = "ins2_1911_caliber",
+        Bone = "Weapon",
         Pos = Vector(1, -1, 0),
         Ang = Angle(0, 0, 0),
     },

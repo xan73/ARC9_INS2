@@ -21,4 +21,15 @@
 	"$envmap"                       "env_cubemap"
 	"$normalmapalphaenvmapmask"	"1"
 	"$envmaptint"                   "[0.1 0.1 0.1]"
+
+	"$detailblendmode" "4"
+    "$detailblendfactor" "1"
+
+     Proxies {
+        CustomCamo {
+            camoTexture $detail
+            camoScale $detailscale
+            blend $detailblendfactor
+        }
+    }
 }

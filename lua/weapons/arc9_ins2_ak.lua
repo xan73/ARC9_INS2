@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS2"
 SWEP.SubCategory = "Assault Rifles"
 
-SWEP.PrintName = "Assault Rifle"
+SWEP.PrintName = "AKM"
 
 SWEP.Class = "Ar2"
 

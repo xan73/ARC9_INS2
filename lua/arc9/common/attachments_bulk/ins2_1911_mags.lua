@@ -18,7 +18,7 @@ ARC9.LoadAttachment(ATT, "ins2_m45_extmag")
 
 ATT = {}
 
-ATT.PrintName = "Extended Magazine"
+ATT.PrintName = "1911 Extended Magazine"
 ATT.CompactName = "15RND"
 ATT.Icon = Material("entities/1911extmag.png", "mips smooth")
 ATT.Description = [[Bridges the gap between the higher capacity pistols. Has minor downsides.]]
@@ -36,7 +36,7 @@ ARC9.LoadAttachment(ATT, "ins2_1911_extmag")
 
 ATT = {}
 
-ATT.PrintName = "M45"
+ATT.PrintName = "M45 Magazine"
 ATT.CompactName = "M45"
 ATT.Icon = Material("entities/m45mag.png", "mips smooth")
 ATT.Description = [[Standard magazine for the M45. Extendend the capacity to 8.]]

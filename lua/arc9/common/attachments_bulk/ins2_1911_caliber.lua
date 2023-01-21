@@ -17,7 +17,7 @@ ATT.AutoStats = true
 ATT.Override_Trivia_Calibre = "9x19mm Parabellum"
 ATT.Override_Trivia_Manufacturer = "Sturm, Ruger & Company"
 
-ATT.DamageMult = 30 / 45
+ATT.DamageMaxMult = 30 / 45
 ATT.DamageMinMult = 17 / 15
 ATT.PenetrationMult = 6 / 9
 ATT.RangeMult = 1.25

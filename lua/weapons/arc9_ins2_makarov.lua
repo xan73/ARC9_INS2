@@ -482,4 +482,16 @@ sound.Add({
 	volume = 		1.0,
 	sound = 			"weapons/makarov/handling/makarov_safety.wav"
     }),
+sound.Add({
+        name = 			"Universal.PistolDraw",
+        channel = 		CHAN_ITEM,
+        volume = 		1.0,
+        sound = 			"weapons/universal/uni_pistol_draw_01.wav"
+        }),
+sound.Add({
+        name = 			"Universal.PistolHolster",
+        channel = 		CHAN_ITEM,
+        volume = 		1.0,
+        sound = 			"weapons/universal/uni_pistol_holster.wav"
+        }),
 }

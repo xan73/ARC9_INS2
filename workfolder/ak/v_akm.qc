@@ -4,7 +4,10 @@ $modelname "weapons\v_akm.mdl"
 
 $bodygroup "Weapon"
 {
-	studio "akm_reference.smd"
+	studio "akm_reference.smd"	
+	studio "aks74u_reference.smd"	
+	studio "ak74_reference.smd"	
+	studio "rpk_reference.smd"	
 }
 
 $bodygroup "lowhandg"
@@ -16,49 +19,94 @@ $bodygroup "lowhandg"
 	studio "a_woodgrips_ak74.smd"
 	studio "a_woodgrips_akm.smd"
 	studio "a_woodgrips_aks74u.smd"
+	studio "rpklhg.smd"	
 }
 
 $bodygroup "stock"
 {
 	blank
 	studio "akmstock.smd"
+	studio "aks74ustock.smd"
+	studio "ak74stock.smd"
+	studio "rpkstock.smd"	
 }
 
 $bodygroup "barrel"
 {
 	studio "akmbarrel.smd"
+	studio "aks74ubarrel.smd"
+	studio "ak74barrel.smd"
+	studio "rpkbarrel.smd"	
 }
 
 $bodygroup "dustcover"
 {
 	studio "akmcover.smd"
+	studio "aks74ucover.smd"
+	studio "ak74cover.smd"
+	studio "rpkcover.smd"	
+}
+
+$bodygroup "bolt"
+{
+	studio "akmbolt.smd"
+	studio "aks74ubolt.smd"
+	studio "ak74bolt.smd"
+	studio "rpkbolt.smd"	
 }
 
 $bodygroup "grip"
 {
 	studio "akmgrip.smd"
+	studio "aks74ugrip.smd"
+	studio "ak74grip.smd"
+	studio "rpkgrip.smd"	
 }
 
 $bodygroup "mag"
 {
 	studio "akmmag.smd"
+	studio "aks74umag.smd"
+	studio "ak74mag.smd"
+	studio "rpkdrum.smd"	
 }
 
 $bodygroup "sight"
 {
+	blank
 	studio "akmsight.smd"
+	studio "aks74usight.smd"
+	studio "ak74sight.smd"
+	studio "rpkight.smd"	
 }
 
 $bodygroup "sighta"
 {
 	studio "akmsighta.smd"
+	studio "ak74sighta.smd"
+	studio "rpksighta.smd"	
 }
 
 $bodygroup "upperhandg"
 {
 	studio "akmupperhandg.smd"
+	studio "aks74uupg.smd"
+	studio "ak74upg.smd"
+	studio "rpkuhg.smd"	
 }
 
+$bodygroup "muzzle"
+{
+	blank
+	studio "aks74umuzzle.smd"
+	studio "ak74muzzle.smd"
+}
+
+$bodygroup "bipod"
+{
+	blank
+	studio "rpkbipod.smd"
+}
 
 
 

@@ -13,3 +13,5 @@ Big thanks to:
 CurlySparkle
 Arctic
 Palindrone
+
+"The words gun control and tyranny should mean the same to you"

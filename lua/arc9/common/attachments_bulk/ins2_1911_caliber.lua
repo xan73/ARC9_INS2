@@ -32,7 +32,7 @@ ATT.Override_TracerNum = 1
 ATT.Override_TracerNum_Priority = 0.5 -- subsonic can override
 
 ATT.ClipSizeMult = 9 / 7
-ATT.Override_ShellModel = "models/weapons/arccw/uc_shells/9x19.mdl"
+ATT.Override_ShellModel = "models/weapons/shells/9x19.mdl"
 ATT.Override_ShellScale = 1
 
 ARC9.LoadAttachment(ATT, "ins2_1911_9MM")

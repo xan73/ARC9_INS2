@@ -191,7 +191,7 @@ SWEP.ViewModelFOVBase = 55
 SWEP.ActivePos = Vector(0, 5, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(0, -1, -2)
+SWEP.CrouchPos = Vector(0, 1, -2)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -410,7 +410,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        Category = {"ins2_1911_extmag", "ins2_m45_extmag", "ins2_m45_mag"},
+        Category = {"ins2_m1911_mags"},
         Bone = "magazine",
         Pos = Vector(0, -1, -2),
         Ang = Angle(0, 0, 0),

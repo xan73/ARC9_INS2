@@ -76,7 +76,7 @@ SWEP.PhysBulletDrag = 1.15
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 7 -- Self-explanatory.
+SWEP.ClipSize = 8 -- Self-explanatory.
 SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 
 SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
@@ -191,7 +191,7 @@ SWEP.ViewModelFOVBase = 55
 SWEP.ActivePos = Vector(0, 5, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(0, -1, -2)
+SWEP.CrouchPos = Vector(0, 3, -2)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)

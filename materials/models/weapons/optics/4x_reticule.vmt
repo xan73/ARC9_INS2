@@ -1,6 +1,0 @@
-"UnlitGeneric"
-
-{
-	"$basetexture"	"models\weapons\optics\aimpoint_reticule"
-	"$translucent" 	"1"
-}

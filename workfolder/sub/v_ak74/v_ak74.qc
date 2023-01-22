@@ -310,17 +310,6 @@ $sequence "menu" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
 }
 
-$sequence "idle" {
-	"v_ak74_anims\idle.smd"
-	fadein 0.2
-	fadeout 0.2
-	hidden
-	fps 30
-	loop
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
-}
-
 $sequence "glsetup" {
 	"v_ak74_anims\glsetup.smd"
 	fadein 0.2
@@ -464,6 +453,17 @@ $sequence "base_idle" {
 	activity "ACT_VM_IDLE" 1
 	fadein 0.2
 	fadeout 0.2
+	fps 30
+	loop
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
+}
+
+$sequence "idle_aks74u" {
+	"v_ak74_anims\base_idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	hidden
 	fps 30
 	loop
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0

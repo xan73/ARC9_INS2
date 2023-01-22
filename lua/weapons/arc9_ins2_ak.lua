@@ -258,8 +258,8 @@ SWEP.FiremodeSound = ARC9FAS.Switch
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
-    if anim == "reload" and attached["ins2_ak_extmag"] then
-        return "base_reload_extmag"
+    if anim == "idle" and attached["ins2_ak_shortbarrel"] then
+        return "idle_aks74u"
     elseif anim == "reload_empty" then
         return "base_reloadempty_extmag"
     end
@@ -326,9 +326,13 @@ SWEP.SuppressDefaultEvents = true
 -------------------------- ATTACHMENTS
 
 SWEP.AttachmentElements = {
-    ["ins2_ak_extmag"] = {
+    ["ins2_ak_shortbarrel"] = {
         Bodygroups = {
-            {1,1},
+            {1,2},
+            {3,1},
+            {10,1},
+            {8,2},
+            {9,3},
         },
     },
     ["ins2_m45_extmag"] = {
@@ -377,8 +381,8 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Tactical",
-        Category = {"ins2_pistol_laser_lights", "eft_um3"},
+        PrintName = "Barrel",
+        Category = "ins2_ak_barrel",
         Bone = "weapon",
         Pos = Vector(0, 3.7, -0.7),
         Ang = Angle(0, -90, 0),

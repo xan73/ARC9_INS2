@@ -84,7 +84,8 @@ $bodygroup "sighta"
 {
 	studio "akmsighta.smd"
 	studio "ak74sighta.smd"
-	studio "rpksighta.smd"	
+	studio "rpksighta.smd"
+	blank
 }
 
 $bodygroup "upperhandg"
@@ -353,6 +354,17 @@ $sequence "idle" {
 	loop
 	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+}
+
+$sequence "idle_aks74u" {
+	"v_ak74_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	hidden
+	fps 30
+	loop
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
 }
 
 $sequence "glsetup" {

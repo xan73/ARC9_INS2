@@ -172,7 +172,7 @@ $sectionframes 30 30
 $ikchain "rhand" "R Hand" knee 0.707 0.707 0
 $ikchain "lhand" "L Hand" knee 0.707 0.707 0
 
-$weightlist "weights_delta_foregrip" {
+$weightlist "weights_delta_foregrip_aks74u" {
 	 "L Clavicle" 1
 	 "L UpperArm" 1
 	 "L Forearm" 1
@@ -249,34 +249,34 @@ $weightlist "weights_delta_foregrip" {
 	 "Bullets" 0
 }
 
-$animation "@delta_iron_corrective_animation" "v_aks74u_anims\@delta_iron_corrective_animation.smd" {
+$animation "@delta_iron_corrective_animation" "v_aks74u_anims\@delta_iron_corrective_animation.smd_aks74u" {
 }
 
-$animation "@delta_foregrip_corrective_animation" "v_aks74u_anims\@delta_foregrip_corrective_animation.smd" {
+$animation "@delta_foregrip_corrective_animation" "v_aks74u_anims\@delta_foregrip_corrective_animation.smd_aks74u" {
 }
 
-$animation "@delta_eotech_corrective_animation" "v_aks74u_anims\@delta_eotech_corrective_animation.smd" {
+$animation "@delta_eotech_corrective_animation" "v_aks74u_anims\@delta_eotech_corrective_animation.smd_aks74u" {
 }
 
-$animation "@delta_kobra_corrective_animation" "v_aks74u_anims\@delta_kobra_corrective_animation.smd" {
+$animation "@delta_kobra_corrective_animation" "v_aks74u_anims\@delta_kobra_corrective_animation.smd_aks74u" {
 }
 
-$animation "@delta_aimp_corrective_animation" "v_aks74u_anims\@delta_aimp_corrective_animation.smd" {
+$animation "@delta_aimp_corrective_animation" "v_aks74u_anims\@delta_aimp_corrective_animation.smd_aks74u" {
 }
 
-$animation "@delta_aimp2x_corrective_animation" "v_aks74u_anims\@delta_aimp2x_corrective_animation.smd" {
+$animation "@delta_aimp2x_corrective_animation" "v_aks74u_anims\@delta_aimp2x_corrective_animation.smd_aks74u" {
 }
 
-$animation "@delta_elcan_corrective_animation" "v_aks74u_anims\@delta_elcan_corrective_animation.smd" {
+$animation "@delta_elcan_corrective_animation" "v_aks74u_anims\@delta_elcan_corrective_animation.smd_aks74u" {
 }
 
-$animation "@delta_po_corrective_animation" "v_aks74u_anims\@delta_po_corrective_animation.smd" {
+$animation "@delta_po_corrective_animation" "v_aks74u_anims\@delta_po_corrective_animation.smd_aks74u" {
 }
 
-$animation "@delta_scope_corrective_animation" "v_aks74u_anims\@delta_scope_corrective_animation.smd" {
+$animation "@delta_scope_corrective_animation" "v_aks74u_anims\@delta_scope_corrective_animation.smd_aks74u" {
 }
 
-$sequence "menu" {
+$sequence "menu_aks74u" {
 	"v_aks74u_anims\menu.smd"
 	activity "ACT_VM_MENU" 1
 	fadein 0.2
@@ -287,7 +287,7 @@ $sequence "menu" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
 }
 
-$sequence "idle" {
+$sequence "idle_aks74u" {
 	"v_aks74u_anims\idle.smd"
 	fadein 0.2
 	fadeout 0.2
@@ -298,7 +298,7 @@ $sequence "idle" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
 }
 
-$sequence "delta_iron" {
+$sequence "delta_iron_aks74u" {
 	"v_aks74u_anims\delta_iron.smd"
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -308,7 +308,7 @@ $sequence "delta_iron" {
 	fps 30
 }
 
-$sequence "delta_foregrip" {
+$sequence "delta_foregrip_aks74u" {
 	"v_aks74u_anims\delta_foregrip.smd"
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -321,7 +321,7 @@ $sequence "delta_foregrip" {
 	weightlist "weights_delta_foregrip"
 }
 
-$sequence "delta_eotech" {
+$sequence "delta_eotech_aks74u" {
 	"v_aks74u_anims\delta_eotech.smd"
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -331,7 +331,7 @@ $sequence "delta_eotech" {
 	fps 30
 }
 
-$sequence "delta_kobra" {
+$sequence "delta_kobra_aks74u" {
 	"v_aks74u_anims\delta_kobra.smd"
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -341,7 +341,7 @@ $sequence "delta_kobra" {
 	fps 30
 }
 
-$sequence "delta_aimp" {
+$sequence "delta_aimp_aks74u" {
 	"v_aks74u_anims\delta_aimp.smd"
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -351,7 +351,7 @@ $sequence "delta_aimp" {
 	fps 30
 }
 
-$sequence "delta_aimp2x" {
+$sequence "delta_aimp2x_aks74u" {
 	"v_aks74u_anims\delta_aimp2x.smd"
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -361,7 +361,7 @@ $sequence "delta_aimp2x" {
 	fps 30
 }
 
-$sequence "delta_elcan" {
+$sequence "delta_elcan_aks74u" {
 	"v_aks74u_anims\delta_elcan.smd"
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -371,7 +371,7 @@ $sequence "delta_elcan" {
 	fps 30
 }
 
-$sequence "delta_po" {
+$sequence "delta_po_aks74u" {
 	"v_aks74u_anims\delta_po.smd"
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -381,7 +381,7 @@ $sequence "delta_po" {
 	fps 30
 }
 
-$sequence "delta_scope" {
+$sequence "delta_scope_aks74u" {
 	"v_aks74u_anims\delta_scope.smd"
 	delta
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -391,7 +391,7 @@ $sequence "delta_scope" {
 	fps 30
 }
 
-$sequence "base_idle" {
+$sequence "base_idle_aks74u" {
 	"v_aks74u_anims\base_idle.smd"
 	activity "ACT_VM_IDLE" 1
 	fadein 0.2
@@ -402,7 +402,7 @@ $sequence "base_idle" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
 }
 
-$sequence "base_ready" {
+$sequence "base_ready_aks74u" {
 	"v_aks74u_anims\base_ready.smd"
 	activity "ACT_VM_READY" 1
 	{ event 5004 0 "Universal.Draw" }
@@ -417,7 +417,7 @@ $sequence "base_ready" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 61 61 target 0
 }
 
-$sequence "base_draw" {
+$sequence "base_draw_aks74u" {
 	"v_aks74u_anims\base_draw.smd"
 	activity "ACT_VM_DRAW" 1
 	{ event 5004 0 "Universal.Draw" }
@@ -429,7 +429,7 @@ $sequence "base_draw" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 22 22 target 0
 }
 
-$sequence "base_holster" {
+$sequence "base_holster_aks74u" {
 	"v_aks74u_anims\base_holster.smd"
 	activity "ACT_VM_HOLSTER" 1
 	{ event 5004 0 "Universal.Holster" }
@@ -440,7 +440,7 @@ $sequence "base_holster" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 19 19 target 0
 }
 
-$sequence "base_down" {
+$sequence "base_down_aks74u" {
 	"v_aks74u_anims\base_down.smd"
 	activity "ACT_VM_DOWN" 1
 	fadein 0.2
@@ -451,7 +451,7 @@ $sequence "base_down" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
 }
 
-$sequence "base_crawl" {
+$sequence "base_crawl_aks74u" {
 	"v_aks74u_anims\base_crawl.smd"
 	activity "ACT_VM_CRAWL" 1
 	{ event 5004 16 "Universal.LeftCrawl" }
@@ -464,7 +464,7 @@ $sequence "base_crawl" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 45 45 target 0
 }
 
-$sequence "base_fire" {
+$sequence "base_fire_aks74u" {
 	"v_aks74u_anims\base_fire.smd"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	{ event AE_MUZZLEFLASH 0 "" }
@@ -477,7 +477,7 @@ $sequence "base_fire" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 39 39 target 0
 }
 
-$sequence "base_dryfire" {
+$sequence "base_dryfire_aks74u" {
 	"v_aks74u_anims\base_dryfire.smd"
 	activity "ACT_VM_DRYFIRE" 1
 	{ event 5004 0 "Weapon_AKS74U.Empty" }
@@ -489,7 +489,7 @@ $sequence "base_dryfire" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 0
 }
 
-$sequence "base_fireselect" {
+$sequence "base_fireselect_aks74u" {
 	"v_aks74u_anims\base_fireselect.smd"
 	activity "ACT_VM_FIREMODE" 1
 	{ event 5004 12 "Weapon_AKS74U.ROF" }
@@ -501,7 +501,7 @@ $sequence "base_fireselect" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "base_reload" {
+$sequence "base_reload_aks74u" {
 	"v_aks74u_anims\base_reload.smd"
 	activity "ACT_VM_RELOAD" 1
 	{ event 5004 16 "Weapon_AKs74u.MagRelease" }
@@ -517,7 +517,7 @@ $sequence "base_reload" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 95 95 target 0
 }
 
-$sequence "base_reloadempty" {
+$sequence "base_reloadempty_aks74u" {
 	"v_aks74u_anims\base_reloadempty.smd"
 	activity "ACT_VM_RELOADEMPTY" 1
 	{ event 5004 16 "Weapon_AKs74u.MagRelease" }
@@ -535,7 +535,7 @@ $sequence "base_reloadempty" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 134 134 target 0
 }
 
-$sequence "base_sprint" {
+$sequence "base_sprint_aks74u" {
 	"v_aks74u_anims\base_sprint.smd"
 	activity "ACT_VM_SPRINT" 1
 	fadein 0.2
@@ -546,7 +546,7 @@ $sequence "base_sprint" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 31 31 target 0
 }
 
-$sequence "iron_down" {
+$sequence "iron_down_aks74u" {
 	"v_aks74u_anims\iron_down.smd"
 	activity "ACT_VM_IDOWN" 1
 	fadein 0.2
@@ -557,7 +557,7 @@ $sequence "iron_down" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
 }
 
-$sequence "iron_fire" {
+$sequence "iron_fire_aks74u" {
 	"v_aks74u_anims\iron_fire.smd"
 	activity "ACT_VM_ISHOOT" 1
 	{ event AE_MUZZLEFLASH 0 "" }
@@ -570,7 +570,7 @@ $sequence "iron_fire" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "iron_fire_a" {
+$sequence "iron_fire_a_aks74u" {
 	"v_aks74u_anims\iron_fire_a.smd"
 	activity "ACT_VM_ISHOOT" 1
 	{ event AE_MUZZLEFLASH 0 "" }
@@ -583,7 +583,7 @@ $sequence "iron_fire_a" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "iron_fire_b" {
+$sequence "iron_fire_b_aks74u" {
 	"v_aks74u_anims\iron_fire_b.smd"
 	activity "ACT_VM_ISHOOT" 1
 	{ event AE_MUZZLEFLASH 0 "" }
@@ -596,7 +596,7 @@ $sequence "iron_fire_b" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "iron_fire_c" {
+$sequence "iron_fire_c_aks74u" {
 	"v_aks74u_anims\iron_fire_c.smd"
 	activity "ACT_VM_ISHOOT" 1
 	{ event AE_MUZZLEFLASH 0 "" }
@@ -609,7 +609,7 @@ $sequence "iron_fire_c" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "iron_fire_d" {
+$sequence "iron_fire_d_aks74u" {
 	"v_aks74u_anims\iron_fire_d.smd"
 	activity "ACT_VM_ISHOOT" 1
 	{ event AE_MUZZLEFLASH 0 "" }
@@ -622,7 +622,7 @@ $sequence "iron_fire_d" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "iron_fire_e" {
+$sequence "iron_fire_e_aks74u" {
 	"v_aks74u_anims\iron_fire_e.smd"
 	activity "ACT_VM_ISHOOT" 1
 	{ event AE_MUZZLEFLASH 0 "" }
@@ -635,7 +635,7 @@ $sequence "iron_fire_e" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "iron_fire_f" {
+$sequence "iron_fire_f_aks74u" {
 	"v_aks74u_anims\iron_fire_f.smd"
 	activity "ACT_VM_ISHOOT" 1
 	{ event AE_MUZZLEFLASH 0 "" }
@@ -648,7 +648,7 @@ $sequence "iron_fire_f" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "iron_dryfire" {
+$sequence "iron_dryfire_aks74u" {
 	"v_aks74u_anims\iron_dryfire.smd"
 	activity "ACT_VM_ISHOOTDRY" 1
 	{ event 5004 0 "Weapon_AKS74U.Empty" }
@@ -660,7 +660,7 @@ $sequence "iron_dryfire" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 0
 }
 
-$sequence "iron_fireselect" {
+$sequence "iron_fireselect_aks74u" {
 	"v_aks74u_anims\iron_fireselect.smd"
 	activity "ACT_VM_IFIREMODE" 1
 	{ event 5004 2 "Weapon_AKS74U.ROF" }
@@ -672,7 +672,7 @@ $sequence "iron_fireselect" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "foregrip_ready" {
+$sequence "foregrip_ready_aks74u" {
 	"v_aks74u_anims\foregrip_ready.smd"
 	activity "ACT_VM_READY_FOREGRIP" 1
 	{ event 5004 0 "Universal.Draw" }
@@ -687,7 +687,7 @@ $sequence "foregrip_ready" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 61 61 target 0
 }
 
-$sequence "foregrip_draw" {
+$sequence "foregrip_draw_aks74u" {
 	"v_aks74u_anims\foregrip_draw.smd"
 	activity "ACT_VM_DRAW_FOREGRIP" 1
 	{ event 5004 0 "Universal.Draw" }
@@ -699,7 +699,7 @@ $sequence "foregrip_draw" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 22 22 target 0
 }
 
-$sequence "foregrip_holster" {
+$sequence "foregrip_holster_aks74u" {
 	"v_aks74u_anims\foregrip_holster.smd"
 	activity "ACT_VM_HOLSTER_FOREGRIP" 1
 	{ event 5004 0 "Universal.Holster" }
@@ -710,7 +710,7 @@ $sequence "foregrip_holster" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 19 19 target 0
 }
 
-$sequence "foregrip_down" {
+$sequence "foregrip_down_aks74u" {
 	"v_aks74u_anims\foregrip_down.smd"
 	activity "ACT_VM_DOWN_FOREGRIP" 1
 	fadein 0.2
@@ -721,7 +721,7 @@ $sequence "foregrip_down" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
 }
 
-$sequence "foregrip_crawl" {
+$sequence "foregrip_crawl_aks74u" {
 	"v_aks74u_anims\foregrip_crawl.smd"
 	activity "ACT_VM_CRAWL_FOREGRIP" 1
 	{ event 5004 16 "Universal.LeftCrawl" }
@@ -734,7 +734,7 @@ $sequence "foregrip_crawl" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 45 45 target 0
 }
 
-$sequence "foregrip_fire" {
+$sequence "foregrip_fire_aks74u" {
 	"v_aks74u_anims\foregrip_fire.smd"
 	activity "ACT_VM_PRIMARYATTACK_FOREGRIP" 1
 	{ event AE_MUZZLEFLASH 0 "" }
@@ -747,7 +747,7 @@ $sequence "foregrip_fire" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 39 39 target 0
 }
 
-$sequence "foregrip_dryfire" {
+$sequence "foregrip_dryfire_aks74u" {
 	"v_aks74u_anims\foregrip_dryfire.smd"
 	activity "ACT_VM_DRYFIRE_FOREGRIP" 1
 	{ event 5004 0 "Weapon_AKS74U.Empty" }
@@ -759,7 +759,7 @@ $sequence "foregrip_dryfire" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 0
 }
 
-$sequence "foregrip_fireselect" {
+$sequence "foregrip_fireselect_aks74u" {
 	"v_aks74u_anims\foregrip_fireselect.smd"
 	activity "ACT_VM_FIREMODE_FOREGRIP" 1
 	{ event 5004 12 "Weapon_AKS74U.ROF" }
@@ -771,7 +771,7 @@ $sequence "foregrip_fireselect" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "foregrip_reload" {
+$sequence "foregrip_reload_aks74u" {
 	"v_aks74u_anims\foregrip_reload.smd"
 	activity "ACT_VM_RELOAD_FOREGRIP" 1
 	{ event 5004 16 "Weapon_AKs74u.MagRelease" }
@@ -787,7 +787,7 @@ $sequence "foregrip_reload" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 95 95 target 0
 }
 
-$sequence "foregrip_reloadempty" {
+$sequence "foregrip_reloadempty_aks74u" {
 	"v_aks74u_anims\foregrip_reloadempty.smd"
 	activity "ACT_VM_RELOADEMPTY_FOREGRIP" 1
 	{ event 5004 16 "Weapon_AKs74u.MagRelease" }
@@ -805,7 +805,7 @@ $sequence "foregrip_reloadempty" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 134 134 target 0
 }
 
-$sequence "foregrip_sprint" {
+$sequence "foregrip_sprint_aks74u" {
 	"v_aks74u_anims\foregrip_sprint.smd"
 	activity "ACT_VM_SPRINT_FOREGRIP" 1
 	fadein 0.2
@@ -816,7 +816,7 @@ $sequence "foregrip_sprint" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 31 31 target 0
 }
 
-$sequence "foregrip_iron_down" {
+$sequence "foregrip_iron_down_aks74u" {
 	"v_aks74u_anims\foregrip_iron_down.smd"
 	activity "ACT_VM_IDOWN_FOREGRIP" 1
 	fadein 0.2
@@ -827,7 +827,7 @@ $sequence "foregrip_iron_down" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
 }
 
-$sequence "foregrip_iron_fire" {
+$sequence "foregrip_iron_fire_aks74u" {
 	"v_aks74u_anims\foregrip_iron_fire.smd"
 	activity "ACT_VM_ISHOOT_FOREGRIP" 1
 	{ event AE_MUZZLEFLASH 0 "" }
@@ -840,7 +840,7 @@ $sequence "foregrip_iron_fire" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "foregrip_iron_fire_2" {
+$sequence "foregrip_iron_fire_2_aks74u" {
 	"v_aks74u_anims\foregrip_iron_fire_2.smd"
 	activity "ACT_VM_ISHOOT_FOREGRIP" 1
 	{ event AE_MUZZLEFLASH 0 "" }
@@ -853,7 +853,7 @@ $sequence "foregrip_iron_fire_2" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }
 
-$sequence "foregrip_iron_dryfire" {
+$sequence "foregrip_iron_dryfire_aks74u" {
 	"v_aks74u_anims\foregrip_iron_dryfire.smd"
 	activity "ACT_VM_ISHOOTDRY_FOREGRIP" 1
 	{ event 5004 0 "Weapon_AKS74U.Empty" }
@@ -865,7 +865,7 @@ $sequence "foregrip_iron_dryfire" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 0
 }
 
-$sequence "foregrip_iron_fireselect" {
+$sequence "foregrip_iron_fireselect_aks74u" {
 	"v_aks74u_anims\foregrip_iron_fireselect.smd"
 	activity "ACT_VM_IFIREMODE_FOREGRIP" 1
 	{ event 5004 12 "Weapon_AKS74U.ROF" }

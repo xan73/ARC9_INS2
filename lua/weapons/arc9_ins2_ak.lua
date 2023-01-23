@@ -13,7 +13,7 @@ SWEP.Class = "Ar2"
 SWEP.Trivia = {
     Designer = "John Browning",
     Manufacturer = "Colt Manufacturing Company",
-    Calibre = ".45 ACP",
+    Calibre = "762x39",
     Mechanism = "Short Recoil",
     Origin = "United States of America",
     Year = "1947"
@@ -221,9 +221,9 @@ SWEP.AnimDraw = false
 
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/weapons/shells/45apc.mdl"
-SWEP.ShellCorrectAng = Angle(0, 0, 0)
-SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
+SWEP.ShellModel = "models/weapons/shells/762x39.mdl"
+SWEP.ShellCorrectAng = Angle(0, 0, 180)
+SWEP.ShellPhysBox = Vector(0.5, 0.5, 1)
 
 SWEP.ShellSounds = ARC9.PistolShellSoundsTable
 
@@ -255,16 +255,6 @@ SWEP.ExitSightsSound = ARC9FAS.SightLower
 
 SWEP.FiremodeSound = ARC9FAS.Switch
 
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    local attached = self:GetElements()
-
-    if anim == "idle" and attached["ins2_ak_shortbarrel"] then
-        return "idle_aks74u"
-    elseif anim == "reload_empty" then
-        return "base_reloadempty_extmag"
-    end
-end
-
 SWEP.Animations = {
     ["ready"] = { Source = "base_ready" },
     ["draw"] = { Source = "base_draw" },
@@ -279,7 +269,10 @@ SWEP.Animations = {
         Source = "idle_empty_iron"
     },
     ["enter_sights"] = {
-        Source = "idle_iron"
+        Source = "base_idle"
+    },
+    ["idle_sights"] = {
+        Source = "base_idle"
     },
     ["exit_sights_empty"] = {
         Source = "idle_empty",
@@ -335,9 +328,12 @@ SWEP.AttachmentElements = {
             {9,3},
         },
     },
-    ["ins2_m45_extmag"] = {
+    ["ins2_ak_rpkbarrel"] = {
         Bodygroups = {
-            {1,3},
+            {1,7},
+            {3,3},
+            {10,3},
+            {9,2},
         },
     },
     ["ins2_m45_mag"] = {
@@ -519,5 +515,71 @@ sound.Add({
     channel = 		CHAN_ITEM,
     volume = 		1.0,
     sound = 			"weapons/universal/uni_weapon_holster.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_AKs74u.Magrelease",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/aks/handling/aks_magrelease.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_AKs74u.Magout",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/aks/handling/aks_magout.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_AKs74u.Magin",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/aks/handling/aks_magin.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_AKs74u.Maghit",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/aks/handling/aks_maghit.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_AKs74u.Boltrelease",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/aks/handling/aks_boltrelease.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_AKs74u.Boltback",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/aks/handling/aks_boltback.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_AKs74u.empty",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/aks/handling/aks_empty.wav"
+    }), 
+    sound.Add({
+	name = 			"Weapon_AKs74u.safety",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/aks/handling/aks_safety.wav"
+    }),
+ sound.Add({
+    name = 			"Weapon_AKs74u.magout.rattle",
+    channel = 		CHAN_ITEM,
+    volume = 		1.0,
+    sound = 			"weapons/aks/handling/aks_magout_rattle.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_AKs74u.rattle",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/aks/handling/aks_rattle.wav"
+    }),
+sound.Add({
+    name = 			"Weapon_AKs74u.ROF",
+    channel = 		CHAN_ITEM,
+    volume = 		1.0,
+    sound = 			"weapons/aks/handling/aks_fireselect_1.wav"
     }),
 }

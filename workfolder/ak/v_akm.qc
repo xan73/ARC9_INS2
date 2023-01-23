@@ -356,17 +356,6 @@ $sequence "idle" {
 	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
 }
 
-$sequence "idle_aks74u" {
-	"v_ak74_anims\idle.smd"
-	fadein 0.2
-	fadeout 0.2
-	hidden
-	fps 30
-	loop
-	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0
-	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
-}
-
 $sequence "glsetup" {
 	"v_akm_anims\glsetup.smd"
 	fadein 0.2
@@ -1424,4 +1413,239 @@ $sequence "glsetup_iron_down" {
 	loop
 	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
+}
+
+$sequence "base_idle_aks74u" {
+	"v_aks74u_anims\base_idle.smd"
+	activity "ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	ikrule "rhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 0
+	ikrule "lhand" release contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 1 1 target 1
+}
+
+$sequence "base_ready_aks74u" {
+	"v_aks74u_anims\base_ready.smd"
+	activity "ACT_VM_READY" 1
+	{ event 5004 0 "Universal.Draw" }
+	{ event 5004 18 "Weapon_AKs74u.ROF" }
+	{ event 5004 31 "Weapon_AKs74u.Boltback" }
+	{ event 5004 39 "Weapon_AKs74u.Boltrelease" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 61 61 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 61 61 target 0
+}
+
+$sequence "base_draw_aks74u" {
+	"v_aks74u_anims\base_draw.smd"
+	activity "ACT_VM_DRAW" 1
+	{ event 5004 0 "Universal.Draw" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 31
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 22 22 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 22 22 target 0
+}
+
+$sequence "base_holster_aks74u" {
+	"v_aks74u_anims\base_holster.smd"
+	activity "ACT_VM_HOLSTER" 1
+	{ event 5004 0 "Universal.Holster" }
+	fadein 0.2
+	fadeout 0.2
+	fps 34
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 19 19 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 19 19 target 0
+}
+
+$sequence "base_down_aks74u" {
+	"v_aks74u_anims\base_down.smd"
+	activity "ACT_VM_DOWN" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 0 0 target 0
+}
+
+$sequence "base_crawl_aks74u" {
+	"v_aks74u_anims\base_crawl.smd"
+	activity "ACT_VM_CRAWL" 1
+	{ event 5004 16 "Universal.LeftCrawl" }
+	{ event 5004 37 "Universal.RightCrawl" }
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 45 45 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 45 45 target 0
+}
+
+$sequence "base_fire_aks74u" {
+	"v_aks74u_anims\base_fire.smd"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 39 39 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 39 39 target 0
+}
+
+$sequence "base_dryfire_aks74u" {
+	"v_aks74u_anims\base_dryfire.smd"
+	activity "ACT_VM_DRYFIRE" 1
+	{ event 5004 0 "Weapon_AKS74U.Empty" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 20 20 target 0
+}
+
+$sequence "base_fireselect_aks74u" {
+	"v_aks74u_anims\base_fireselect.smd"
+	activity "ACT_VM_FIREMODE" 1
+	{ event 5004 12 "Weapon_AKS74U.ROF" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+}
+
+$sequence "base_reload_aks74u" {
+	"v_aks74u_anims\base_reload.smd"
+	activity "ACT_VM_RELOAD" 1
+	{ event 5004 16 "Weapon_AKs74u.MagRelease" }
+	{ event 5004 19 "Weapon_AKs74u.Magout" }
+	{ event 5004 21 "Weapon_AKs74u.MagoutRattle" }
+	{ event 5004 60 "Weapon_AKs74u.Magin" }
+	{ event 46 68 "" }
+	{ event 5004 86 "Weapon_AKs74u.Rattle" }
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 95 95 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 95 95 target 0
+}
+
+$sequence "base_reloadempty_aks74u" {
+	"v_aks74u_anims\base_reloadempty.smd"
+	activity "ACT_VM_RELOADEMPTY" 1
+	{ event 5004 16 "Weapon_AKs74u.MagRelease" }
+	{ event 5004 19 "Weapon_AKs74u.Magout" }
+	{ event 5004 21 "Weapon_AKs74u.MagoutRattle" }
+	{ event 5004 60 "Weapon_AKs74u.Magin" }
+	{ event 46 68 "" }
+	{ event 5004 97 "Weapon_AKs74u.Boltback" }
+	{ event 5004 104 "Weapon_AKs74u.Boltrelease" }
+	{ event 5004 121 "Weapon_AKs74u.Rattle" }
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 134 134 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 134 134 target 0
+}
+
+$sequence "iron_fire_aks74u" {
+	"v_aks74u_anims\iron_fire.smd"
+	activity "ACT_VM_ISHOOT" 1
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+}
+
+$sequence "iron_fire_a_aks74u" {
+	"v_aks74u_anims\iron_fire_a.smd"
+	activity "ACT_VM_ISHOOT" 1
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+}
+
+$sequence "iron_fire_b_aks74u" {
+	"v_aks74u_anims\iron_fire_b.smd"
+	activity "ACT_VM_ISHOOT" 1
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+}
+
+$sequence "iron_fire_c_aks74u" {
+	"v_aks74u_anims\iron_fire_c.smd"
+	activity "ACT_VM_ISHOOT" 1
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+}
+
+$sequence "iron_fire_d_aks74u" {
+	"v_aks74u_anims\iron_fire_d.smd"
+	activity "ACT_VM_ISHOOT" 1
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+}
+
+$sequence "iron_fire_e_aks74u" {
+	"v_aks74u_anims\iron_fire_e.smd"
+	activity "ACT_VM_ISHOOT" 1
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
+}
+
+$sequence "iron_fire_f_aks74u" {
+	"v_aks74u_anims\iron_fire_f.smd"
+	activity "ACT_VM_ISHOOT" 1
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 30
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 30 30 target 0
 }

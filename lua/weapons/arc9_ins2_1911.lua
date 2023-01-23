@@ -273,6 +273,7 @@ SWEP.Animations = {
     ["holster_empty"] = {
         Source = "empty_holster",
     },
+    ["bash"] = { Source = "base_melee_bash" },
     ["idle_iron_empty"] = {
         Source = "idle_empty_iron"
     },

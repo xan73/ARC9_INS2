@@ -8,7 +8,7 @@ SWEP.SubCategory = "Assault Rifles"
 
 SWEP.PrintName = "AKM"
 
-SWEP.Class = "Ar2"
+SWEP.Class = "Assualt Rifle"
 
 SWEP.Trivia = {
     Designer = "John Browning",
@@ -330,15 +330,14 @@ SWEP.AttachmentElements = {
     },
     ["ins2_ak_rpkbarrel"] = {
         Bodygroups = {
-            {1,7},
             {3,3},
-            {10,3},
             {9,2},
         },
     },
-    ["ins2_m45_mag"] = {
+    ["ins2_ak_ak74"] = {
         Bodygroups = {
-            {1,2},
+            {3,2},
+            {9,1},
         },
     },
     ["ins2_m45_frame"] = {
@@ -581,5 +580,137 @@ sound.Add({
     channel = 		CHAN_ITEM,
     volume = 		1.0,
     sound = 			"weapons/aks/handling/aks_fireselect_1.wav"
+    }),
+    sound.Add({
+	name = 			"Weapon_RPK.Magrelease",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/rpk/handling/rpk_magrelease.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_RPK.Magout",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/rpk/handling/rpk_magout.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_RPK.Magin",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/rpk/handling/rpk_magin.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_RPK.Maghit",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/rpk/handling/rpk_maghit.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_RPK.Boltrelease",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/rpk/handling/rpk_boltrelease.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_RPK.Boltback",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/rpk/handling/rpk_boltback.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_RPK.empty",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/rpk/handling/rpk_empty.wav"
+    }), 
+    sound.Add({
+	name = 			"Weapon_RPK.safety",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/rpk/handling/rpk_safety.wav"
+    }),
+ sound.Add({
+    name = 			"Weapon_RPK.magout.rattle",
+    channel = 		CHAN_ITEM,
+    volume = 		1.0,
+    sound = 			"weapons/rpk/handling/rpk_magout_rattle.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_RPK.rattle",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/rpk/handling/rpk_rattle.wav"
+    }),
+sound.Add({
+    name = 			"Weapon_RPK.ROF",
+    channel = 		CHAN_ITEM,
+    volume = 		1.0,
+    sound = 			"weapons/rpk/handling/rpk_fireselect_1.wav"
+    }),
+    sound.Add({
+	name = 			"Weapon_ak74.Magrelease",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/ak74/handling/ak74_magrelease.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_ak74.Magout",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/ak74/handling/ak74_magout.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_ak74.Magin",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/ak74/handling/ak74_magin.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_ak74.Maghit",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/ak74/handling/ak74_maghit.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_ak74.Boltrelease",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/ak74/handling/ak74_boltrelease.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_ak74.Boltback",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/ak74/handling/ak74_boltback.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_ak74.empty",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/ak74/handling/ak74_empty.wav"
+    }), 
+    sound.Add({
+	name = 			"Weapon_ak74.safety",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/ak74/handling/ak74_safety.wav"
+    }),
+ sound.Add({
+    name = 			"Weapon_ak74.magout.rattle",
+    channel = 		CHAN_ITEM,
+    volume = 		1.0,
+    sound = 			"weapons/ak74/handling/ak74_magout_rattle.wav"
+    }),
+sound.Add({
+	name = 			"Weapon_ak74.rattle",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/ak74/handling/ak74_rattle.wav"
+    }),
+sound.Add({
+    name = 			"Weapon_ak74.ROF",
+    channel = 		CHAN_ITEM,
+    volume = 		1.0,
+    sound = 			"weapons/ak74/handling/ak74_fireselect_1.wav"
     }),
 }

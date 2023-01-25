@@ -273,6 +273,9 @@ SWEP.Animations = {
     ["holster_empty"] = {
         Source = "empty_holster",
     },
+    ["fire_empty"] = {
+        Source = "base_dryfire"
+    },
     ["bash"] = { Source = "base_melee_bash" },
     ["idle_iron_empty"] = {
         Source = "idle_empty_iron"
@@ -303,8 +306,8 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = {
-            "iron_fire_1",     
-            "iron_fire_2",       
+            "iron_fire_1",
+            "iron_fire_2",
             "iron_fire_3"
         }
     },
@@ -377,9 +380,9 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Category = {"ins2_pistol_laser_lights", "eft_um3"},
+        Category = {"ins2_pistol_laser_lights"},
         Bone = "weapon",
-        Pos = Vector(0, 3.7, -0.7),
+        Pos = Vector(0, 4, -0.7),
         Ang = Angle(0, -90, 0),
     },
     {
@@ -416,7 +419,7 @@ SWEP.Attachments = {
         Bone = "magazine",
         Pos = Vector(0, -1, -2),
         Ang = Angle(0, 0, 0),
-    },    
+    },
     {
         PrintName = "Caliber",
         Category = "ins2_1911_caliber",
@@ -479,7 +482,7 @@ sound.Add({
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/m1911/handling/m1911_empty.wav"
-    }), 
+    }),
 sound.Add({
 	name = 			"Weapon_M1911.safety",
 	channel = 		CHAN_ITEM,

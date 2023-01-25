@@ -275,6 +275,9 @@ SWEP.Animations = {
     ["idle_iron_empty"] = {
         Source = "idle_empty_iron"
     },
+    ["fire_empty"] = {
+        Source = "base_dryfire"
+    },
     ["enter_sights"] = {
         Source = "idle_iron"
     },

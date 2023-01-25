@@ -264,6 +264,9 @@ SWEP.Animations = {
     ["holster_empty"] = {
         Source = "empty_holster",
     },
+    ["fire_empty"] = {
+        Source = "base_dryfire"
+    },
     ["idle_iron_empty"] = {
         Source = "idle_empty_iron"
     },
@@ -354,25 +357,42 @@ SWEP.AttachmentElements = {
             {8,3},
         },
     },
-    ["ins2_m45_grip"] = {
+    ["ins2_ak_shortstock"] = {
         Bodygroups = {
-            {3,1},
+            {2,2},
         },
     },
-    ["ins2_pistol_suppressor"] = {
+    ["ins2_ak_wirestock"] = {
         Bodygroups = {
-            {5,1},
+            {2,1},
+        },
+    },
+    ["ins2_ak_ak74stock"] = {
+        Bodygroups = {
+            {2,3},
+        },
+    },
+    ["ins2_ak_rpkstock"] = {
+        Bodygroups = {
+            {2,4},
+        },
+    },
+    ["ins2_ak_rpkreceiver"] = {
+        Bodygroups = {
+            {0,3},
+        },
+    },
+    ["ins2_ak_ak74receiver"] = {
+        Bodygroups = {
+            {0,2},
+        },
+    },
+    ["ins2_ak_shortreceiver"] = {
+        Bodygroups = {
+            {0,1},
         },
     },
 }
-
-SWEP.Hook_TranslateIronSights = function()
-    local attached = Self:GetElements()
-
-    if attached["ins2_ak_ak74"] and attached["ins2_ak_sight2"] then
-        return {Pos = Vector(-2.25, -2, 0.55), Ang = Angle(0, 1, 0)}
-    end
-end
 
 SWEP.Attachments = {
     {
@@ -397,8 +417,8 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Trigger",
-        Category = "ins2_m45_trigger",
+        PrintName = "Stock",
+        Category = "ins2_ak_stock",
         Bone = "Weapon",
         Pos = Vector(0, 0, -1),
         Ang = Angle(0, 0, 0),
@@ -411,9 +431,9 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Slide",
-        Category = "ins2_m45_slide",
-        Bone = "Slide",
+        PrintName = "Receiver",
+        Category = "ins2_ak_receiver",
+        Bone = "Weapon",
         Pos = Vector(0, -2, 0.2),
         Ang = Angle(0, 0, 0),
     },

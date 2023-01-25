@@ -20,7 +20,7 @@ ATT.PrintName = "Lowered Irons"
 ATT.CompactName = "Lowered Irons"
 ATT.Icon = Material("entities/ak74sight.png", "mips smooth")
 ATT.Description = [[Longer barrel for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
-ATT.Category = "ins2_ak_ironsights"
+ATT.Category = "ins2_ak_ironsightsFIXTHIS"
 
 ATT.SortOrder = 3
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
@@ -29,7 +29,7 @@ ATT.RecoilMult = 0.8
 ATT.AimDownSightsTimeMult = 1.05
 ATT.SprintToFireTimeMult = 1.05
 
-ARC9.LoadAttachment(ATT, "ins2_ak_sight2")
+ARC9.LoadAttachment(ATT, "ins2_ak_sight2FIXTIS")
 
 ATT = {}
 

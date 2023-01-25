@@ -354,7 +354,7 @@ SWEP.AttachmentElements = {
             {8,3},
         },
     },
-    ["ins2_m45_trigger"] = {
+    ["ins2_m45_grip"] = {
         Bodygroups = {
             {3,1},
         },
@@ -365,6 +365,14 @@ SWEP.AttachmentElements = {
         },
     },
 }
+
+SWEP.Hook_TranslateIronSights = function()
+    local attached = Self:GetElements()
+
+    if attached["ins2_ak_ak74"] and attached["ins2_ak_sight2"] then
+        return {Pos = Vector(-2.25, -2, 0.55), Ang = Angle(0, 1, 0)}
+    end
+end
 
 SWEP.Attachments = {
     {
@@ -415,7 +423,7 @@ SWEP.Attachments = {
         Bone = "magazine",
         Pos = Vector(0, -1, -2),
         Ang = Angle(0, 0, 0),
-    },    
+    },
     {
         PrintName = "Caliber",
         Category = "ins2_ak_caliber",
@@ -435,57 +443,56 @@ SWEP.Attachments = {
         StickerModel = "models/weapons/arc9_fas/stickers/ak47_a.mdl",
         Category = "stickers",
     },
-        
 
 sound.Add({
 	name = 			"Weapon_ak47.Magrelease",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/ak47/handling/ak47_magrelease.wav"
-    }),
+}),
 sound.Add({
 	name = 			"Weapon_ak47.Magout",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/ak47/handling/ak47_magout.wav"
-    }),
+}),
 sound.Add({
 	name = 			"Weapon_ak47.Magin",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/ak47/handling/ak47_magin.wav"
-    }),
+}),
 sound.Add({
 	name = 			"Weapon_ak47.Maghit",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/ak47/handling/ak47_maghit.wav"
-    }),
+}),
 sound.Add({
 	name = 			"Weapon_ak47.Boltrelease",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/ak47/handling/ak47_boltrelease.wav"
-    }),
+}),
 sound.Add({
 	name = 			"Weapon_ak47.Boltback",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/ak47/handling/ak47_boltback.wav"
-    }),
+}),
 sound.Add({
 	name = 			"Weapon_ak47.empty",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/ak47/handling/ak47_empty.wav"
-    }), 
-    sound.Add({
+}),
+sound.Add({
 	name = 			"Weapon_ak47.safety",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/ak47/handling/ak47_safety.wav"
-    }),
- sound.Add({
+}),
+sound.Add({
     name = 			"Weapon_ak47.magout.rattle",
     channel = 		CHAN_ITEM,
     volume = 		1.0,
@@ -556,7 +563,7 @@ sound.Add({
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/aks/handling/aks_empty.wav"
-    }), 
+    }),
     sound.Add({
 	name = 			"Weapon_AKs74u.safety",
 	channel = 		CHAN_ITEM,
@@ -622,7 +629,7 @@ sound.Add({
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/rpk/handling/rpk_empty.wav"
-    }), 
+    }),
     sound.Add({
 	name = 			"Weapon_RPK.safety",
 	channel = 		CHAN_ITEM,
@@ -688,7 +695,7 @@ sound.Add({
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/ak74/handling/ak74_empty.wav"
-    }), 
+    }),
     sound.Add({
 	name = 			"Weapon_ak74.safety",
 	channel = 		CHAN_ITEM,
@@ -706,7 +713,7 @@ sound.Add({
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/ak74/handling/ak74_rattle.wav"
-    }),
+}),
 sound.Add({
     name = 			"Weapon_ak74.ROF",
     channel = 		CHAN_ITEM,

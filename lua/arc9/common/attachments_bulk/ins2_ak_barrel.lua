@@ -19,9 +19,8 @@ ATT.Hook_TranslateSource = function (wep, anim)
 end
 
 ATT.IronSights = {
-    Pos = Vector(-2.25, -2, 0.55),
+    Pos = Vector(-2.25, 0, 0.55),
     Ang = Angle(0, 0, 0),
-    Magnification = 1.1,
 }
 
 ARC9.LoadAttachment(ATT, "ins2_ak_shortbarrel")
@@ -30,7 +29,7 @@ ATT = {}
 
 ATT.PrintName = "RPK Barrel"
 ATT.CompactName = "RPK"
-ATT.Icon = Material("entities/akrpkbarrel.png", "mips smooth")
+ATT.Icon = Material("entities/akrpkbarre.png", "mips smooth")
 ATT.Description = [[Longer barrel for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_barrel"
 
@@ -51,7 +50,7 @@ ATT = {}
 
 ATT.PrintName = "AK74 Barrel"
 ATT.CompactName = "AK74"
-ATT.Icon = Material("entities/.png", "mips smooth")
+ATT.Icon = Material("entities/ak74barrel.png", "mips smooth")
 ATT.Description = [[Longer barrel for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_barrel"
 
@@ -62,8 +61,13 @@ ATT.RecoilMult = 0.8
 ATT.AimDownSightsTimeMult = 1.05
 ATT.SprintToFireTimeMult = 1.05
 
+ATT.IronSights = {
+    Pos = Vector(-2.25, 0, 0.47),
+    Ang = Angle(0, 1, 0),
+}
+
 ATT.Hook_TranslateSource = function (wep, anim)
-    return anim .. "_rpk"
+    return anim .. "_ak74"
 end
 
 ARC9.LoadAttachment(ATT, "ins2_ak_ak74")

@@ -75,7 +75,6 @@ $bodygroup "sight"
 {
 	blank
 	studio "akmsight.smd"
-	studio "aks74usight.smd"
 	studio "ak74sight.smd"
 	studio "rpkight.smd"	
 }
@@ -85,6 +84,7 @@ $bodygroup "sighta"
 	studio "akmsighta.smd"
 	studio "ak74sighta.smd"
 	studio "rpksighta.smd"
+	studio "aks74usight.smd"
 	blank
 }
 

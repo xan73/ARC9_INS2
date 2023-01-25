@@ -128,7 +128,7 @@ SWEP.UseVisualRecoil = true
 
 SWEP.PhysicalVisualRecoil = true
 
-SWEP.VisualRecoilUp = 0.02 -- Vertical tilt for visual recoil.F
+SWEP.VisualRecoilUp = 8 -- Vertical tilt for visual recoil.F
 SWEP.VisualRecoilSide = 0.1 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 25 -- Roll tilt for visual recoil.
 
@@ -178,20 +178,19 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.32, -2, 0.1),
+    Pos = Vector(-2.32, 0, 0.1),
     Ang = Angle(0, 1, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(-4, 0, -8),
         Ang = Angle(0, 0, 0),
     },
-    Magnification = 1.1,
 }
 
 SWEP.RestPos = Vector(0, 1, -2)
 SWEP.RestAng = Angle(25, -5, 0)
 
 SWEP.ViewModelFOVBase = 55
-SWEP.ActivePos = Vector(0, 4, 0)
+SWEP.ActivePos = Vector(0, 3, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(0, 1, -2)
@@ -324,8 +323,7 @@ SWEP.AttachmentElements = {
             {1,2},
             {3,1},
             {10,1},
-            {8,2},
-            {9,3},
+            {9,2},
         },
     },
     ["ins2_ak_rpkbarrel"] = {
@@ -340,19 +338,20 @@ SWEP.AttachmentElements = {
             {9,1},
         },
     },
-    ["ins2_m45_frame"] = {
+    ["ins2_ak_sight1"] = {
         Bodygroups = {
-            {0,1},
+            {8,1},
         },
     },
-    ["ins2_m45_slide"] = {
+    ["ins2_ak_sight2"] = {
         Bodygroups = {
-            {2,1},
+            {8,2},
+            {9,1},
         },
     },
-    ["ins2_m45_grip"] = {
+    ["ins2_ak_sight3"] = {
         Bodygroups = {
-            {4,1},
+            {8,3},
         },
     },
     ["ins2_m45_trigger"] = {
@@ -383,8 +382,8 @@ SWEP.Attachments = {
         Ang = Angle(0, -90, 0),
     },
     {
-        PrintName = "Frame",
-        Category = "ins2_m45_frame",
+        PrintName = "Iron Sights",
+        Category = "ins2_ak_ironsights",
         Bone = "Weapon",
         Pos = Vector(0, -2, -0.5),
         Ang = Angle(0, 0, 0),
@@ -436,6 +435,7 @@ SWEP.Attachments = {
         StickerModel = "models/weapons/arc9_fas/stickers/ak47_a.mdl",
         Category = "stickers",
     },
+        
 
 sound.Add({
 	name = 			"Weapon_ak47.Magrelease",

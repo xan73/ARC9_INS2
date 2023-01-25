@@ -304,8 +304,8 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = {
-            "iron_fire_1",     
-            "iron_fire_2",       
+            "iron_fire_1",
+            "iron_fire_2",
             "iron_fire_3"
         }
     },
@@ -415,7 +415,7 @@ SWEP.Attachments = {
         Bone = "magazine",
         Pos = Vector(0, -1, -2),
         Ang = Angle(0, 0, 0),
-    },    
+    },
     {
         PrintName = "AMMO",
         Category = "fas_ammo_bullet",
@@ -478,7 +478,7 @@ sound.Add({
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/makarov/handling/makarov_empty.wav"
-    }), 
+    }),
     sound.Add({
 	name = 			"Weapon_makarov.safety",
 	channel = 		CHAN_ITEM,

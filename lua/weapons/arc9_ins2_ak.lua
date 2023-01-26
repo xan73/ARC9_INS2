@@ -392,6 +392,22 @@ SWEP.AttachmentElements = {
             {0,1},
         },
     },
+    ["ins2_ak_aks74cover"] = {
+        Bodygroups = {
+            {4,1},
+            {9,2},
+        },
+    },
+    ["ins2_ak_rpkcover"] = {
+        Bodygroups = {
+            {4,3},
+        },
+    },
+    ["ins2_ak_ak74cover"] = {
+        Bodygroups = {
+            {4,2},
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -445,8 +461,8 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Caliber",
-        Category = "ins2_ak_caliber",
+        PrintName = "Dust Cover",
+        Category = "ins2_ak_covers",
         Bone = "Weapon",
         Pos = Vector(1, -1, 0),
         Ang = Angle(0, 0, 0),

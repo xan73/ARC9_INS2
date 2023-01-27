@@ -326,7 +326,7 @@ SWEP.AttachmentElements = {
             {1,2},
             {3,1},
             {10,1},
-            {9,2},
+            {9,3},
         },
     },
     ["ins2_ak_rpkbarrel"] = {
@@ -395,17 +395,34 @@ SWEP.AttachmentElements = {
     ["ins2_ak_aks74cover"] = {
         Bodygroups = {
             {4,1},
-            {9,2},
+            {5,1},
         },
     },
     ["ins2_ak_rpkcover"] = {
         Bodygroups = {
             {4,3},
+            {5,3},
         },
     },
     ["ins2_ak_ak74cover"] = {
         Bodygroups = {
             {4,2},
+            {5,2},
+        },
+    },
+    ["ins2_ak_plummag"] = {
+        Bodygroups = {
+            {7,1},
+        },
+    },
+    ["ins2_ak_545mag"] = {
+        Bodygroups = {
+            {7,2},
+        },
+    },
+    ["ins2_ak_drum"] = {
+        Bodygroups = {
+            {7,3},
         },
     },
 }
@@ -422,21 +439,21 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         Category = "ins2_ak_barrel",
         Bone = "weapon",
-        Pos = Vector(0, 3.7, -0.7),
+        Pos = Vector(0, 3, 0.4),
         Ang = Angle(0, -90, 0),
     },
     {
         PrintName = "Iron Sights",
         Category = "ins2_ak_ironsights",
         Bone = "Weapon",
-        Pos = Vector(0, -2, -0.5),
+        Pos = Vector(0, 3.5, 1.5),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Stock",
         Category = "ins2_ak_stock",
         Bone = "Weapon",
-        Pos = Vector(0, 0, -1),
+        Pos = Vector(0, -7, 0),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -450,21 +467,21 @@ SWEP.Attachments = {
         PrintName = "Receiver",
         Category = "ins2_ak_receiver",
         Bone = "Weapon",
-        Pos = Vector(0, -2, 0.2),
+        Pos = Vector(0, 2, 0),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Magazine",
         Category = {"ins2_ak47_mags"},
         Bone = "magazine",
-        Pos = Vector(0, -1, -2),
+        Pos = Vector(0, 1, -2),
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Dust Cover",
+        PrintName = "Upper",
         Category = "ins2_ak_covers",
         Bone = "Weapon",
-        Pos = Vector(1, -1, 0),
+        Pos = Vector(0, -1, 1),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -749,7 +766,7 @@ sound.Add({
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
 	sound = 			"weapons/ak74/handling/ak74_rattle.wav"
-}),
+    }),
 sound.Add({
     name = 			"Weapon_ak74.ROF",
     channel = 		CHAN_ITEM,

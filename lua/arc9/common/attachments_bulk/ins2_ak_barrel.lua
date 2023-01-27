@@ -20,6 +20,10 @@ ATT.Hook_TranslateSource = function (wep, anim)
     return anim .. "_aks74u"
 end
 
+ATT.ShootSound = "weapons/aks/aks_fp.wav"
+ATT.DistantShootSound = "weapons/aks/aks_dist.wav"
+ATT.ShootSoundSilenced = "weapons/aks/aks_suppressed_fp.wav"
+
 ATT.IronSights = {
     Pos = Vector(-2.25, 0, 0.55),
     Ang = Angle(0, 0, 0),
@@ -51,7 +55,7 @@ end
 
 local path = "weapons/rpk/"
 
-ATT.Override_ShootSound = path .. "rpk_fp.wav"
+ATT.ShootSound = path .. "rpk_fp.wav"
 
 ARC9.LoadAttachment(ATT, "ins2_ak_rpkbarrel")
 

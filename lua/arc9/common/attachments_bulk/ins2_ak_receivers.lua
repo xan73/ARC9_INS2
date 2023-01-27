@@ -18,7 +18,7 @@ ARC9.LoadAttachment(ATT, "ins2_ak_shortreceiver")
 ATT = {}
 
 ATT.PrintName = "AK74 receiver"
-ATT.CompactName = "receiver"
+ATT.CompactName = "AK74"
 ATT.Icon = Material("entities/ak74receiver.png", "mips smooth")
 ATT.Description = [[Longer receiver for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_receiver"
@@ -36,7 +36,7 @@ ARC9.LoadAttachment(ATT, "ins2_ak_ak74receiver")
 ATT = {}
 
 ATT.PrintName = "RPK receiver"
-ATT.CompactName = "Heavy"
+ATT.CompactName = "RPK"
 ATT.Icon = Material("entities/ak74receiver.png", "mips smooth")
 ATT.Description = [[Longer receiver for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_receiver"

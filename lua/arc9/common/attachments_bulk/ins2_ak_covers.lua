@@ -6,7 +6,7 @@ ATT.Icon = Material("entities/akshort.png", "mips smooth")
 ATT.Description = [[Shorter receiver for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_covers"
 
-ATT.SortOrder = 0
+ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
 ATT.RecoilMult = 1.2
@@ -18,12 +18,12 @@ ARC9.LoadAttachment(ATT, "ins2_ak_aks74cover")
 ATT = {}
 
 ATT.PrintName = "Dark Dust Cover"
-ATT.CompactName = "receiver"
+ATT.CompactName = "Dark"
 ATT.Icon = Material("entities/ak74receiver.png", "mips smooth")
 ATT.Description = [[Longer receiver for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_covers"
 
-ATT.SortOrder = 0
+ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
 ATT.RecoilMult = 0.8
@@ -36,12 +36,12 @@ ARC9.LoadAttachment(ATT, "ins2_ak_rpkcover")
 ATT = {}
 
 ATT.PrintName = "AK74 Dust Cover"
-ATT.CompactName = "Heavy"
+ATT.CompactName = "AK74"
 ATT.Icon = Material("entities/ak74receiver.png", "mips smooth")
 ATT.Description = [[Longer receiver for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_covers"
 
-ATT.SortOrder = 0
+ATT.SortOrder = 3
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
 ATT.RecoilMult = 0.8

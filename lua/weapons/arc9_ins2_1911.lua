@@ -127,7 +127,7 @@ SWEP.UseVisualRecoil = true
 SWEP.PhysicalVisualRecoil = true
 
 SWEP.VisualRecoilUp = 8 -- Vertical tilt for visual recoil.F
-SWEP.VisualRecoilSide = 0.09 -- Horizontal tilt for visual recoil.
+SWEP.VisualRecoilSide = 0.2 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 25 -- Roll tilt for visual recoil.
 
 SWEP.VisualRecoil = 1

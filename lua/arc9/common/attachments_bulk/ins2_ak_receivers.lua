@@ -50,3 +50,21 @@ ATT.SprintToFireTimeMult = 1.05
 
 
 ARC9.LoadAttachment(ATT, "ins2_ak_rpkreceiver")
+
+ATT = {}
+
+ATT.PrintName = "Worn Receiver"
+ATT.CompactName = "Battle Worn"
+ATT.Icon = Material("entities/ak74receiver.png", "mips smooth")
+ATT.Description = [[Longer receiver for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
+ATT.Category = "ins2_ak_receiver"
+
+ATT.SortOrder = 2
+ATT.MenuCategory = "ARC9 - INS2 Attachments"
+
+ATT.RecoilMult = 0.8
+ATT.AimDownSightsTimeMult = 1.05
+ATT.SprintToFireTimeMult = 1.05
+
+
+ARC9.LoadAttachment(ATT, "ins2_ak_wornreceiver")

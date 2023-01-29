@@ -8,6 +8,7 @@ $bodygroup "Weapon"
 	studio "aks74u_reference.smd"	
 	studio "ak74_reference.smd"	
 	studio "rpk_reference.smd"	
+	studio "btwref.smd"	
 }
 
 $bodygroup "lowhandg"
@@ -29,6 +30,7 @@ $bodygroup "stock"
 	studio "aks74ustock.smd"
 	studio "ak74stock.smd"
 	studio "rpkstock.smd"	
+	studio "btwstock.smd"	
 }
 
 $bodygroup "barrel"
@@ -37,6 +39,7 @@ $bodygroup "barrel"
 	studio "aks74ubarrel.smd"
 	studio "ak74barrel.smd"
 	studio "rpkbarrel.smd"	
+	studio "btwbarrel.smd"	
 }
 
 $bodygroup "dustcover"
@@ -44,7 +47,8 @@ $bodygroup "dustcover"
 	studio "akmcover.smd"
 	studio "aks74ucover.smd"
 	studio "ak74cover.smd"
-	studio "rpkcover.smd"	
+	studio "rpkcover.smd"
+	blank
 }
 
 $bodygroup "bolt"
@@ -53,6 +57,7 @@ $bodygroup "bolt"
 	studio "aks74ubolt.smd"
 	studio "ak74bolt.smd"
 	studio "rpkbolt.smd"	
+	studio "btwbolt.smd"	
 }
 
 $bodygroup "grip"
@@ -61,6 +66,7 @@ $bodygroup "grip"
 	studio "aks74ugrip.smd"
 	studio "ak74grip.smd"
 	studio "rpkgrip.smd"	
+	studio "btwgrip.smd"	
 }
 
 $bodygroup "mag"
@@ -69,6 +75,7 @@ $bodygroup "mag"
 	studio "aks74umag.smd"
 	studio "ak74mag.smd"
 	studio "rpkdrum.smd"	
+	studio "btwmag.smd"	
 }
 
 $bodygroup "sight"
@@ -109,6 +116,11 @@ $bodygroup "bipod"
 	studio "rpkbipod.smd"
 }
 
+$bodygroup "btwbolt2"
+{
+	blank
+	studio "btwbolt001.smd"	
+}
 
 
 $surfaceprop "default"
@@ -119,6 +131,7 @@ $illumposition -3.27 -4.054 -12.018
 
 $cdmaterials "models\weapons\akm\"
 $cdmaterials "models\weapons\m16a4\"
+$cdmaterials "models\weapons\phale\AKM\"
 
 $attachment "muzzle" "A_Muzzle" 0 0 0 rotate 0 0 0
 $attachment "muzzle_supp" "A_Muzzle_Supp" 0 0 0 rotate 0 0 0
@@ -1749,8 +1762,8 @@ $sequence "base_fireselect_rpk" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 35 35 target 0
 }
 
-$sequence "base_reload_rpk_drum" {
-	"v_rpk_anims\base_reload.smd"
+$sequence "base_reload_drum" {
+	"v_rpk_anims\base_reloaddrum.smd"
 	activity "ACT_VM_RELOAD" 1
 	{ event 5004 20 "Weapon_RPK.MagRelease" }
 	{ event 5004 23 "Weapon_RPK.Magout" }
@@ -1766,8 +1779,8 @@ $sequence "base_reload_rpk_drum" {
 	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 138 138 target 0
 }
 
-$sequence "base_reloadempty_rpk_drum" {
-	"v_rpk_anims\base_reloadempty.smd"
+$sequence "base_reloadempty_drum" {
+	"v_rpk_anims\base_reloademptydrum.smd"
 	activity "ACT_VM_RELOADEMPTY" 1
 	{ event 5004 20 "Weapon_RPK.MagRelease" }
 	{ event 5004 23 "Weapon_RPK.Magout" }
@@ -1847,6 +1860,45 @@ $sequence "iron_fire_b_rpk" {
 }
 
 $sequence "iron_fire_c_rpk" {
+	"v_rpk_anims\iron_fire_4.smd"
+	activity "ACT_VM_ISHOOT" 1
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 32
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+}
+
+$sequence "iron_fire_d_rpk" {
+	"v_rpk_anims\iron_fire_2.smd"
+	activity "ACT_VM_ISHOOT" 1
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 32
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+}
+
+$sequence "iron_fire_e_rpk" {
+	"v_rpk_anims\iron_fire_3.smd"
+	activity "ACT_VM_ISHOOT" 1
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_CL_CREATE_PARTICLE_BRASS 0 "" }
+	fadein 0.2
+	fadeout 0.2
+	snap
+	fps 32
+	ikrule "lhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 1
+	ikrule "rhand" touch "Weapon" contact 0 fakeorigin 0 0 0 fakerotate 0 0 0 floor 0 height 0 radius 0 range 0 0 40 40 target 0
+}
+
+$sequence "iron_fire_f_rpk" {
 	"v_rpk_anims\iron_fire_4.smd"
 	activity "ACT_VM_ISHOOT" 1
 	{ event AE_MUZZLEFLASH 0 "" }

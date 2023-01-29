@@ -1,0 +1,13 @@
+"SurfaceGGX" 
+{
+	$basetexture 						"models\weapons\phale\akm\eft_ak_grip_diff"
+	$bumpmap 							"models\weapons\phale\akm\eft_ak_grip_nrm"
+	$phongexponenttexture				"models\weapons\phale\akm\eft_ak_grip_gloss"
+	//"$srgbtint"							"[1.5 1.5 1.5]"		
+	
+	"$roughnessmultiplier" 		"1"
+	"$metal" "0"
+
+	"$envmap" "models\weapons\ins2_sandstorm\envmap_unfuck"
+	
+}

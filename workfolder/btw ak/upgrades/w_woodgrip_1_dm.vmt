@@ -1,0 +1,15 @@
+"SurfaceGGX"
+{
+	"$baseTexture" 			"models\weapons\upgrades\w_woodgrip_1_dm"
+	"$bumpmap" 				"models\weapons\upgrades\w_woodgrip_nm"
+	"$phongexponenttexture" "models\weapons\upgrades\w_woodgrip_1_dm"
+	
+	"$metal" "0"
+	"$roughnessmultiplier" "0.7"
+	
+	//"$fuzz" "1"
+	//"$fuzzmultiplier" ".2"
+	
+	"$envmap" "models\weapons\ins2_sandstorm\envmap_unfuck"
+	//"$srgbtint" "[2.5 2.5 2.5]"
+}

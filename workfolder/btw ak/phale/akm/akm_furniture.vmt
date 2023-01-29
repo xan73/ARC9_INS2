@@ -1,0 +1,13 @@
+"SurfaceGGX" 
+{
+	$basetexture 				"models\weapons\Phale\AKM\AKM_Furniture_Diffuse"
+	$bumpmap 					"models\weapons\Phale\AKM\AKM_Furniture_Normal"
+	$phongexponenttexture		"models/weapons/Phale/AKM/AKM_Furniture_Exponent"
+	//"$srgbtint"					"[0.7 0.7 0.7]"		
+	
+	"$roughnessmultiplier" 		"0.95" //"0.55"
+	"$metal" "1"
+
+	"$envmap" "models\weapons\ins2_sandstorm\envmap_unfuck"
+	
+}

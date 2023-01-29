@@ -265,13 +265,14 @@ SWEP.Animations = {
         Source = "empty_holster",
     },
     ["fire_empty"] = {
-        Source = "base_dryfire"
+        Source = "base_dryfire",
     },
     ["idle_iron_empty"] = {
-        Source = "idle_empty_iron"
+        Source = "idle_empty_iron",
     },
     ["enter_sights"] = {
-        Source = "base_idle"
+        Source = "base_idle",
+        Mult = 3
     },
     ["idle_sights"] = {
         Source = "base_idle"
@@ -327,6 +328,7 @@ SWEP.AttachmentElements = {
             {3,1},
             {10,1},
             {9,3},
+            {13,0},
         },
     },
     ["ins2_ak_rpkbarrel"] = {
@@ -398,6 +400,15 @@ SWEP.AttachmentElements = {
             {5,1},
         },
     },
+    ["ins2_ak_wornreceiver"] = {
+        Bodygroups = {
+            {4,4},
+            {5,4},
+            {13,1},
+            {0,4},
+            {9,4},
+        },
+    },
     ["ins2_ak_rpkcover"] = {
         Bodygroups = {
             {4,3},
@@ -423,6 +434,11 @@ SWEP.AttachmentElements = {
     ["ins2_ak_drum"] = {
         Bodygroups = {
             {7,3},
+        },
+    },
+    ["ins2_ak_wornsteelmag"] = {
+        Bodygroups = {
+            {7,4},
         },
     },
 }
@@ -472,7 +488,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        Category = {"ins2_ak47_mags"},
+        Category = "ins2_ak_mags",
         Bone = "magazine",
         Pos = Vector(0, 1, -2),
         Ang = Angle(0, 0, 0),
@@ -772,5 +788,11 @@ sound.Add({
     channel = 		CHAN_ITEM,
     volume = 		1.0,
     sound = 			"weapons/ak74/handling/ak74_fireselect_1.wav"
+    }),
+sound.Add({
+    name = 			"Weapon_RPK.FetchMag",
+    channel = 		CHAN_ITEM,
+    volume = 		1.0,
+    sound = 			"weapons/rpk/handling/rpk_fetchmag.wav"
     }),
 }

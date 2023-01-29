@@ -6,14 +6,14 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS2"
 SWEP.SubCategory = "Pistols"
 
-SWEP.PrintName = "Makarov"
+SWEP.PrintName = "M9 Beretta"
 
 SWEP.Class = "Pistol"
 
 SWEP.Trivia = {
     Designer = "John Browning",
     Manufacturer = "Colt Manufacturing Company",
-    Calibre = ".45 ACP",
+    Calibre = "9x19",
     Mechanism = "Short Recoil",
     Origin = "United States of America",
     Year = "1911"
@@ -24,10 +24,10 @@ SWEP.Credits = {
     Assets = "New World Interactive",
 }
 
-SWEP.Description = [[The makarov is a single-action, semi-automatic, magazine-fed, recoil-operated pistol chambered for the .45 ACP cartridge. It was designed by John Browning and served as the standard-issue sidearm for the United States Armed Forces from 1911 to 1986.]]
+SWEP.Description = [[The m9 is a single-action, semi-automatic, magazine-fed, recoil-operated pistol chambered for the .45 ACP cartridge. It was designed by John Browning and served as the standard-issue sidearm for the United States Armed Forces from 1911 to 1986.]]
 
-SWEP.ViewModel = "models/weapons/v_makarov.mdl"
-SWEP.WorldModel = "models/weapons/w_makarov.mdl"
+SWEP.ViewModel = "models/weapons/v_beretta.mdl"
+SWEP.WorldModel = "models/weapons/w_beretta.mdl"
 
 SWEP.Slot = 1
 
@@ -38,13 +38,14 @@ SWEP.WorldModelOffset = {
     Ang = Angle(-5, 0, 180),
     Scale = 1
 }
+
 SWEP.NoTPIKVMPos = true
 
 SWEP.DefaultBodygroups = "0000000000000000000000"
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 23 -- Damage done at point blank range
+SWEP.DamageMax = 20 -- Damage done at point blank range
 SWEP.DamageMin = 10 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
@@ -76,14 +77,14 @@ SWEP.PhysBulletDrag = 1.15
 SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
-SWEP.ClipSize = 8 -- Self-explanatory.
+SWEP.ClipSize = 15 -- Self-explanatory.
 SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 
 SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 321
+SWEP.RPM = 281
 
 SWEP.Firemodes = {
     {
@@ -91,21 +92,21 @@ SWEP.Firemodes = {
     }
 }
 
-SWEP.BarrelLength = 6
+SWEP.BarrelLength = 7
 
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 0.65
+SWEP.Recoil = 0.8
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 0.7 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 0.5 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
-SWEP.RecoilRandomUp = 0.1
-SWEP.RecoilRandomSide = 1
+SWEP.RecoilRandomUp = 0.5
+SWEP.RecoilRandomSide = 0.5
 
 SWEP.RecoilDissipationRate = 50 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil pattern starts to reset.
@@ -113,7 +114,7 @@ SWEP.RecoilResetTime = 0.05 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 1
 SWEP.RecoilAutoControlHipFire = 2.5
 
-SWEP.RecoilKick = 0.7
+SWEP.RecoilKick = 0.75
 
 SWEP.FOV_RecoilAdd = 0 -- FOV to increase or decrease by.
 SWEP.FOV_Recoil_TimeStart = 0.10 -- Peak
@@ -125,7 +126,7 @@ SWEP.UseVisualRecoil = true
 
 SWEP.PhysicalVisualRecoil = true
 
-SWEP.VisualRecoilUp = 8 -- Vertical tilt for visual recoil.F
+SWEP.VisualRecoilUp = 3 -- Vertical tilt for visual recoil.F
 SWEP.VisualRecoilSide = 0.1 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 25 -- Roll tilt for visual recoil.
 
@@ -148,7 +149,7 @@ SWEP.Spread = 0
 SWEP.FreeAimRadius = 6
 SWEP.FreeAimRadiusMultSights = 0
 
-SWEP.Sway = 2.5 -- How much the gun sways.
+SWEP.Sway = 3 -- How much the gun sways.
 
 SWEP.SwayMultMidAir = 4
 SWEP.SwayMultMove = 1.75
@@ -175,7 +176,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-1.92, 0, 0.55),
+    Pos = Vector(-1.87, 0, 0.5),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(-4, 0, -8),
@@ -190,11 +191,11 @@ SWEP.ViewModelFOVBase = 55
 SWEP.ActivePos = Vector(0, 5, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(0, 3, -2)
+SWEP.CrouchPos = Vector(0, 1, -2)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(12, 25, 2)
+SWEP.CustomizePos = Vector(14, 25, 2)
 SWEP.CustomizeSnapshotFOV = 100
 
 SWEP.BipodPos = Vector(0, 0, 0)
@@ -217,7 +218,7 @@ SWEP.AnimDraw = false
 
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/weapons/shells/9x19.mdl"
+SWEP.ShellModel = "models/weapons/shells/45apc.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 
@@ -232,14 +233,14 @@ SWEP.CamCoolView = true
 
 -------------------------- SOUNDS
 
-local path = "weapons/makarov/"
+local path = "weapons/m9/"
 local common = "weapons/"
 
 
-SWEP.ShootSound = path .. "makarov_fp.wav"
-SWEP.DistantShootSound = path .. "makarov_dist.wav"
-SWEP.ShootSoundSilenced = path .. "makarov_suppressed_fp.wav"
-SWEP.DryFireSound = path .. "handling/makarov_empty.wav"
+SWEP.ShootSound = path .. "m9_fp.wav"
+SWEP.DistantShootSound = path .. "m9_dist.wav"
+SWEP.ShootSoundSilenced = path .. "m9_suppressed_fp.wav"
+SWEP.DryFireSound = path .. "handling/m9_empty.wav"
 
 SWEP.DryFireSingleAction = false
 
@@ -254,7 +255,7 @@ SWEP.FiremodeSound = ARC9FAS.Switch
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
-    if anim == "reload" and attached["ins2_maka_extmag"] then
+    if anim == "reload" and attached["ins2_1911_extmag"] then
         return "base_reload_extmag"
     elseif anim == "reload_empty" then
         return "base_reloadempty_extmag"
@@ -271,11 +272,12 @@ SWEP.Animations = {
     ["holster_empty"] = {
         Source = "empty_holster",
     },
-    ["idle_iron_empty"] = {
-        Source = "idle_empty_iron"
-    },
     ["fire_empty"] = {
         Source = "base_dryfire"
+    },
+    ["bash"] = { Source = "base_melee_bash" },
+    ["idle_iron_empty"] = {
+        Source = "idle_empty_iron"
     },
     ["enter_sights"] = {
         Source = "idle_iron"
@@ -309,7 +311,7 @@ SWEP.Animations = {
         }
     },
     ["fire_iron_empty"] = {
-        Source = "iron_fire_last"
+        Source = "iron_firelast"
     },
     ["reload"] = {
         Source = "base_reload"
@@ -343,39 +345,44 @@ SWEP.SuppressDefaultEvents = true
 -------------------------- ATTACHMENTS
 
 SWEP.AttachmentElements = {
-    ["ins2_maka_extmag"] = {
+    ["ins2_1911_extmag"] = {
         Bodygroups = {
             {1,1},
         },
     },
-    ["ins2_pmm_extmag"] = {
+    ["ins2_m45_extmag"] = {
         Bodygroups = {
             {1,3},
         },
     },
-    ["ins2_pmm_mag"] = {
+    ["ins2_m45_mag"] = {
         Bodygroups = {
             {1,2},
         },
     },
-    ["ins2_pmm_frame"] = {
+    ["ins2_m45_frame"] = {
         Bodygroups = {
             {0,1},
         },
     },
-    ["ins2_pmm_slide"] = {
+    ["ins2_m45_slide"] = {
         Bodygroups = {
             {2,1},
         },
     },
-    ["ins2_pmm_grip"] = {
+    ["ins2_m45_grip"] = {
+        Bodygroups = {
+            {4,1},
+        },
+    },
+    ["ins2_m45_trigger"] = {
         Bodygroups = {
             {3,1},
         },
     },
     ["ins2_pistol_suppressor"] = {
         Bodygroups = {
-            {4,1},
+            {5,1},
         },
     },
 }
@@ -389,54 +396,51 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Optic",
-        Category = {"csgo_optics_pistols_alt","eft_optic_small"},
-        Pos = Vector(0, 0, 0),
-        Ang = Angle(90, 0, -90),
-        Bone = "Slide",
-        Scale = 1,
-		CorrectiveAng = Angle(1.6, 0.2, 0),
-        ExtraSightDistance = 10
-    },
-    {
         PrintName = "Tactical",
         Category = {"ins2_pistol_laser_lights"},
         Bone = "weapon",
-        Pos = Vector(0, 4.2, -0.6),
+        Pos = Vector(0, 4, -0.7),
         Ang = Angle(0, -90, 0),
     },
     {
         PrintName = "Frame",
-        Category = "ins2_pmm_frame",
+        Category = "ins2_m45_frame",
         Bone = "Weapon",
         Pos = Vector(0, -2, -0.5),
         Ang = Angle(0, 0, 0),
     },
     {
+        PrintName = "Trigger",
+        Category = "ins2_m45_trigger",
+        Bone = "Weapon",
+        Pos = Vector(0, 0, -1),
+        Ang = Angle(0, 0, 0),
+    },
+    {
         PrintName = "Grip",
-        Category = "ins2_pmm_grip",
+        Category = "ins2_m45_grip",
         Bone = "Weapon",
         Pos = Vector(0, -2.5, -2),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Slide",
-        Category = "ins2_pmm_slide",
+        Category = "ins2_m45_slide",
         Bone = "Slide",
-        Pos = Vector(0, 0, 0.2),
+        Pos = Vector(0, -2, 0.2),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Magazine",
-        Category = {"ins2_maka_extmag", "ins2_pmm_extmag", "ins2_pmm_mag"},
+        Category = {"ins2_m9_mags"},
         Bone = "magazine",
         Pos = Vector(0, -1, -2),
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "AMMO",
-        Category = "fas_ammo_bullet",
-        Bone = "Frame_BONE",
+        PrintName = "Caliber",
+        Category = "ins2_1911_caliber",
+        Bone = "Weapon",
         Pos = Vector(1, -1, 0),
         Ang = Angle(0, 0, 0),
     },
@@ -444,63 +448,63 @@ SWEP.Attachments = {
         PrintName = "CHARM",
         Category = "charm",
         Bone = "Slide",
-        Pos = Vector(0.4, 1, -0.25),
+        Pos = Vector(0.4, 0, 0),
         Ang = Angle(0, -90, 0),
     },
     {
         PrintName = "STICKER",
-        StickerModel = "models/weapons/arc9_fas/stickers/makarov_a.mdl",
+        StickerModel = "models/weapons/arc9_fas/stickers/m9_a.mdl",
         Category = "stickers",
-        Bone = "Slide",
     },
 
+
 sound.Add({
-	name = 			"Weapon_makarov.Magrelease",
+	name = 			"Weapon_m9.Magrelease",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/makarov/handling/makarov_magrelease.wav"
+	sound = 			"weapons/m9/handling/m9_magrelease.wav"
     }),
 sound.Add({
-	name = 			"Weapon_makarov.Magout",
+	name = 			"Weapon_m9.Magout",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/makarov/handling/makarov_magout.wav"
+	sound = 			"weapons/m9/handling/m9_magout.wav"
     }),
 sound.Add({
-	name = 			"Weapon_makarov.Magin",
+	name = 			"Weapon_m9.Magin",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/makarov/handling/makarov_magin.wav"
+	sound = 			"weapons/m9/handling/m9_magin.wav"
     }),
 sound.Add({
-	name = 			"Weapon_makarov.Maghit",
+	name = 			"Weapon_m9.Maghit",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/makarov/handling/makarov_maghit.wav"
+	sound = 			"weapons/m9/handling/m9_maghit.wav"
     }),
 sound.Add({
-	name = 			"Weapon_makarov.Boltrelease",
+	name = 			"Weapon_m9.Boltrelease",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/makarov/handling/makarov_boltrelease.wav"
+	sound = 			"weapons/m9/handling/m9_boltrelease.wav"
     }),
 sound.Add({
-	name = 			"Weapon_makarov.Boltback",
+	name = 			"Weapon_m9.Boltback",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/makarov/handling/makarov_boltback.wav"
+	sound = 			"weapons/m9/handling/m9_boltback.wav"
     }),
 sound.Add({
-	name = 			"Weapon_makarov.empty",
+	name = 			"Weapon_m9.empty",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/makarov/handling/makarov_empty.wav"
+	sound = 			"weapons/m9/handling/m9_empty.wav"
     }),
-    sound.Add({
-	name = 			"Weapon_makarov.safety",
+sound.Add({
+	name = 			"Weapon_m9.safety",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/makarov/handling/makarov_safety.wav"
+	sound = 			"weapons/m9/handling/m9_safety.wav"
     }),
 sound.Add({
         name = 			"Universal.PistolDraw",

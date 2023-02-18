@@ -169,7 +169,7 @@ SWEP.SpeedMultCrouch = 1
 
 -------------------------- TRACERS
 
-SWEP.TracerNum = 1 -- Tracer every X
+SWEP.TracerNum = 5 -- Tracer every X
 SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 -------------------------- POSITIONS

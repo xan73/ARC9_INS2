@@ -170,7 +170,7 @@ SWEP.SpeedMultCrouch = 1
 
 -------------------------- TRACERS
 
-SWEP.TracerNum = 1 -- Tracer every X
+SWEP.TracerNum = 20 -- Tracer every X
 SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 -------------------------- POSITIONS
@@ -195,7 +195,7 @@ SWEP.CrouchPos = Vector(0, 1, -2)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(14, 25, 2)
+SWEP.CustomizePos = Vector(13, 20, -1.5)
 SWEP.CustomizeSnapshotFOV = 100
 
 SWEP.BipodPos = Vector(0, 0, 0)
@@ -251,16 +251,6 @@ SWEP.EnterSightsSound = ARC9FAS.SightRaise
 SWEP.ExitSightsSound = ARC9FAS.SightLower
 
 SWEP.FiremodeSound = ARC9FAS.Switch
-
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    local attached = self:GetElements()
-
-    if anim == "reload" and attached["ins2_1911_extmag"] then
-        return "base_reload_extmag"
-    elseif anim == "reload_empty" then
-        return "base_reloadempty_extmag"
-    end
-end
 
 SWEP.Animations = {
     ["ready"] = { Source = "base_ready" },
@@ -345,44 +335,9 @@ SWEP.SuppressDefaultEvents = true
 -------------------------- ATTACHMENTS
 
 SWEP.AttachmentElements = {
-    ["ins2_1911_extmag"] = {
-        Bodygroups = {
-            {1,1},
-        },
-    },
-    ["ins2_m45_extmag"] = {
-        Bodygroups = {
-            {1,3},
-        },
-    },
-    ["ins2_m45_mag"] = {
-        Bodygroups = {
-            {1,2},
-        },
-    },
-    ["ins2_m45_frame"] = {
-        Bodygroups = {
-            {0,1},
-        },
-    },
-    ["ins2_m45_slide"] = {
-        Bodygroups = {
-            {2,1},
-        },
-    },
-    ["ins2_m45_grip"] = {
-        Bodygroups = {
-            {4,1},
-        },
-    },
-    ["ins2_m45_trigger"] = {
-        Bodygroups = {
-            {3,1},
-        },
-    },
     ["ins2_pistol_suppressor"] = {
         Bodygroups = {
-            {5,1},
+            {1,1},
         },
     },
 }
@@ -397,52 +352,10 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Category = {"ins2_pistol_laser_lights"},
+        Category = {"ins2_pistol_laser_lights", "ins2_m9_flashlight"},
         Bone = "weapon",
-        Pos = Vector(0, 4, -0.7),
+        Pos = Vector(0, 4.3, -0.8),
         Ang = Angle(0, -90, 0),
-    },
-    {
-        PrintName = "Frame",
-        Category = "ins2_m45_frame",
-        Bone = "Weapon",
-        Pos = Vector(0, -2, -0.5),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Trigger",
-        Category = "ins2_m45_trigger",
-        Bone = "Weapon",
-        Pos = Vector(0, 0, -1),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Grip",
-        Category = "ins2_m45_grip",
-        Bone = "Weapon",
-        Pos = Vector(0, -2.5, -2),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Slide",
-        Category = "ins2_m45_slide",
-        Bone = "Slide",
-        Pos = Vector(0, -2, 0.2),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Magazine",
-        Category = {"ins2_m9_mags"},
-        Bone = "magazine",
-        Pos = Vector(0, -1, -2),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Caliber",
-        Category = "ins2_1911_caliber",
-        Bone = "Weapon",
-        Pos = Vector(1, -1, 0),
-        Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "CHARM",

@@ -1,9 +1,0 @@
-// Created by Crowbar 0.71
-version 1
-nodes
-  0 "Weapon" -1
-end
-skeleton
-  time 0
-    0 -2.248047 -11.148438 -2.826172 0.000000 0.000000 0.000174
-end

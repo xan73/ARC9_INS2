@@ -39,16 +39,3 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
 ARC9.LoadAttachment(ATT, "ins2_ak_drum")
-
-ATT = {}
-
-ATT.PrintName = "Worn Steel Magazine"
-ATT.CompactName = "Worn Steel"
-ATT.Icon = Material("entities/", "mips smooth")
-ATT.Description = [[Longer stock for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
-ATT.Category = "ins2_ak_mags"
-
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - INS2 Attachments"
-
-ARC9.LoadAttachment(ATT, "ins2_ak_wornsteelmag")

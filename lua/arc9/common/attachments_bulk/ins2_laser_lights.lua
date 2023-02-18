@@ -83,7 +83,7 @@ ATT.Category = "ins2_m9_flashlight"
 
 ATT.Model = "models/weapons/upgrades/a_flashlight_m9.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0.34, 0, 0.05)
+ATT.ModelOffset = Vector(0.05, 0, -0.05)
 
 ATT.SprintToFireTimeMult = 1.025
 

@@ -118,8 +118,8 @@ $bodygroup "bipod"
 
 $bodygroup "btwbolt2"
 {
+	studio "btwbolt001.smd"
 	blank
-	studio "btwbolt001.smd"	
 }
 
 

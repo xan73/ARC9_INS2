@@ -172,7 +172,7 @@ SWEP.SpeedMultCrouch = 1
 
 -------------------------- TRACERS
 
-SWEP.TracerNum = 1 -- Tracer every X
+SWEP.TracerNum = 23 -- Tracer every X
 SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 -------------------------- POSITIONS
@@ -197,7 +197,7 @@ SWEP.CrouchPos = Vector(0, 1, -2)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(14, 25, 2)
+SWEP.CustomizePos = Vector(12, 25, 2)
 SWEP.CustomizeSnapshotFOV = 100
 
 SWEP.BipodPos = Vector(0, 0, 0)
@@ -337,19 +337,21 @@ SWEP.AttachmentElements = {
             {3,1},
             {10,1},
             {9,3},
-            {13,0},
+            {13,1},
         },
     },
     ["ins2_ak_rpkbarrel"] = {
         Bodygroups = {
             {3,3},
             {9,2},
+            {13,0},
         },
     },
     ["ins2_ak_ak74"] = {
         Bodygroups = {
             {3,2},
             {9,1},
+            {13,0},
         },
     },
     ["ins2_ak_sight1"] = {
@@ -413,7 +415,6 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {4,4},
             {5,4},
-            {13,1},
             {0,4},
             {9,4},
         },
@@ -443,11 +444,6 @@ SWEP.AttachmentElements = {
     ["ins2_ak_drum"] = {
         Bodygroups = {
             {7,3},
-        },
-    },
-    ["ins2_ak_wornsteelmag"] = {
-        Bodygroups = {
-            {7,4},
         },
     },
 }

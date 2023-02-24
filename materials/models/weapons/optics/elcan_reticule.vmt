@@ -1,0 +1,6 @@
+"UnlitGeneric"
+
+{
+	"$basetexture"	"models\weapons\optics\elcan_reticule"
+	"$translucent" 	"1"
+}

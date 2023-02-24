@@ -337,6 +337,9 @@ SWEP.Animations = {
     ["exit_sprint_empty"] = {
         Source = "empty_sprint",
     },
+    ["dryfire"] = {
+        Source = "base_dryfire",
+    },
 }
 
 SWEP.SuppressCumulativeShoot = true

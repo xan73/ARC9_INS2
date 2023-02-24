@@ -195,7 +195,7 @@ SWEP.CrouchPos = Vector(0, 1, -2)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(13, 20, -1.5)
+SWEP.CustomizePos = Vector(13, 20, 2)
 SWEP.CustomizeSnapshotFOV = 100
 
 SWEP.BipodPos = Vector(0, 0, 0)
@@ -326,6 +326,9 @@ SWEP.Animations = {
     },
     ["exit_sprint_empty"] = {
         Source = "empty_sprint",
+    },
+    ["dryfire"] = {
+        Source = "base_dryfire",
     },
 }
 

@@ -323,6 +323,9 @@ SWEP.Animations = {
     ["exit_sprint"] = {
         Source = "base_sprint",
     },
+    ["dryfire"] = {
+        Source = "base_dryfire",
+    },
 }
 
 SWEP.SuppressCumulativeShoot = true
@@ -343,6 +346,8 @@ SWEP.AttachmentElements = {
     ["ins2_ak_rpkbarrel"] = {
         Bodygroups = {
             {3,3},
+            {1,7},
+            {10,3},
             {9,2},
             {13,0},
         },
@@ -350,6 +355,8 @@ SWEP.AttachmentElements = {
     ["ins2_ak_ak74"] = {
         Bodygroups = {
             {3,2},
+            {1,1},
+            {10,2},
             {9,1},
             {13,0},
         },
@@ -446,6 +453,21 @@ SWEP.AttachmentElements = {
             {7,3},
         },
     },
+    ["ins2_ak_grip1"] = {
+        Bodygroups = {
+            {6,1},
+        },
+    },
+    ["ins2_ak_grip2"] = {
+        Bodygroups = {
+            {6,2},
+        },
+    },
+    ["ins2_ak_grip3"] = {
+        Bodygroups = {
+            {6,3},
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -479,7 +501,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Grip",
-        Category = "ins2_m45_grip",
+        Category = "ins2_ak_grip",
         Bone = "Weapon",
         Pos = Vector(0, -2.5, -2),
         Ang = Angle(0, 0, 0),

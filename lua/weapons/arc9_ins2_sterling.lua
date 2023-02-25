@@ -11,12 +11,12 @@ SWEP.PrintName = "Sterling"
 SWEP.Class = "Submachine Gun"
 
 SWEP.Trivia = {
-    Designer = "John Browning",
-    Manufacturer = "Colt Manufacturing Company",
-    Calibre = ".45 ACP",
-    Mechanism = "Short Recoil",
-    Origin = "United States of America",
-    Year = "1911"
+    Designer = "George William Patchett",
+    Manufacturer = "Sterling Armaments Company",
+    Calibre = "9x19",
+    Mechanism = "API Blowback",
+    Origin = "United Kingdom",
+    Year = "1944"
 }
 
 SWEP.Credits = {
@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "New World Interactive",
 }
 
-SWEP.Description = [[The sterling is a single-action, semi-automatic, magazine-fed, recoil-operated pistol chambered for the .45 ACP cartridge. It was designed by John Browning and served as the standard-issue sidearm for the United States Armed Forces from 1911 to 1986.]]
+SWEP.Description = [[The Sterling is an open bolt submachine gun that saw service with the British Commonwealth. Many were also sold to or copied by foreign countries. It fires the 9×19mm Parabellum cartridge, typical of most pistols and submachine guns. Its most distinctive feature is the horizontal magwell, feeding rounds from a sideways magazine. Today, It is most often used by insurgent and rebel groups, as the Sterling is a cost effective firearm and is easily manufactured and operated.]]
 
 SWEP.ViewModel = "models/weapons/v_sterling.mdl"
 SWEP.WorldModel = "models/weapons/w_sterling.mdl"
@@ -202,10 +202,10 @@ SWEP.BipodPos = Vector(0, 0, 0)
 
 -------------------------- HoldTypes
 
-SWEP.HoldType = "revolver"
+SWEP.HoldType = "ar2"
 SWEP.HoldTypeSprint = "normal"
 SWEP.HoldTypeHolstered = "normal"
-SWEP.HoldTypeSights = "revolver"
+SWEP.HoldTypeSights = "rpg"
 SWEP.HoldTypeCustomize = "slam"
 SWEP.HoldTypeBlindfire = "pistol"
 
@@ -218,7 +218,7 @@ SWEP.AnimDraw = false
 
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/weapons/shells/45apc.mdl"
+SWEP.ShellModel = "models/weapons/shells/9x19.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 

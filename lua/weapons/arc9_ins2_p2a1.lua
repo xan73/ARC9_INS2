@@ -8,7 +8,7 @@ SWEP.SubCategory = "Pistols"
 
 SWEP.PrintName = "P2A1"
 
-SWEP.Class = "Pistol"
+SWEP.Class = "Flare Projector"
 
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",

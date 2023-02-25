@@ -11,12 +11,12 @@ SWEP.PrintName = "MP40"
 SWEP.Class = "Submachine Gun"
 
 SWEP.Trivia = {
-    Designer = "John Browning",
-    Manufacturer = "Colt Manufacturing Company",
-    Calibre = ".45 ACP",
-    Mechanism = "Short Recoil",
-    Origin = "United States of America",
-    Year = "1911"
+    Designer = "Heinrich Vollmer",
+    Manufacturer = "Steyr-Mannlicher",
+    Calibre = "9x19",
+    Mechanism = "Straight Blowback; Open Bolt",
+    Origin = "Germany",
+    Year = "1940"
 }
 
 SWEP.Credits = {
@@ -206,11 +206,11 @@ SWEP.BipodPos = Vector(0, 0, 0)
 
 -------------------------- HoldTypes
 
-SWEP.HoldType = "revolver"
+SWEP.HoldType = "ar2"
 SWEP.HoldTypeSprint = "normal"
 SWEP.HoldTypeHolstered = "normal"
-SWEP.HoldTypeSights = "revolver"
-SWEP.HoldTypeCustomize = "slam"
+SWEP.HoldTypeSights = "ar2"
+SWEP.HoldTypeCustomize = "rpg"
 SWEP.HoldTypeBlindfire = "pistol"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
@@ -222,7 +222,7 @@ SWEP.AnimDraw = false
 
 SWEP.MuzzleParticle = "muzzleflash_pistol" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/weapons/shells/45apc.mdl"
+SWEP.ShellModel = "models/weapons/shells/9x19.mdl"
 SWEP.ShellCorrectAng = Angle(0, 0, 0)
 SWEP.ShellPhysBox = Vector(0.5, 0.5, 2)
 

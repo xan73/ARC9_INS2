@@ -11,12 +11,12 @@ SWEP.PrintName = "UMP"
 SWEP.Class = "Submachine Gun"
 
 SWEP.Trivia = {
-    Designer = "John Browning",
-    Manufacturer = "Colt Manufacturing Company",
+    Designer = "Heckler & Koch",
+    Manufacturer = "Heckler & Koch",
     Calibre = ".45 ACP",
-    Mechanism = "Short Recoil",
-    Origin = "United States of America",
-    Year = "1911"
+    Mechanism = "Blowback; closed bolt",
+    Origin = "Germany",
+    Year = "1990s"
 }
 
 SWEP.Credits = {
@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "New World Interactive",
 }
 
-SWEP.Description = [[The ump45 is a single-action, semi-automatic, magazine-fed, recoil-operated pistol chambered for the .45 ACP cartridge. It was designed by John Browning and served as the standard-issue sidearm for the United States Armed Forces from 1911 to 1986.]]
+SWEP.Description = [[The UMP (German: Universale Maschinenpistole) is a blowback-operated, magazine-fed submachine gun developed and manufactured by Heckler & Koch. It was developed as a lighter and cheaper successor to the MP5, though both remain in production. The UMP can be chambered in .45 ACP (UMP45), .40 S&W (UMP40), and 9×19mm Parabellum (UMP9).]]
 
 SWEP.ViewModel = "models/weapons/v_ump45.mdl"
 SWEP.WorldModel = "models/weapons/w_ump45.mdl"
@@ -34,7 +34,7 @@ SWEP.Slot = 1
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos = Vector(-11, 4, -5),
-    TPIKPos = Vector(-10, 4, -4),
+    TPIKPos = Vector(-6, 4, -4),
     Ang = Angle(-5, 0, 180),
     Scale = 1
 }
@@ -205,10 +205,10 @@ SWEP.BipodPos = Vector(0, 0, 0)
 
 -------------------------- HoldTypes
 
-SWEP.HoldType = "revolver"
+SWEP.HoldType = "ar2"
 SWEP.HoldTypeSprint = "normal"
 SWEP.HoldTypeHolstered = "normal"
-SWEP.HoldTypeSights = "revolver"
+SWEP.HoldTypeSights = "rpg"
 SWEP.HoldTypeCustomize = "slam"
 SWEP.HoldTypeBlindfire = "pistol"
 

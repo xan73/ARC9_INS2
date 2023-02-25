@@ -8,15 +8,14 @@ SWEP.SubCategory = "Pistols"
 
 SWEP.PrintName = "M9 Beretta"
 
-SWEP.Class = "Pistol"
+SWEP.Class = "Semi-automatic Pistol"
 
 SWEP.Trivia = {
-    Designer = "John Browning",
-    Manufacturer = "Colt Manufacturing Company",
+    Manufacturer = "Beretta",
     Calibre = "9x19",
     Mechanism = "Short Recoil",
-    Origin = "United States of America",
-    Year = "1911"
+    Origin = "Italy",
+    Year = "1980ss"
 }
 
 SWEP.Credits = {
@@ -24,7 +23,7 @@ SWEP.Credits = {
     Assets = "New World Interactive",
 }
 
-SWEP.Description = [[The m9 is a single-action, semi-automatic, magazine-fed, recoil-operated pistol chambered for the .45 ACP cartridge. It was designed by John Browning and served as the standard-issue sidearm for the United States Armed Forces from 1911 to 1986.]]
+SWEP.Description = [[The M9, formally written as Pistol, Semiautomatic, 9mm, M9, is the designation for the Beretta 92FS semi-automatic pistol by the United States Armed Forces. The M9 was adopted by the United States military in 1985 to replace the dated M1911 as the standard-issue sidearm.]]
 
 SWEP.ViewModel = "models/weapons/v_beretta.mdl"
 SWEP.WorldModel = "models/weapons/w_beretta.mdl"

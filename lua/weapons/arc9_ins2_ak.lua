@@ -8,14 +8,14 @@ SWEP.SubCategory = "Assault Rifles"
 
 SWEP.PrintName = "AKM"
 
-SWEP.Class = "Assualt Rifle"
+SWEP.Class = "Assault Rifle"
 
 SWEP.Trivia = {
-    Designer = "John Browning",
-    Manufacturer = "Colt Manufacturing Company",
+    Designer = "Mikhail Kalashnikov",
+    Manufacturer = "Izhmash",
     Calibre = "762x39",
-    Mechanism = "Short Recoil",
-    Origin = "United States of America",
+    Mechanism = "Gas Operated; Rotating Bolt",
+    Origin = "Soviet Union",
     Year = "1947"
 }
 
@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "New World Interactive",
 }
 
-SWEP.Description = [[The ak47 is a single-action, semi-automatic, magazine-fed, recoil-operated pistol chambered for the .45 ACP cartridge. It was designed by John Browning and served as the standard-issue sidearm for the United States Armed Forces from 1911 to 1986.]]
+SWEP.Description = [[The AKM (Russian: Модернизированный Автомат Калашникова, modernizirovanny Avtomat Kalashnikova; English: Modernized Kalashnikov Automatic Rifle) is a 7.62mm assault rifle designed by Mikhail Kalashnikov. It is a common modernized variant of the AK-47 rifle developed in the 1940s.]]
 
 SWEP.ViewModel = "models/weapons/v_akm.mdl"
 SWEP.WorldModel = "models/weapons/w_ak47.mdl"
@@ -34,7 +34,7 @@ SWEP.Slot = 3
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos = Vector(-11, 4, -5),
-    TPIKPos = Vector(-10, 4, -4),
+    TPIKPos = Vector(-5, 4, -4),
     Ang = Angle(-5, 0, 180),
     Scale = 1
 }
@@ -204,10 +204,10 @@ SWEP.BipodPos = Vector(0, 0, 0)
 
 -------------------------- HoldTypes
 
-SWEP.HoldType = "revolver"
+SWEP.HoldType = "ar2"
 SWEP.HoldTypeSprint = "normal"
 SWEP.HoldTypeHolstered = "normal"
-SWEP.HoldTypeSights = "revolver"
+SWEP.HoldTypeSights = "rpg"
 SWEP.HoldTypeCustomize = "slam"
 SWEP.HoldTypeBlindfire = "pistol"
 

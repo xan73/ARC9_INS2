@@ -8,7 +8,7 @@ SWEP.SubCategory = "Pistols"
 
 SWEP.PrintName = "M1911"
 
-SWEP.Class = "Pistol"
+SWEP.Class = "Semi-automatic Pistol"
 
 SWEP.Trivia = {
     Designer = "John Browning",

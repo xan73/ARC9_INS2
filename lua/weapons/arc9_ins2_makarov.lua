@@ -8,15 +8,15 @@ SWEP.SubCategory = "Pistols"
 
 SWEP.PrintName = "Makarov"
 
-SWEP.Class = "Pistol"
+SWEP.Class = "Semi-automatic pistol"
 
 SWEP.Trivia = {
-    Designer = "John Browning",
-    Manufacturer = "Colt Manufacturing Company",
-    Calibre = ".45 ACP",
-    Mechanism = "Short Recoil",
-    Origin = "United States of America",
-    Year = "1911"
+    Designer = "Nikolay Makarov",
+    Manufacturer = "Izhevsk Mechanical Plant",
+    Calibre = "9×18mm Makarov",
+    Mechanism = "Blowback",
+    Origin = "Soviet Union",
+    Year = "1948"
 }
 
 SWEP.Credits = {
@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "New World Interactive",
 }
 
-SWEP.Description = [[The makarov is a single-action, semi-automatic, magazine-fed, recoil-operated pistol chambered for the .45 ACP cartridge. It was designed by John Browning and served as the standard-issue sidearm for the United States Armed Forces from 1911 to 1986.]]
+SWEP.Description = [[The Makarov pistol or PM (Russian: Пистолет Макарова, Pistolet Makarova) is a 9x18mm semi-automatic pistol designed by Nikolay Makarov. It became the Soviet Union's standard military and police sidearm in 1951. The Makarov pistol remained in wide front-line service with Soviet military and police until and beyond the end of the USSR in 1991. Variants of the pistol remain in production in Russia, China, and Bulgaria.]]
 
 SWEP.ViewModel = "models/weapons/v_makarov.mdl"
 SWEP.WorldModel = "models/weapons/w_makarov.mdl"

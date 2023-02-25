@@ -8,15 +8,14 @@ SWEP.SubCategory = "Pistols"
 
 SWEP.PrintName = "Model 10"
 
-SWEP.Class = "Pistol"
+SWEP.Class = "Service Revolver"
 
 SWEP.Trivia = {
-    Designer = "John Browning",
-    Manufacturer = "Colt Manufacturing Company",
-    Calibre = "9x19",
-    Mechanism = "Short Recoil",
+    Manufacturer = "Smith & Wesson",
+    Calibre = ".38 Special",
+    Mechanism = "Double Action",
     Origin = "United States of America",
-    Year = "1911"
+    Year = "1899"
 }
 
 SWEP.Credits = {
@@ -24,7 +23,7 @@ SWEP.Credits = {
     Assets = "New World Interactive",
 }
 
-SWEP.Description = [[The revolver is a single-action, semi-automatic, magazine-fed, recoil-operated pistol chambered for the .45 ACP cartridge. It was designed by John Browning and served as the standard-issue sidearm for the United States Armed Forces from 1911 to 1986.]]
+SWEP.Description = [[The Smith & Wesson Model 10, previously known as the Military & Police or the Victory Model is a six-shot, double-action revolver chambered for the .38 Special cartridge.]]
 
 SWEP.ViewModel = "models/weapons/v_38rev.mdl"
 SWEP.WorldModel = "models/weapons/v_38rev.mdl"

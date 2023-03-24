@@ -176,10 +176,10 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.68, 0, 1.63),
+    Pos = Vector(-2.35, 0, 1),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
-        Pos = Vector(-4, 0, -8),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
 }
@@ -227,7 +227,7 @@ SWEP.ShellSounds = ARC9.PistolShellSoundsTable
 SWEP.AfterShotParticle = "barrel_smoke_plume"
 
 SWEP.CamQCA = 1
-SWEP.CaseEffectQCA = 3 -- QC Attachment for shell ejection.
+SWEP.CaseEffectQCA = 4 -- QC Attachment for shell ejection.
 SWEP.CamQCA_Mult = 1
 SWEP.CamCoolView = true
 

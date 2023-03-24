@@ -246,10 +246,8 @@ SWEP.DryFireSingleAction = false
 SWEP.TriggerDownSound = common .. "empty/triggerpull_pistol.wav"
 SWEP.TriggerUpSound = common .. "empty/triggerrelease_pistol.wav"
 
-SWEP.EnterSightsSound = ARC9FAS.SightRaise
-SWEP.ExitSightsSound = ARC9FAS.SightLower
-
-SWEP.FiremodeSound = ARC9FAS.Switch
+SWEP.EnterSightsSound = common .. "universal/uni_ads_in_02.wav"
+SWEP.ExitSightsSound = common .. "universal/uni_ads_out_01.wav"
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
@@ -419,24 +417,11 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "AMMO",
-        Category = "fas_ammo_bullet",
-        Bone = "Frame_BONE",
-        Pos = Vector(1, -1, 0),
-        Ang = Angle(0, 0, 0),
-    },
-    {
         PrintName = "CHARM",
         Category = "charm",
         Bone = "Slide",
         Pos = Vector(0.4, 1, -0.25),
         Ang = Angle(0, -90, 0),
-    },
-    {
-        PrintName = "STICKER",
-        StickerModel = "models/weapons/arc9_fas/stickers/makarov_a.mdl",
-        Category = "stickers",
-        Bone = "Slide",
     },
 
 sound.Add({

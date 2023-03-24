@@ -251,10 +251,8 @@ SWEP.DryFireSingleAction = false
 SWEP.TriggerDownSound = common .. "empty/triggerpull_pistol.wav"
 SWEP.TriggerUpSound = common .. "empty/triggerrelease_pistol.wav"
 
-SWEP.EnterSightsSound = ARC9FAS.SightRaise
-SWEP.ExitSightsSound = ARC9FAS.SightLower
-
-SWEP.FiremodeSound = ARC9FAS.Switch
+SWEP.EnterSightsSound = common .. "universal/uni_ads_in_02.wav"
+SWEP.ExitSightsSound = common .. "universal/uni_ads_out_01.wav"
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
@@ -406,11 +404,6 @@ SWEP.Attachments = {
         Bone = "Slide",
         Pos = Vector(0.4, 0, 0),
         Ang = Angle(0, -90, 0),
-    },
-    {
-        PrintName = "STICKER",
-        StickerModel = "models/weapons/arc9_fas/stickers/mp40_a.mdl",
-        Category = "stickers",
     },
 
 

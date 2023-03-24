@@ -26,8 +26,8 @@ SWEP.Credits = {
 
 SWEP.Description = [[The M1 Carbine is a World War 2-era carbine chambered for the medium-power .30 US Carbine round (7.62×33mm). It was designed in the early 1940s to fill the role of a small, light and accurate firearm for vehicle crews and soldiers with more specialized training, many of whom found the full-size M1 Garand rifle too bulky.]]
 
-SWEP.ViewModel = "models/weapons/v_m14.mdl"
-SWEP.WorldModel = "models/weapons/w_m14.mdl"
+SWEP.ViewModel = "models/weapons/v_mini14.mdl"
+SWEP.WorldModel = "models/weapons/w_mini14.mdl"
 
 SWEP.Slot = 1
 
@@ -233,14 +233,14 @@ SWEP.CamCoolView = true
 
 -------------------------- SOUNDS
 
-local path = "weapons/m1a1/"
+local path = "weapons/mini14/"
 local common = "weapons/"
 
 
-SWEP.ShootSound = path .. "m1a1_fp.wav"
-SWEP.DistantShootSound = path .. "m1a1_dist.wav"
-SWEP.ShootSoundSilenced = path .. "m1a1_suppressed_fp.wav"
-SWEP.DryFireSound = path .. "handling/m1a1_empty.wav"
+SWEP.ShootSound = path .. "mini14_fp.wav"
+SWEP.DistantShootSound = path .. "mini14_dist.wav"
+SWEP.ShootSoundSilenced = path .. "mini14_suppressed_fp.wav"
+SWEP.DryFireSound = path .. "handling/mini14_empty.wav"
 
 SWEP.DryFireSingleAction = false
 
@@ -351,7 +351,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Tactical",
-        Category = {"ins2_pistol_laser_lights", "ins2_m1a1_flashlight"},
+        Category = {"ins2_pistol_laser_lights", "ins2_mini14_flashlight"},
         Bone = "weapon",
         Pos = Vector(0, 4.3, -0.8),
         Ang = Angle(0, -90, 0),
@@ -365,58 +365,58 @@ SWEP.Attachments = {
     },
     {
         PrintName = "STICKER",
-        StickerModel = "models/weapons/arc9_fas/stickers/m1a1_a.mdl",
+        StickerModel = "models/weapons/arc9_fas/stickers/mini14_a.mdl",
         Category = "stickers",
     },
 
 
 sound.Add({
-	name = 			"Weapon_m1a1.Magrelease",
+	name = 			"Weapon_mini14.Magrelease",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/m1a1/handling/m1a1_magrelease.wav"
+	sound = 			"weapons/mini14/handling/mini14_magrelease.wav"
     }),
 sound.Add({
-	name = 			"Weapon_m1a1.Magout",
+	name = 			"Weapon_mini14.Magout",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/m1a1/handling/m1a1_magout.wav"
+	sound = 			"weapons/mini14/handling/mini14_magout.wav"
     }),
 sound.Add({
-	name = 			"Weapon_m1a1.Magin",
+	name = 			"Weapon_mini14.Magin",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/m1a1/handling/m1a1_magin.wav"
+	sound = 			"weapons/mini14/handling/mini14_magin.wav"
     }),
 sound.Add({
-	name = 			"Weapon_m1a1.Maghit",
+	name = 			"Weapon_mini14.Maghit",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/m1a1/handling/m1a1_maghit.wav"
+	sound = 			"weapons/mini14/handling/mini14_maghit.wav"
     }),
 sound.Add({
-	name = 			"Weapon_m1a1.Boltrelease",
+	name = 			"Weapon_mini14.Boltrelease",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/m1a1/handling/m1a1_boltrelease.wav"
+	sound = 			"weapons/mini14/handling/mini14_boltrelease.wav"
     }),
 sound.Add({
-	name = 			"Weapon_m1a1.Boltback",
+	name = 			"Weapon_mini14.Boltback",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/m1a1/handling/m1a1_boltback.wav"
+	sound = 			"weapons/mini14/handling/mini14_boltback.wav"
     }),
 sound.Add({
-	name = 			"Weapon_m1a1.empty",
+	name = 			"Weapon_mini14.empty",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/m1a1/handling/m1a1_empty.wav"
+	sound = 			"weapons/mini14/handling/mini14_empty.wav"
     }),
 sound.Add({
-	name = 			"Weapon_m1a1.safety",
+	name = 			"Weapon_mini14.safety",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/m1a1/handling/m1a1_safety.wav"
+	sound = 			"weapons/mini14/handling/mini14_safety.wav"
     }),
 sound.Add({
         name = 			"Universal.PistolDraw",

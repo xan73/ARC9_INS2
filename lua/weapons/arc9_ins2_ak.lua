@@ -314,15 +314,6 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "base_reloadempty"
     },
-    ["idle_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["enter_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["exit_sprint"] = {
-        Source = "base_sprint",
-    },
     ["dryfire"] = {
         Source = "base_dryfire",
     },

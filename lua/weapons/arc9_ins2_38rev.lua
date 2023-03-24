@@ -77,9 +77,7 @@ SWEP.Ammo = "pistol" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 6 -- DefaultClip is automatically set.
-SWEP.ReloadTime = 1
-SWEP.HybridReload = false
-SWEP.ShotgunReload = false
+SWEP.ShotgunReload = true
 SWEP.SupplyLimit = 6 -- Amount of magazines of ammo this gun can take from an ARC9 supply crate.
 
 SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
@@ -295,15 +293,6 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "base_reloadempty"
     },
-    ["idle_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["enter_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["exit_sprint"] = {
-        Source = "base_sprint",
-    },
     ["reload_start"] = {
         Source = "base_reload_start",
         DumpAmmo = true,
@@ -368,22 +357,27 @@ sound.Add({
 	sound = 			"weapons/revolver/handling/revolver_dump_rounds_01.wav"
     }),
 sound.Add({
-	name = 			"Weapon_revolver.Magin",
+	name = 			"Weapon_revolver.RoundInsertSingle",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/revolver/handling/revolver_magin.wav"
+	sound = 			"weapons/revolver/handling/revolver_round_insert_single_01.wav",
+	sound = 			"weapons/revolver/handling/revolver_round_insert_single_02.wav",
+	sound = 			"weapons/revolver/handling/revolver_round_insert_single_03.wav",
+	sound = 			"weapons/revolver/handling/revolver_round_insert_single_04.wav",
+	sound = 			"weapons/revolver/handling/revolver_round_insert_single_05.wav",
+	sound = 			"weapons/revolver/handling/revolver_round_insert_single_06.wav",
     }),
 sound.Add({
-	name = 			"Weapon_revolver.Maghit",
+	name = 			"Weapon_revolver.CockHammer",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/revolver/handling/revolver_maghit.wav"
+	sound = 			"weapons/revolver/handling/revolver_cock_hammer.wav"
     }),
 sound.Add({
-	name = 			"Weapon_revolver.Boltrelease",
+	name = 			"Weapon_revolver.CloseChamber",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
-	sound = 			"weapons/revolver/handling/revolver_boltrelease.wav"
+	sound = 			"weapons/revolver/handling/revolver_close_chamber.wav"
     }),
 sound.Add({
 	name = 			"Weapon_revolver.Boltback",

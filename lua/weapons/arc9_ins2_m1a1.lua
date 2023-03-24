@@ -84,7 +84,7 @@ SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 281
+SWEP.RPM = 521
 
 SWEP.Firemodes = {
     {
@@ -100,8 +100,8 @@ SWEP.BarrelLength = 7
 SWEP.Recoil = 0.8
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.7 -- Multiplier for vertical recoil
-SWEP.RecoilSide = 0.5 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 0.5 -- Multiplier for vertical recoil
+SWEP.RecoilSide = 0.3 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
 -- This type of recoil CANNOT be predicted.
@@ -126,7 +126,7 @@ SWEP.UseVisualRecoil = true
 
 SWEP.PhysicalVisualRecoil = true
 
-SWEP.VisualRecoilUp = 3 -- Vertical tilt for visual recoil.F
+SWEP.VisualRecoilUp = 0.2 -- Vertical tilt for visual recoil.F
 SWEP.VisualRecoilSide = 0.1 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 25 -- Roll tilt for visual recoil.
 
@@ -184,8 +184,8 @@ SWEP.IronSights = {
     },
 }
 
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
+SWEP.RestPos = Vector(5, 0, -2)
+SWEP.RestAng = Angle(40, 0, 0)
 
 SWEP.ViewModelFOVBase = 55
 SWEP.ActivePos = Vector(0, 5, 0)
@@ -304,24 +304,6 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "base_reloadempty"
-    },
-    ["idle_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["enter_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["exit_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["idle_sprint_empty"] = {
-        Source = "empty_sprint",
-    },
-    ["enter_sprint_empty"] = {
-        Source = "empty_sprint",
-    },
-    ["exit_sprint_empty"] = {
-        Source = "empty_sprint",
     },
     ["dryfire"] = {
         Source = "base_dryfire",

@@ -84,7 +84,7 @@ SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 281
+SWEP.RPM = 521
 
 SWEP.Firemodes = {
     {
@@ -126,7 +126,7 @@ SWEP.UseVisualRecoil = true
 
 SWEP.PhysicalVisualRecoil = true
 
-SWEP.VisualRecoilUp = 3 -- Vertical tilt for visual recoil.F
+SWEP.VisualRecoilUp = 0.3 -- Vertical tilt for visual recoil.F
 SWEP.VisualRecoilSide = 0.1 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 25 -- Roll tilt for visual recoil.
 
@@ -176,7 +176,7 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-2.68, 0, 1.63),
+    Pos = Vector(-2.375, 0, 0.8),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(-4, 0, -8),
@@ -184,8 +184,8 @@ SWEP.IronSights = {
     },
 }
 
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
+SWEP.RestPos = Vector(0, 1, -2)
+SWEP.RestAng = Angle(25, -5, 0)
 
 SWEP.ViewModelFOVBase = 55
 SWEP.ActivePos = Vector(0, 5, 0)
@@ -304,24 +304,6 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "base_reloadempty"
-    },
-    ["idle_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["enter_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["exit_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["idle_sprint_empty"] = {
-        Source = "empty_sprint",
-    },
-    ["enter_sprint_empty"] = {
-        Source = "empty_sprint",
-    },
-    ["exit_sprint_empty"] = {
-        Source = "empty_sprint",
     },
     ["dryfire"] = {
         Source = "base_dryfire",

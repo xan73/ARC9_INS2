@@ -183,8 +183,8 @@ SWEP.IronSights = {
     },
 }
 
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
+SWEP.RestPos = Vector(5, 0, -2)
+SWEP.RestAng = Angle(40, 0, 0)
 
 SWEP.ViewModelFOVBase = 55
 SWEP.ActivePos = Vector(0, 5, 0)
@@ -307,24 +307,6 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "base_reloadempty"
-    },
-    ["idle_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["enter_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["exit_sprint"] = {
-        Source = "base_sprint",
-    },
-    ["idle_sprint_empty"] = {
-        Source = "empty_sprint",
-    },
-    ["enter_sprint_empty"] = {
-        Source = "empty_sprint",
-    },
-    ["exit_sprint_empty"] = {
-        Source = "empty_sprint",
     },
     ["dryfire"] = {
         Source = "base_dryfire",

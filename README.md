@@ -3,12 +3,6 @@ ARC9 Insurgency 2014 pack
 to do:
 all
 
-done:
-pistola 
-
-current: 
-everytingh 
-
 Big thanks to:
 CurlySparkle
 Arctic

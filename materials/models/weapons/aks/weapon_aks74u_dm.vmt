@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-	"$basetexture"					"models\weapons\aks74u\weapon_aks74u_dm"
-	"$bumpmap" 						"models\weapons\aks74u\weapon_aks74u_nm"
+	"$basetexture"					"models\weapons\aks\weapon_aks74u_dm"
+	"$bumpmap" 						"models\weapons\aks\weapon_aks74u_nm"
     "$color"						"[1 1 1]"
 
 	"$phong"                        "1"
@@ -11,7 +11,7 @@
 	"$phongboost"                   ".75"
 	"$phongexponent"                "37"
 	"$phongfresnelranges"           "[1 2.5 7]"
-//	"$phongexponenttexture"         "models\weapons\aks74u\weapon_aks74u_exp"
+//	"$phongexponenttexture"         "models\weapons\aks\weapon_aks74u_exp"
 
 	"$envmap"                       "env_cubemap"
 	"$normalmapalphaenvmapmask"		"1"

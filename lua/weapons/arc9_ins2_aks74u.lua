@@ -6,9 +6,9 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS2"
 SWEP.SubCategory = "Assault Rifles"
 
-SWEP.PrintName = "AKM"
+SWEP.PrintName = "AKs74U"
 
-SWEP.Class = "Assault Rifle"
+SWEP.Class = "Carbine"
 
 SWEP.Trivia = {
     Designer = "Mikhail Kalashnikov",
@@ -24,10 +24,10 @@ SWEP.Credits = {
     Assets = "New World Interactive",
 }
 
-SWEP.Description = [[The AKM (Russian: Модернизированный Автомат Калашникова, modernizirovanny Avtomat Kalashnikova; English: Modernized Kalashnikov Automatic Rifle) is a 7.62mm assault rifle designed by Mikhail Kalashnikov. It is a common modernized variant of the AK-47 rifle developed in the 1940s.]]
+SWEP.Description = [[The aks74u (Russian: Модернизированный Автомат Калашникова, modernizirovanny Avtomat Kalashnikova; English: Modernized Kalashnikov Automatic Rifle) is a 7.62mm assault rifle designed by Mikhail Kalashnikov. It is a common modernized variant of the AK-47 rifle developed in the 1940s.]]
 
-SWEP.ViewModel = "models/weapons/v_akm.mdl"
-SWEP.WorldModel = "models/weapons/w_ak47.mdl"
+SWEP.ViewModel = "models/weapons/v_aks74u.mdl"
+SWEP.WorldModel = "models/weapons/w_aks74u.mdl"
 
 SWEP.Slot = 3
 
@@ -177,9 +177,9 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 
 -------------------------- POSITIONS
 
-SWEP.IronSights = {
-    Pos = Vector(-2.32, 0, 0.1),
-    Ang = Angle(0, 1, 0),
+ATT.IronSights = {
+    Pos = Vector(-2.25, 0, 4),
+    Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(-4, 0, -8),
         Ang = Angle(0, 0, 0),
@@ -323,49 +323,6 @@ SWEP.SuppressDefaultEvents = true
 -------------------------- ATTACHMENTS
 
 SWEP.AttachmentElements = {
-    ["ins2_ak_shortbarrel"] = {
-        Bodygroups = {
-            {1,2},
-            {3,1},
-            {10,1},
-            {9,3},
-            {13,1},
-        },
-    },
-    ["ins2_ak_rpkbarrel"] = {
-        Bodygroups = {
-            {3,3},
-            {1,7},
-            {10,3},
-            {9,2},
-            {13,0},
-        },
-    },
-    ["ins2_ak_ak74"] = {
-        Bodygroups = {
-            {3,2},
-            {1,1},
-            {10,2},
-            {9,1},
-            {13,0},
-        },
-    },
-    ["ins2_ak_sight1"] = {
-        Bodygroups = {
-            {8,1},
-        },
-    },
-    ["ins2_ak_sight2"] = {
-        Bodygroups = {
-            {8,2},
-            {9,1},
-        },
-    },
-    ["ins2_ak_sight3"] = {
-        Bodygroups = {
-            {8,3},
-        },
-    },
     ["ins2_ak_shortstock"] = {
         Bodygroups = {
             {2,2},
@@ -384,47 +341,6 @@ SWEP.AttachmentElements = {
     ["ins2_ak_rpkstock"] = {
         Bodygroups = {
             {2,4},
-        },
-    },
-    ["ins2_ak_rpkreceiver"] = {
-        Bodygroups = {
-            {0,3},
-        },
-    },
-    ["ins2_ak_ak74receiver"] = {
-        Bodygroups = {
-            {0,2},
-        },
-    },
-    ["ins2_ak_shortreceiver"] = {
-        Bodygroups = {
-            {0,1},
-        },
-    },
-    ["ins2_ak_aks74cover"] = {
-        Bodygroups = {
-            {4,1},
-            {5,1},
-        },
-    },
-    ["ins2_ak_wornreceiver"] = {
-        Bodygroups = {
-            {4,4},
-            {5,4},
-            {0,4},
-            {9,4},
-        },
-    },
-    ["ins2_ak_rpkcover"] = {
-        Bodygroups = {
-            {4,3},
-            {5,3},
-        },
-    },
-    ["ins2_ak_ak74cover"] = {
-        Bodygroups = {
-            {4,2},
-            {5,2},
         },
     },
     ["ins2_ak_plummag"] = {

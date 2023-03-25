@@ -1,9 +1,9 @@
 "VertexLitGeneric"
 {
-	"$basetexture"			"models\weapons\akm\weapon_akm_dm"
-	"$bumpmap" 			"models\weapons\akm\weapon_akm_nm"
+	"$basetexture"			"models\weapons\aks\weapon_w_ak74_dm"
+	"$bumpmap" 			"models\weapons\aks\weapon_w_ak74_nm"
 	"$color"			"[1 1 1]"
-	
+
 	$normalmapalphaenvmapmask 	"1"
 
 	 $phongtint 			"[.6 .8 1]"

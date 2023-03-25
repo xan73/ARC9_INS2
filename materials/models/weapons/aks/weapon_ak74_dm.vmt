@@ -12,7 +12,7 @@
 	$phongexponent                  "45"
 	$phongfresnelranges             "[1 2.5 7]"
 
-//	"$phongexponenttexture"         "models\weapons\ak74\weapon_ak74_exp"
+//	"$phongexponenttexture"         "models\weapons\aks\weapon_ak74_exp"
 
 	$envmap                         "env_cubemap"
 	$normalmapalphaenvmapmask       "1"

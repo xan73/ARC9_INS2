@@ -4,7 +4,7 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS2"
-SWEP.SubCategory = "Assault rifles"
+SWEP.SubCategory = "Assault Rifles"
 
 SWEP.PrintName = "AK-74"
 

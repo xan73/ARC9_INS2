@@ -1,12 +1,12 @@
 local ATT = {}
 
-ATT.PrintName = "AKS74U Stock"
-ATT.CompactName = "AKS74U"
+ATT.PrintName = "Folding Stock"
+ATT.CompactName = "FOLDING"
 ATT.Icon = Material("entities/akwire2stock.png", "mips smooth")
 ATT.Description = [[Shorter stock for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_stock"
 
-ATT.SortOrder = 0
+ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
 ATT.RecoilMult = 0.7
@@ -24,7 +24,7 @@ ATT.Icon = Material("entities/akwirestock.png", "mips smooth")
 ATT.Description = [[Longer stock for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_stock"
 
-ATT.SortOrder = 0
+ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
 ATT.RecoilMult = 0.6
@@ -37,12 +37,12 @@ ARC9.LoadAttachment(ATT, "ins2_ak_wirestock")
 ATT = {}
 
 ATT.PrintName = "Wood Stock"
-ATT.CompactName = "Wood Stock"
+ATT.CompactName = "WOOD"
 ATT.Icon = Material("entities/akwoodstock.png", "mips smooth")
 ATT.Description = [[Longer stock for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_stock"
 
-ATT.SortOrder = 0
+ATT.SortOrder = 3
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
 ATT.RecoilMult = 0.8
@@ -56,12 +56,12 @@ ARC9.LoadAttachment(ATT, "ins2_ak_ak74stock")
 ATT = {}
 
 ATT.PrintName = "RPK Stock"
-ATT.CompactName = "Heavy"
+ATT.CompactName = "HEAVY"
 ATT.Icon = Material("entities/akwheavystock.png", "mips smooth")
 ATT.Description = [[Longer stock for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_stock"
 
-ATT.SortOrder = 0
+ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
 ATT.VisualRecoilUpMult = 0.08

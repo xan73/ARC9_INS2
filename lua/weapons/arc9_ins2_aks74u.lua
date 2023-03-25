@@ -4,19 +4,19 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS2"
-SWEP.SubCategory = "Assault Rifles"
+SWEP.SubCategory = "Carbines"
 
-SWEP.PrintName = "AKs74U"
+SWEP.PrintName = "AKS-74U"
 
 SWEP.Class = "Carbine"
 
 SWEP.Trivia = {
     Designer = "Mikhail Kalashnikov",
     Manufacturer = "Izhmash",
-    Calibre = "762x39",
+    Calibre = "5.45×39",
     Mechanism = "Gas Operated; Rotating Bolt",
-    Origin = "Soviet Union",
-    Year = "1947"
+    Origin = "Russia",
+    Year = "1976"
 }
 
 SWEP.Credits = {
@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "New World Interactive",
 }
 
-SWEP.Description = [[The aks74u (Russian: Модернизированный Автомат Калашникова, modernizirovanny Avtomat Kalashnikova; English: Modernized Kalashnikov Automatic Rifle) is a 7.62mm assault rifle designed by Mikhail Kalashnikov. It is a common modernized variant of the AK-47 rifle developed in the 1940s.]]
+SWEP.Description = [[The AKS-74U (Russian: Автомат Калашникова Складной образца 1974 года Укороченный, Avtomat Kalashnikova Skladnoy obraztsa goda 1974 Ukorochenniy; English: Automatic Kalashnikov Folding model 1974 Shortened) is a Soviet carbine, developed in the late 1970s from the AKS-74 assault rifle (itself a folding-stock variant of the AK-74), firing the 5.45×39mm cartridge. The AKS-74U straddles the line between assault rifle and submachine gun, firing assault rifle ammunition with a severely abbreviated barrel which allows for maneuverability in restricted spaces, yet noticeably decreases both its accuracy and muzzle velocity.]]
 
 SWEP.ViewModel = "models/weapons/v_aks74u.mdl"
 SWEP.WorldModel = "models/weapons/w_aks74u.mdl"
@@ -73,7 +73,7 @@ SWEP.PhysBulletDrag = 1.15
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "pistol" -- What ammo type this gun uses.
+SWEP.Ammo = "smg1" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 30 -- Self-explanatory.
@@ -177,8 +177,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 
 -------------------------- POSITIONS
 
-ATT.IronSights = {
-    Pos = Vector(-2.25, 0, 4),
+SWEP.IronSights = {
+    Pos = Vector(-2.25, 0, 0.55),
     Ang = Angle(0, 0, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(-4, 0, -8),
@@ -235,14 +235,14 @@ SWEP.CamCoolView = true
 
 -------------------------- SOUNDS
 
-local path = "weapons/ak47/"
+local path = "weapons/aks/"
 local common = "weapons/"
 
 
-SWEP.ShootSound = path .. "ak47_fp.wav"
-SWEP.DistantShootSound = path .. "ak47_dist.wav"
-SWEP.ShootSoundSilenced = path .. "ak47_suppressed_fp.wav"
-SWEP.DryFireSound = path .. "handling/ak47_empty.wav"
+SWEP.ShootSound = path .. "aks_fp.wav"
+SWEP.DistantShootSound = path .. "aks_dist.wav"
+SWEP.ShootSoundSilenced = path .. "aks_suppressed_fp.wav"
+SWEP.DryFireSound = path .. "handling/aks_empty.wav"
 
 SWEP.DryFireSingleAction = false
 
@@ -269,11 +269,11 @@ SWEP.Animations = {
         Source = "idle_empty_iron",
     },
     ["enter_sights"] = {
-        Source = "base_idle",
+        Source = "idle",
         Mult = 3
     },
     ["idle_sights"] = {
-        Source = "base_idle"
+        Source = "idle"
     },
     ["exit_sights_empty"] = {
         Source = "idle_empty",
@@ -283,7 +283,7 @@ SWEP.Animations = {
         Source = "idle_iron_empty"
     },
     ["exit_sights"] = {
-        Source = "base_idle",
+        Source = "idle",
         Mult = 3
     },
     ["fire"] = {
@@ -320,6 +320,17 @@ SWEP.Animations = {
 SWEP.SuppressCumulativeShoot = true
 SWEP.SuppressDefaultEvents = true
 
+
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if anim == "reload" and attached["ins2_akdrum"] then
+        return "base_reload_drum"
+    elseif anim == "reload_empty" and attached["ins2_akdrum"] then
+        return "base_reloadempty_drum"
+    end
+end
+
 -------------------------- ATTACHMENTS
 
 SWEP.AttachmentElements = {
@@ -343,34 +354,29 @@ SWEP.AttachmentElements = {
             {2,4},
         },
     },
-    ["ins2_ak_plummag"] = {
+    ["ins2_ak74mag"] = {
         Bodygroups = {
-            {7,1},
+            {4,2},
         },
     },
-    ["ins2_ak_545mag"] = {
+    ["ins2_akdrum"] = {
         Bodygroups = {
-            {7,2},
+            {4,3},
         },
     },
-    ["ins2_ak_drum"] = {
+    ["ins2_steelmag"] = {
         Bodygroups = {
-            {7,3},
-        },
-    },
-    ["ins2_ak_grip1"] = {
-        Bodygroups = {
-            {6,1},
+            {4,1},
         },
     },
     ["ins2_ak_grip2"] = {
         Bodygroups = {
-            {6,2},
+            {3,2},
         },
     },
-    ["ins2_ak_grip3"] = {
+    ["ins2_ak_grip1"] = {
         Bodygroups = {
-            {6,3},
+            {3,1},
         },
     },
 }
@@ -381,20 +387,6 @@ SWEP.Attachments = {
         Category = {"ins2_pistol_suppressor"},
         Bone = "A_Muzzle",
         Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Barrel",
-        Category = "ins2_ak_barrel",
-        Bone = "weapon",
-        Pos = Vector(0, 3, 0.4),
-        Ang = Angle(0, -90, 0),
-    },
-    {
-        PrintName = "Iron Sights",
-        Category = "ins2_ak_ironsights",
-        Bone = "Weapon",
-        Pos = Vector(0, 3.5, 1.5),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -412,24 +404,10 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Receiver",
-        Category = "ins2_ak_receiver",
-        Bone = "Weapon",
-        Pos = Vector(0, 2, 0),
-        Ang = Angle(0, 0, 0),
-    },
-    {
         PrintName = "Magazine",
-        Category = "ins2_ak_mags",
+        Category = {"ins2_steelmag", "ins2_ak74mag", "ins2_akdrum",},
         Bone = "magazine",
         Pos = Vector(0, 1, -2),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Upper",
-        Category = "ins2_ak_covers",
-        Bone = "Weapon",
-        Pos = Vector(0, -1, 1),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -440,72 +418,6 @@ SWEP.Attachments = {
         Ang = Angle(0, -90, 0),
     },
 
-sound.Add({
-	name = 			"Weapon_ak47.Magrelease",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_magrelease.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.Magout",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_magout.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.Magin",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_magin.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.Maghit",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_maghit.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.Boltrelease",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_boltrelease.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.Boltback",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_boltback.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.empty",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_empty.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.safety",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_safety.wav"
-}),
-sound.Add({
-    name = 			"Weapon_ak47.magout.rattle",
-    channel = 		CHAN_ITEM,
-    volume = 		1.0,
-    sound = 			"weapons/ak47/handling/ak47_magout_rattle.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_ak47.rattle",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_rattle.wav"
-    }),
-sound.Add({
-    name = 			"Weapon_ak47.ROF",
-    channel = 		CHAN_ITEM,
-    volume = 		1.0,
-    sound = 			"weapons/ak47/handling/ak47_fireselect_1.wav"
-    }),
 sound.Add({
     name = 			"Universal.Draw",
     channel = 		CHAN_ITEM,
@@ -583,143 +495,5 @@ sound.Add({
     channel = 		CHAN_ITEM,
     volume = 		1.0,
     sound = 			"weapons/aks/handling/aks_fireselect_1.wav"
-    }),
-    sound.Add({
-	name = 			"Weapon_RPK.Magrelease",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/rpk/handling/rpk_magrelease.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_RPK.Magout",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/rpk/handling/rpk_magout.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_RPK.Magin",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/rpk/handling/rpk_magin.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_RPK.Maghit",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/rpk/handling/rpk_maghit.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_RPK.Boltrelease",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/rpk/handling/rpk_boltrelease.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_RPK.Boltback",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/rpk/handling/rpk_boltback.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_RPK.empty",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/rpk/handling/rpk_empty.wav"
-    }),
-    sound.Add({
-	name = 			"Weapon_RPK.safety",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/rpk/handling/rpk_safety.wav"
-    }),
- sound.Add({
-    name = 			"Weapon_RPK.magout.rattle",
-    channel = 		CHAN_ITEM,
-    volume = 		1.0,
-    sound = 			"weapons/rpk/handling/rpk_magout_rattle.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_RPK.rattle",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/rpk/handling/rpk_rattle.wav"
-    }),
-sound.Add({
-    name = 			"Weapon_RPK.ROF",
-    channel = 		CHAN_ITEM,
-    volume = 		1.0,
-    sound = 			"weapons/rpk/handling/rpk_fireselect_1.wav"
-    }),
-    sound.Add({
-	name = 			"Weapon_ak74.Magrelease",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak74/handling/ak74_magrelease.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_ak74.Magout",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak74/handling/ak74_magout.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_ak74.Magin",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak74/handling/ak74_magin.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_ak74.Maghit",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak74/handling/ak74_maghit.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_ak74.Boltrelease",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak74/handling/ak74_boltrelease.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_ak74.Boltback",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak74/handling/ak74_boltback.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_ak74.empty",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak74/handling/ak74_empty.wav"
-    }),
-    sound.Add({
-	name = 			"Weapon_ak74.safety",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak74/handling/ak74_safety.wav"
-    }),
- sound.Add({
-    name = 			"Weapon_ak74.magout.rattle",
-    channel = 		CHAN_ITEM,
-    volume = 		1.0,
-    sound = 			"weapons/ak74/handling/ak74_magout_rattle.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_ak74.rattle",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak74/handling/ak74_rattle.wav"
-    }),
-sound.Add({
-    name = 			"Weapon_ak74.ROF",
-    channel = 		CHAN_ITEM,
-    volume = 		1.0,
-    sound = 			"weapons/ak74/handling/ak74_fireselect_1.wav"
-    }),
-sound.Add({
-    name = 			"Weapon_RPK.FetchMag",
-    channel = 		CHAN_ITEM,
-    volume = 		1.0,
-    sound = 			"weapons/rpk/handling/rpk_fetchmag.wav"
     }),
 }

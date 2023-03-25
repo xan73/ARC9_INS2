@@ -4,19 +4,19 @@ SWEP.Base = "arc9_base"
 
 SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS2"
-SWEP.SubCategory = "Carbines"
+SWEP.SubCategory = "Assault rifles"
 
-SWEP.PrintName = "ak74"
+SWEP.PrintName = "AK-74"
 
 SWEP.Class = "Assault Rifle"
 
 SWEP.Trivia = {
     Designer = "Mikhail Kalashnikov",
     Manufacturer = "Izhmash",
-    Calibre = "762x39",
+    Calibre = "5.45×39",
     Mechanism = "Gas Operated; Rotating Bolt",
-    Origin = "Soviet Union",
-    Year = "1947"
+    Origin = "Russia",
+    Year = "1974"
 }
 
 SWEP.Credits = {
@@ -24,7 +24,7 @@ SWEP.Credits = {
     Assets = "New World Interactive",
 }
 
-SWEP.Description = [[The ak74 (Russian: Модернизированный Автомат Калашникова, modernizirovanny Avtomat Kalashnikova; English: Modernized Kalashnikov Automatic Rifle) is a 7.62mm assault rifle designed by Mikhail Kalashnikov. It is a common modernized variant of the AK-47 rifle developed in the 1940s.]]
+SWEP.Description = [[The AK-74 (Russian: Автомат Калашникова образца 1974 года, Avtomat Kalashnikova obraztsa 1974 goda; English: Kalashnikov Automatic rifle model 1974) is an assault rifle developed in the early 1970s as the replacement for the earlier AKM (itself a refined version of the AK-47). It uses a smaller 5.45×39mm cartridge, replacing the 7.62×39mm chambering of earlier Kalashnikov-pattern weapons.]]
 
 SWEP.ViewModel = "models/weapons/v_ak74.mdl"
 SWEP.WorldModel = "models/weapons/w_ak47.mdl"
@@ -73,7 +73,7 @@ SWEP.PhysBulletDrag = 1.15
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "pistol" -- What ammo type this gun uses.
+SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 30 -- Self-explanatory.
@@ -177,9 +177,9 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 
 -------------------------- POSITIONS
 
-ATT.IronSights = {
-    Pos = Vector(-2.25, 0, 0.47),
-    Ang = Angle(0, 0, 0),
+SWEP.IronSights = {
+    Pos = Vector(-2.25, 0, 0.6),
+    Ang = Angle(0, 0.5, 0),
     Midpoint = { -- Where the gun should be at the middle of it's irons
         Pos = Vector(-4, 0, -8),
         Ang = Angle(0, 0, 0),
@@ -229,7 +229,7 @@ SWEP.ShellSounds = ARC9.PistolShellSoundsTable
 SWEP.AfterShotParticle = "barrel_smoke_plume"
 
 SWEP.CamQCA = 1
-SWEP.CaseEffectQCA = 3 -- QC Attachment for shell ejection.
+SWEP.CaseEffectQCA = 4 -- QC Attachment for shell ejection.
 SWEP.CamQCA_Mult = 1
 SWEP.CamCoolView = true
 
@@ -320,6 +320,16 @@ SWEP.Animations = {
 SWEP.SuppressCumulativeShoot = true
 SWEP.SuppressDefaultEvents = true
 
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if anim == "reload" and attached["ins2_akdrum"] then
+        return "base_reload_drum"
+    elseif anim == "reload_empty" and attached["ins2_akdrum"] then
+        return "base_reloadempty_drum"
+    end
+end
+
 -------------------------- ATTACHMENTS
 
 SWEP.AttachmentElements = {
@@ -343,6 +353,31 @@ SWEP.AttachmentElements = {
             {2,4},
         },
     },
+    ["ins2_aksmag"] = {
+        Bodygroups = {
+            {4,2},
+        },
+    },
+    ["ins2_akdrum"] = {
+        Bodygroups = {
+            {4,3},
+        },
+    },
+    ["ins2_steelmag"] = {
+        Bodygroups = {
+            {3,1},
+        },
+    },
+    ["ins2_ak_grip2"] = {
+        Bodygroups = {
+            {3,2},
+        },
+    },
+    ["ins2_ak_grip1"] = {
+        Bodygroups = {
+            {3,1},
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -351,20 +386,6 @@ SWEP.Attachments = {
         Category = {"ins2_pistol_suppressor"},
         Bone = "A_Muzzle",
         Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Barrel",
-        Category = "ins2_ak_barrel",
-        Bone = "weapon",
-        Pos = Vector(0, 3, 0.4),
-        Ang = Angle(0, -90, 0),
-    },
-    {
-        PrintName = "Iron Sights",
-        Category = "ins2_ak_ironsights",
-        Bone = "Weapon",
-        Pos = Vector(0, 3.5, 1.5),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -382,24 +403,10 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Receiver",
-        Category = "ins2_ak_receiver",
-        Bone = "Weapon",
-        Pos = Vector(0, 2, 0),
-        Ang = Angle(0, 0, 0),
-    },
-    {
         PrintName = "Magazine",
-        Category = "ins2_ak_mags",
+        Category = {"ins2_steelmag", "ins2_aksmag", "ins2_akdrum",},
         Bone = "magazine",
         Pos = Vector(0, 1, -2),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Upper",
-        Category = "ins2_ak_covers",
-        Bone = "Weapon",
-        Pos = Vector(0, -1, 1),
         Ang = Angle(0, 0, 0),
     },
     {

@@ -255,7 +255,17 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     if anim == "reload" and attached["ins2_1911_extmag"] then
         return "base_reload_extmag"
-    elseif anim == "reload_empty" then
+    elseif anim == "reload_empty" and attached["ins2_1911_extmag"] then
+        return "base_reloadempty_extmag"
+    end
+end
+
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if anim == "reload" and attached["ins2_m45_extmag"] then
+        return "base_reload_extmag"
+    elseif anim == "reload_empty" and attached["ins2_m45_extmag"] then
         return "base_reloadempty_extmag"
     end
 end
@@ -418,13 +428,6 @@ SWEP.Attachments = {
         Category = {"ins2_m1911_mags"},
         Bone = "magazine",
         Pos = Vector(0, -1, -2),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Caliber",
-        Category = "ins2_1911_caliber",
-        Bone = "Weapon",
-        Pos = Vector(1, -1, 0),
         Ang = Angle(0, 0, 0),
     },
     {

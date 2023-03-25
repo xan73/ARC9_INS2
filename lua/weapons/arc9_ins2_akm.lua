@@ -73,7 +73,7 @@ SWEP.PhysBulletDrag = 1.15
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "pistol" -- What ammo type this gun uses.
+SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 1 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 30 -- Self-explanatory.
@@ -320,6 +320,16 @@ SWEP.Animations = {
 SWEP.SuppressCumulativeShoot = true
 SWEP.SuppressDefaultEvents = true
 
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if anim == "reload" and attached["ins2_akdrum"] then
+        return "base_reload_drum"
+    elseif anim == "reload_empty" and attached["ins2_akdrum"] then
+        return "base_reloadempty_drum"
+    end
+end
+
 -------------------------- ATTACHMENTS
 
 SWEP.AttachmentElements = {
@@ -343,6 +353,31 @@ SWEP.AttachmentElements = {
             {2,4},
         },
     },
+    ["ins2_ak74mag"] = {
+        Bodygroups = {
+            {4,2},
+        },
+    },
+    ["ins2_akdrum"] = {
+        Bodygroups = {
+            {4,3},
+        },
+    },
+    ["ins2_aksmag"] = {
+        Bodygroups = {
+            {4,1},
+        },
+    },
+    ["ins2_ak_grip2"] = {
+        Bodygroups = {
+            {3,2},
+        },
+    },
+    ["ins2_ak_grip1"] = {
+        Bodygroups = {
+            {3,1},
+        },
+    },
 }
 
 SWEP.Attachments = {
@@ -351,20 +386,6 @@ SWEP.Attachments = {
         Category = {"ins2_pistol_suppressor"},
         Bone = "A_Muzzle",
         Pos = Vector(0, 0, 0),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Barrel",
-        Category = "ins2_ak_barrel",
-        Bone = "weapon",
-        Pos = Vector(0, 3, 0.4),
-        Ang = Angle(0, -90, 0),
-    },
-    {
-        PrintName = "Iron Sights",
-        Category = "ins2_ak_ironsights",
-        Bone = "Weapon",
-        Pos = Vector(0, 3.5, 1.5),
         Ang = Angle(0, 0, 0),
     },
     {
@@ -382,24 +403,10 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Receiver",
-        Category = "ins2_ak_receiver",
-        Bone = "Weapon",
-        Pos = Vector(0, 2, 0),
-        Ang = Angle(0, 0, 0),
-    },
-    {
         PrintName = "Magazine",
-        Category = "ins2_ak_mags",
+        Category = {"ins2_akdrum", "ins2_ak74mag", "ins2_aksmag",},
         Bone = "magazine",
         Pos = Vector(0, 1, -2),
-        Ang = Angle(0, 0, 0),
-    },
-    {
-        PrintName = "Upper",
-        Category = "ins2_ak_covers",
-        Bone = "Weapon",
-        Pos = Vector(0, -1, 1),
         Ang = Angle(0, 0, 0),
     },
     {

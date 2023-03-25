@@ -254,7 +254,17 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     if anim == "reload" and attached["ins2_maka_extmag"] then
         return "base_reload_extmag"
-    elseif anim == "reload_empty" then
+    elseif anim == "reload_empty" and attached["ins2_maka_extmag"] then
+        return "base_reloadempty_extmag"
+    end
+end
+
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if anim == "reload" and attached["ins2_pmm_extmag"] then
+        return "base_reload_extmag"
+    elseif anim == "reload_empty" and attached["ins2_pmm_extmag"] then
         return "base_reloadempty_extmag"
     end
 end

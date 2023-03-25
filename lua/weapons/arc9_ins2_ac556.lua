@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 SWEP.Category = "ARC9 - INS2"
 SWEP.SubCategory = "Carbines"
 
-SWEP.PrintName = "aC-556"
+SWEP.PrintName = "AC-556"
 
 SWEP.Class = "Semi-automatic Rifle"
 

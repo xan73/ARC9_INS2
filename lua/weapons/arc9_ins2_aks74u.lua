@@ -45,7 +45,7 @@ SWEP.DefaultBodygroups = "0000000000000000000000"
 -------------------------- DAMAGE PROFILE
 
 SWEP.DamageMax = 40 -- Damage done at point blank range
-SWEP.DamageMin = 13 -- Damage done at maximum range
+SWEP.DamageMin = 23 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
@@ -83,7 +83,7 @@ SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 600
+SWEP.RPM = 735
 
 SWEP.Firemodes = {
     {
@@ -99,7 +99,7 @@ SWEP.BarrelLength = 18
 -------------------------- RECOIL
 
 -- General recoil multiplier
-SWEP.Recoil = 0.8
+SWEP.Recoil = 1.3
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
 SWEP.RecoilUp = 2 -- Multiplier for vertical recoil
@@ -479,7 +479,7 @@ sound.Add({
 	sound = 			"weapons/aks/handling/aks_safety.wav"
     }),
  sound.Add({
-    name = 			"Weapon_AKs74u.magout.rattle",
+    name = 			"Weapon_AKs74u.magoutrattle",
     channel = 		CHAN_ITEM,
     volume = 		1.0,
     sound = 			"weapons/aks/handling/aks_magout_rattle.wav"

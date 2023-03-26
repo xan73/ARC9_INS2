@@ -44,8 +44,8 @@ SWEP.DefaultBodygroups = "0000000000000000000000"
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 40 -- Damage done at point blank range
-SWEP.DamageMin = 13 -- Damage done at maximum range
+SWEP.DamageMax = 38 -- Damage done at point blank range
+SWEP.DamageMin = 23 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
 
@@ -83,7 +83,7 @@ SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
 
 -------------------------- FIREMODES
 
-SWEP.RPM = 600
+SWEP.RPM = 650
 
 SWEP.Firemodes = {
     {
@@ -418,72 +418,6 @@ SWEP.Attachments = {
     },
 
 sound.Add({
-	name = 			"Weapon_ak47.Magrelease",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_magrelease.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.Magout",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_magout.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.Magin",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_magin.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.Maghit",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_maghit.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.Boltrelease",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_boltrelease.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.Boltback",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_boltback.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.empty",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_empty.wav"
-}),
-sound.Add({
-	name = 			"Weapon_ak47.safety",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_safety.wav"
-}),
-sound.Add({
-    name = 			"Weapon_ak47.magout.rattle",
-    channel = 		CHAN_ITEM,
-    volume = 		1.0,
-    sound = 			"weapons/ak47/handling/ak47_magout_rattle.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_ak47.rattle",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/ak47/handling/ak47_rattle.wav"
-    }),
-sound.Add({
-    name = 			"Weapon_ak47.ROF",
-    channel = 		CHAN_ITEM,
-    volume = 		1.0,
-    sound = 			"weapons/ak47/handling/ak47_fireselect_1.wav"
-    }),
-sound.Add({
     name = 			"Universal.Draw",
     channel = 		CHAN_ITEM,
     volume = 		1.0,
@@ -494,72 +428,6 @@ sound.Add({
     channel = 		CHAN_ITEM,
     volume = 		1.0,
     sound = 			"weapons/universal/uni_weapon_holster.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_AKs74u.Magrelease",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/aks/handling/aks_magrelease.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_AKs74u.Magout",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/aks/handling/aks_magout.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_AKs74u.Magin",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/aks/handling/aks_magin.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_AKs74u.Maghit",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/aks/handling/aks_maghit.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_AKs74u.Boltrelease",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/aks/handling/aks_boltrelease.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_AKs74u.Boltback",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/aks/handling/aks_boltback.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_AKs74u.empty",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/aks/handling/aks_empty.wav"
-    }),
-    sound.Add({
-	name = 			"Weapon_AKs74u.safety",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/aks/handling/aks_safety.wav"
-    }),
- sound.Add({
-    name = 			"Weapon_AKs74u.magout.rattle",
-    channel = 		CHAN_ITEM,
-    volume = 		1.0,
-    sound = 			"weapons/aks/handling/aks_magout_rattle.wav"
-    }),
-sound.Add({
-	name = 			"Weapon_AKs74u.rattle",
-	channel = 		CHAN_ITEM,
-	volume = 		1.0,
-	sound = 			"weapons/aks/handling/aks_rattle.wav"
-    }),
-sound.Add({
-    name = 			"Weapon_AKs74u.ROF",
-    channel = 		CHAN_ITEM,
-    volume = 		1.0,
-    sound = 			"weapons/aks/handling/aks_fireselect_1.wav"
     }),
     sound.Add({
 	name = 			"Weapon_RPK.Magrelease",
@@ -676,7 +544,7 @@ sound.Add({
 	sound = 			"weapons/ak74/handling/ak74_safety.wav"
     }),
  sound.Add({
-    name = 			"Weapon_ak74.magout.rattle",
+    name = 			"Weapon_ak74.magoutrattle",
     channel = 		CHAN_ITEM,
     volume = 		1.0,
     sound = 			"weapons/ak74/handling/ak74_magout_rattle.wav"

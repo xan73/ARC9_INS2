@@ -286,10 +286,10 @@ SWEP.Animations = {
         }
     },
     ["reload"] = {
-        Source = "base_reload"
+        Source = "base_reload_speed"
     },
     ["reload_empty"] = {
-        Source = "base_reloadempty"
+        Source = "base_reload_speed"
     },
     ["reload_start"] = {
         Source = "base_reload_start",
@@ -303,21 +303,13 @@ SWEP.Animations = {
     ["reload_finish"] = {
         Source = "base_reload_end",
     },
-    ["fire_empty"] = {
+    ["dryfire"] = {
         Source = "base_dryfire",
     },
 }
 
 SWEP.SuppressCumulativeShoot = true
 SWEP.SuppressDefaultEvents = true
-
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    local attached = self:GetElements()
-
-    if attached["ins2_rev_speedloader"] then
-        return {"ShotgunReload = false"}
-    end
-end
 
 -------------------------- ATTACHMENTS
 SWEP.AttachmentElements = {
@@ -326,12 +318,24 @@ SWEP.AttachmentElements = {
             {1,1},
         },
     },
+    ["ins2_rev_speedloader"] = {
+        Bodygroups = {
+            {2,1},
+        },
+    },
 }
 
 SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Category = {"ins2_revo_barrel"},
+        Bone = "A_Muzzle",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
+    },
+    {
+        PrintName = "Loading",
+        Category = {"ins2_revo_reload"},
         Bone = "A_Muzzle",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -382,6 +386,12 @@ sound.Add({
 	sound = 			"weapons/revolver/handling/revolver_cock_hammer.wav"
     }),
 sound.Add({
+	name = 			"Weapon_revolver.RoundInsertSpeedLoader",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/revolver/handling/revolver_speed_loader_insert_01.wav"
+    }),
+sound.Add({
 	name = 			"Weapon_revolver.CloseChamber",
 	channel = 		CHAN_ITEM,
 	volume = 		1.0,
@@ -400,15 +410,21 @@ sound.Add({
 	sound = 			"weapons/revolver/handling/revolver_safety.wav"
     }),
 sound.Add({
-        name = 			"Universal.PistolDraw",
-        channel = 		CHAN_ITEM,
-        volume = 		1.0,
-        sound = 			"weapons/universal/uni_pistol_draw_01.wav"
-        }),
+	name = 			"Weapon_revolver.Empty",
+	channel = 		CHAN_ITEM,
+	volume = 		1.0,
+	sound = 			"weapons/revolver/handling/revolver_Empty.wav"
+    }),
 sound.Add({
-        name = 			"Universal.PistolHolster",
-        channel = 		CHAN_ITEM,
-        volume = 		1.0,
-        sound = 			"weapons/universal/uni_pistol_holster.wav"
-        }),
+    name = 			"Universal.PistolDraw",
+    channel = 		CHAN_ITEM,
+    volume = 		1.0,
+    sound = 			"weapons/universal/uni_pistol_draw_01.wav"
+    }),
+sound.Add({
+    name = 			"Universal.PistolHolster",
+    channel = 		CHAN_ITEM,
+    volume = 		1.0,
+    sound = 			"weapons/universal/uni_pistol_holster.wav"
+    }),
 }

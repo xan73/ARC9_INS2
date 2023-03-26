@@ -256,13 +256,7 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         return "base_reload_extmag"
     elseif anim == "reload_empty" and attached["ins2_maka_extmag"] then
         return "base_reloadempty_extmag"
-    end
-end
-
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    local attached = self:GetElements()
-
-    if anim == "reload" and attached["ins2_pmm_extmag"] then
+    elseif anim == "reload" and attached["ins2_pmm_extmag"] then
         return "base_reload_extmag"
     elseif anim == "reload_empty" and attached["ins2_pmm_extmag"] then
         return "base_reloadempty_extmag"
@@ -383,7 +377,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Optic",
-        Category = {"csgo_optics_pistols_alt","eft_optic_small"},
+        Category = {"eft_optic_small"},
         Pos = Vector(0, 0, 0),
         Ang = Angle(90, 0, -90),
         Bone = "Slide",
@@ -421,7 +415,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Magazine",
-        Category = {"ins2_maka_extmag", "ins2_pmm_extmag", "ins2_pmm_mag"},
+        Category = {"ins2_maka_mags"},
         Bone = "magazine",
         Pos = Vector(0, -1, -2),
         Ang = Angle(0, 0, 0),

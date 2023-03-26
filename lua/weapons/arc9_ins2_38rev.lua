@@ -311,12 +311,27 @@ SWEP.Animations = {
 SWEP.SuppressCumulativeShoot = true
 SWEP.SuppressDefaultEvents = true
 
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if attached["ins2_rev_speedloader"] then
+        return {"ShotgunReload = false"}
+    end
+end
+
 -------------------------- ATTACHMENTS
+SWEP.AttachmentElements = {
+    ["ins2_rev_shortbarrel"] = {
+        Bodygroups = {
+            {1,1},
+        },
+    },
+}
 
 SWEP.Attachments = {
     {
         PrintName = "Muzzle",
-        Category = {"ins2_pistol_suppressor"},
+        Category = {"ins2_revo_barrel"},
         Bone = "A_Muzzle",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),

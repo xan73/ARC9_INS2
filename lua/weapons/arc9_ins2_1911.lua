@@ -184,8 +184,8 @@ SWEP.IronSights = {
     },
 }
 
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
+SWEP.RestPos = Vector(5, 0, -2)
+SWEP.RestAng = Angle(40, 0, 0)
 
 SWEP.ViewModelFOVBase = 55
 SWEP.ActivePos = Vector(0, 5, 0)

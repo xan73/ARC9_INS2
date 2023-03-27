@@ -287,7 +287,7 @@ SWEP.Animations = {
         }
     },
     ["fire_empty"] = {
-        Source = "base_firelast"
+        Source = "base_fire"
     },
     ["fire_iron"] = {
         Source = {
@@ -311,12 +311,22 @@ SWEP.Animations = {
 SWEP.SuppressCumulativeShoot = true
 SWEP.SuppressDefaultEvents = true
 
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    if anim == "reload" and attached["ins2_m1a1_extmag"] then
+        return "base_reload_ext"
+    elseif anim == "reload_empty" and attached["ins2_m1a1_extmag"] then
+        return "base_reloadempty_ext"
+    end
+end
+
 -------------------------- ATTACHMENTS
 
 SWEP.AttachmentElements = {
-    ["ins2_pistol_suppressor"] = {
+    ["ins2_m1a1_extmag"] = {
         Bodygroups = {
-            {1,1},
+            {2,1},
         },
     },
 }
@@ -330,11 +340,11 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
-        PrintName = "Tactical",
-        Category = {"ins2_pistol_laser_lights", "ins2_m1a1_flashlight"},
-        Bone = "weapon",
-        Pos = Vector(0, 4.3, -0.8),
-        Ang = Angle(0, -90, 0),
+        PrintName = "Magazine",
+        Category = {"ins2_m1a1_mag"},
+        Bone = "Magazine",
+        Pos = Vector(0, 0, 0),
+        Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "CHARM",

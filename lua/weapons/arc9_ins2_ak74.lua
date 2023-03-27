@@ -365,7 +365,7 @@ SWEP.AttachmentElements = {
     },
     ["ins2_steelmag"] = {
         Bodygroups = {
-            {3,1},
+            {4,1},
         },
     },
     ["ins2_ak_grip2"] = {

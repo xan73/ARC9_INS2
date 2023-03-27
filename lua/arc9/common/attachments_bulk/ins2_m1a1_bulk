@@ -6,9 +6,9 @@ ATT.Icon = Material("entities/.png", "mips smooth")
 ATT.Description = [[exzt]]
 ATT.Category = "ins2_m1a1_mag"
 
+ATT.ClipSize = 30
+
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
-
-ATT.ClipSize = 30
 
 ARC9.LoadAttachment(ATT, "ins2_m1a1_extmag")

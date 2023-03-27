@@ -45,7 +45,7 @@ SWEP.DefaultBodygroups = "0000000000000000000000"
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 20 -- Damage done at point blank range
+SWEP.DamageMax = 43 -- Damage done at point blank range
 SWEP.DamageMin = 10 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
@@ -195,7 +195,7 @@ SWEP.CrouchPos = Vector(0, 1, -2)
 SWEP.CrouchAng = Angle(0, 0, 0)
 
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(13, 20, 2)
+SWEP.CustomizePos = Vector(13, 26, 2)
 SWEP.CustomizeSnapshotFOV = 100
 
 SWEP.BipodPos = Vector(0, 0, 0)

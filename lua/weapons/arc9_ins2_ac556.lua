@@ -45,7 +45,7 @@ SWEP.DefaultBodygroups = "0000000000000000000000"
 
 -------------------------- DAMAGE PROFILE
 
-SWEP.DamageMax = 20 -- Damage done at point blank range
+SWEP.DamageMax = 35 -- Damage done at point blank range
 SWEP.DamageMin = 10 -- Damage done at maximum range
 
 SWEP.DamageRand = 0.1 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.

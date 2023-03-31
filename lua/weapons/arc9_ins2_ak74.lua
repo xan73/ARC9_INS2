@@ -27,7 +27,7 @@ SWEP.Credits = {
 SWEP.Description = [[The AK-74 (Russian: Автомат Калашникова образца 1974 года, Avtomat Kalashnikova obraztsa 1974 goda; English: Kalashnikov Automatic rifle model 1974) is an assault rifle developed in the early 1970s as the replacement for the earlier AKM (itself a refined version of the AK-47). It uses a smaller 5.45×39mm cartridge, replacing the 7.62×39mm chambering of earlier Kalashnikov-pattern weapons.]]
 
 SWEP.ViewModel = "models/weapons/v_ak74.mdl"
-SWEP.WorldModel = "models/weapons/w_ak47.mdl"
+SWEP.WorldModel = "models/weapons/w_ak74.mdl"
 
 SWEP.Slot = 3
 
@@ -235,14 +235,14 @@ SWEP.CamCoolView = true
 
 -------------------------- SOUNDS
 
-local path = "weapons/ak47/"
+local path = "weapons/ak74/"
 local common = "weapons/"
 
 
-SWEP.ShootSound = path .. "ak47_fp.wav"
-SWEP.DistantShootSound = path .. "ak47_dist.wav"
-SWEP.ShootSoundSilenced = path .. "ak47_suppressed_fp.wav"
-SWEP.DryFireSound = path .. "handling/ak47_empty.wav"
+SWEP.ShootSound = path .. "ak74_fp.wav"
+SWEP.DistantShootSound = path .. "ak74_dist.wav"
+SWEP.ShootSoundSilenced = path .. "ak74_suppressed_fp.wav"
+SWEP.DryFireSound = path .. "handling/ak74_empty.wav"
 
 SWEP.DryFireSingleAction = false
 
@@ -290,7 +290,7 @@ SWEP.Animations = {
         Source = "base_fire"
     },
     ["fire_empty"] = {
-        Source = "base_firelast"
+        Source = "base_fire"
     },
     ["fire_iron"] = {
         Source = {
@@ -304,7 +304,7 @@ SWEP.Animations = {
         }
     },
     ["fire_iron_empty"] = {
-        Source = "iron_firelast"
+        Source = "iron_fire"
     },
     ["reload"] = {
         Source = "base_reload"
@@ -383,14 +383,21 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     {
         PrintName = "Muzzle",
-        Category = {"ins2_pistol_suppressor"},
-        Bone = "A_Muzzle",
+        Category = {"ins2_rifle_suppressors",},
+        Bone = "weapon",
+        Pos = Vector(0, 15, 0.3),
+        Ang = Angle(0, -90, 0),
+    },
+    {
+        PrintName = "Mount",
+        Category = {"ins2_ak_sidemount"},
+        Bone = "weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Stock",
-        Category = "ins2_ak_stock",
+        Category = {"ins2_ak_stock"},
         Bone = "Weapon",
         Pos = Vector(0, -7, 0),
         Ang = Angle(0, 0, 0),

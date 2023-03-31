@@ -290,7 +290,7 @@ SWEP.Animations = {
         Source = "base_fire"
     },
     ["fire_empty"] = {
-        Source = "base_firelast"
+        Source = "base_fire"
     },
     ["fire_iron"] = {
         Source = {
@@ -304,7 +304,7 @@ SWEP.Animations = {
         }
     },
     ["fire_iron_empty"] = {
-        Source = "iron_firelast"
+        Source = "iron_fire"
     },
     ["reload"] = {
         Source = "base_reload"
@@ -384,9 +384,16 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     {
         PrintName = "Muzzle",
-        Category = {"ins2_pistol_suppressor"},
-        Bone = "A_Muzzle",
-        Pos = Vector(0, 0, 0),
+        Category = "ins2_rifle_suppressors",
+        Bone = "weapon",
+        Pos = Vector(0, 7.9, 0.3),
+        Ang = Angle(0, -90, 0),
+    },
+    {
+        PrintName = "Mount",
+        Category = {"ins2_ak_sidemount"},
+        Bone = "weapon",
+        Pos = Vector(0, -1, 0),
         Ang = Angle(0, 0, 0),
     },
     {

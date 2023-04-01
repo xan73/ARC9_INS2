@@ -367,7 +367,7 @@ SWEP.AttachmentElements = {
             {3,1},
         },
     },
-    ["ins2_pistol_suppressor"] = {
+    ["ins2_exclusivepistol_suppressor"] = {
         Bodygroups = {
             {5,1},
         },
@@ -377,7 +377,7 @@ SWEP.AttachmentElements = {
 SWEP.Attachments = {
     {
         PrintName = "Muzzle",
-        Category = {"ins2_pistol_suppressor"},
+        Category = {"ins2_exclusivepistol_suppressor"},
         Bone = "A_Muzzle",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),

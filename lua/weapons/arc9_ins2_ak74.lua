@@ -263,10 +263,10 @@ SWEP.Animations = {
         Source = "empty_holster",
     },
     ["fire_empty"] = {
-        Source = "base_dryfire",
+        Source = "base_fire",
     },
     ["idle_iron_empty"] = {
-        Source = "idle_empty_iron",
+        Source = "idle_iron",
     },
     ["enter_sights"] = {
         Source = "base_idle",
@@ -276,11 +276,11 @@ SWEP.Animations = {
         Source = "base_idle"
     },
     ["exit_sights_empty"] = {
-        Source = "idle_empty",
+        Source = "idle",
         Mult = 3
     },
     ["enter_sights_empty"] = {
-        Source = "idle_iron_empty"
+        Source = "idle_iron"
     },
     ["exit_sights"] = {
         Source = "base_idle",
@@ -386,7 +386,7 @@ SWEP.Attachments = {
         Category = {"ins2_rifle_suppressors",},
         Bone = "weapon",
         Pos = Vector(0, 15, 0.3),
-        Ang = Angle(0, -90, 0),
+        Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Mount",
@@ -422,6 +422,13 @@ SWEP.Attachments = {
         Bone = "Slide",
         Pos = Vector(0.4, 0, 0),
         Ang = Angle(0, -90, 0),
+    },
+    {
+        PrintName = "Perk",
+        Category = "ins2_perks",
+        Bone = "Weapon",
+        Pos = Vector(0, -10, 0),
+        Ang = Angle(0, 0, 0),
     },
 
 sound.Add({

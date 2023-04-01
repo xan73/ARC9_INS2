@@ -263,7 +263,7 @@ SWEP.Animations = {
         Source = "empty_holster",
     },
     ["fire_empty"] = {
-        Source = "base_dryfire",
+        Source = "base_fire",
     },
     ["idle_iron_empty"] = {
         Source = "idle_empty_iron",
@@ -276,11 +276,11 @@ SWEP.Animations = {
         Source = "base_idle"
     },
     ["exit_sights_empty"] = {
-        Source = "idle_empty",
+        Source = "idle",
         Mult = 3
     },
     ["enter_sights_empty"] = {
-        Source = "idle_iron_empty"
+        Source = "idle_iron"
     },
     ["exit_sights"] = {
         Source = "base_idle",
@@ -385,8 +385,8 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         Category = {"ins2_rifle_suppressors",},
         Bone = "weapon",
-        Pos = Vector(0, 15, 0.3),
-        Ang = Angle(0, -90, 0),
+        Pos = Vector(0, 15.3, 0.3),
+        Ang = Angle(0, 0, 0),
     },
     {
         PrintName = "Mount",

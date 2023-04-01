@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/aksalpha/t_1p_akalpha_d"
+	"$normalmap" "models/weapons/aksalpha/t_1p_akalpha_n"
+}

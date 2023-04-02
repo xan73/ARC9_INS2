@@ -93,7 +93,7 @@ ATT.Category = "ins2_ak_stock"
 ATT.SortOrder = 2
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
-ATT.RecoilMult = 0.7
+ATT.RecoilMult = 0.75
 ATT.VisualRecoilUpMult = 0.4
 ATT.AimDownSightsTimeMult = 1.08
 ATT.SprintToFireTimeMult = 1.09
@@ -102,8 +102,8 @@ ARC9.LoadAttachment(ATT, "ins2_ak_shortstock")
 
 ATT = {}
 
-ATT.PrintName = "Wire Stock"
-ATT.CompactName = "WIRE"
+ATT.PrintName = "Underfolding Stock"
+ATT.CompactName = "UNDERFOLD"
 ATT.Icon = Material("entities/akwirestock.png", "mips smooth")
 ATT.Description = [[Longer stock for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
 ATT.Category = "ins2_ak_stock"
@@ -111,7 +111,7 @@ ATT.Category = "ins2_ak_stock"
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
-ATT.RecoilMult = 0.6
+ATT.RecoilMult = 0.75
 ATT.VisualRecoilUpMult = 0.3
 ATT.AimDownSightsTimeMult = 1.05
 ATT.SprintToFireTimeMult = 1.05
@@ -129,7 +129,7 @@ ATT.Category = "ins2_ak_stock"
 ATT.SortOrder = 3
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
-ATT.RecoilMult = 0.8
+ATT.RecoilMult = 0.5
 ATT.SpeedMult = 0.9
 ATT.VisualRecoilUpMult = 0.1
 ATT.AimDownSightsTimeMult = 1.2
@@ -149,9 +149,29 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - INS2 Attachments"
 
 ATT.VisualRecoilUpMult = 0.08
+ATT.RecoilMult = 0.4
+ATT.AimDownSightsTimeMult = 1.5
+ATT.SprintToFireTimeMult = 1.7
+ATT.RecoilMultSights = 0.4
+ATT.SpeedMult = 0.85
+
+ARC9.LoadAttachment(ATT, "ins2_ak_rpkstock")
+
+ATT = {}
+
+ATT.PrintName = "Alpha Upper"
+ATT.CompactName = "Alpha"
+ATT.Icon = Material("entities/akwheavystock.png", "mips smooth")
+ATT.Description = [[Longer stock for the AKS74U. Lowers muzzle velocity, but increases firerate. Somehow.]]
+ATT.Category = "ins2_aks_uppers"
+
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - INS2 Attachments"
+
+ATT.VisualRecoilUpMult = 0.08
 ATT.RecoilMult = 0.5
 ATT.AimDownSightsTimeMult = 1.5
 ATT.SprintToFireTimeMult = 1.7
 ATT.SpeedMult = 0.85
 
-ARC9.LoadAttachment(ATT, "ins2_ak_rpkstock")
+ARC9.LoadAttachment(ATT, "ins2_ak_alphaaksupper")

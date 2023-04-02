@@ -128,7 +128,7 @@ SWEP.UseVisualRecoil = true
 
 SWEP.PhysicalVisualRecoil = true
 
-SWEP.VisualRecoilUp = 8 -- Vertical tilt for visual recoil.F
+SWEP.VisualRecoilUp = 6 -- Vertical tilt for visual recoil.F
 SWEP.VisualRecoilSide = 0.1 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 25 -- Roll tilt for visual recoil.
 
@@ -238,6 +238,7 @@ SWEP.CamCoolView = true
 local path = "weapons/ak47/"
 local common = "weapons/"
 
+SWEP.FiremodeSound = ""
 
 SWEP.ShootSound = path .. "ak47_fp.wav"
 SWEP.DistantShootSound = path .. "ak47_dist.wav"
@@ -266,7 +267,7 @@ SWEP.Animations = {
         Source = "base_fire",
     },
     ["idle_iron_empty"] = {
-        Source = "idle_empty_iron",
+        Source = "idle_iron",
     },
     ["enter_sights"] = {
         Source = "base_idle",
@@ -314,6 +315,13 @@ SWEP.Animations = {
     },
     ["dryfire"] = {
         Source = "base_dryfire",
+    },
+    ["firemode_1"] = {
+        Source = "base_fireselect",
+    },
+    ["firemode_2"] = {
+        Source = "base_fireselect",
+        Reverse = true,
     },
 }
 

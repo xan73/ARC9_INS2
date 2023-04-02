@@ -238,6 +238,7 @@ SWEP.CamCoolView = true
 local path = "weapons/aks/"
 local common = "weapons/"
 
+SWEP.FiremodeSound = ""
 
 SWEP.ShootSound = path .. "aks_fp.wav"
 SWEP.DistantShootSound = path .. "aks_dist.wav"
@@ -314,6 +315,13 @@ SWEP.Animations = {
     },
     ["dryfire"] = {
         Source = "base_dryfire",
+    },
+    ["firemode_1"] = {
+        Source = "base_fireselect",
+    },
+    ["firemode_2"] = {
+        Source = "base_fireselect",
+        Reverse = true,
     },
 }
 

@@ -330,6 +330,13 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
     },
     {
+        PrintName = "OPTIC",
+        Category = {"SAA_SCOPE_SMALL","SAA_SCOPE_MEDIUM"},
+        Pos = Vector(0.1, 3, 1.7),
+        Ang = Angle(0, 270, 0),
+        Scale = 0.9,
+    },
+    {
         PrintName = "Tactical",
         Category = {"ins2_pistol_laser_lights", "ins2_mini14_flashlight"},
         Bone = "weapon",

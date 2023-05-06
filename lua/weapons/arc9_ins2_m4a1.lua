@@ -102,7 +102,7 @@ SWEP.BarrelLength = 6
 SWEP.Recoil = 0.65
 
 -- These multipliers affect the predictible recoil by making the pattern taller, shorter, wider, or thinner.
-SWEP.RecoilUp = 0.7 -- Multiplier for vertical recoil
+SWEP.RecoilUp = 0.4 -- Multiplier for vertical recoil
 SWEP.RecoilSide = 1 -- Multiplier for vertical recoil
 
 -- These values determine how much extra movement is applied to the recoil entirely randomly, like in a circle.
@@ -128,7 +128,7 @@ SWEP.UseVisualRecoil = true
 
 SWEP.PhysicalVisualRecoil = true
 
-SWEP.VisualRecoilUp = 8 -- Vertical tilt for visual recoil.F
+SWEP.VisualRecoilUp = 4 -- Vertical tilt for visual recoil.F
 SWEP.VisualRecoilSide = 0.1 -- Horizontal tilt for visual recoil.
 SWEP.VisualRecoilRoll = 25 -- Roll tilt for visual recoil.
 
@@ -178,12 +178,8 @@ SWEP.TracerColor = Color(255, 225, 200) -- Color of tracers. Only works if trace
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(-1.92, 0, 0.55),
+    Pos = Vector(-2.5, 0, 0.55),
     Ang = Angle(0, 0, 0),
-    Midpoint = { -- Where the gun should be at the middle of it's irons
-        Pos = Vector(-4, 0, -8),
-        Ang = Angle(0, 0, 0),
-    },
 }
 
 SWEP.RestPos = Vector(5, 0, -2)
@@ -271,7 +267,7 @@ end
 SWEP.Malfunction = true
 SWEP.MalfunctionJam = true
 SWEP.MalfunctionNeverLastShoot = true
-SWEP.MalfunctionMeanShotsToFail = 100
+SWEP.MalfunctionMeanShotsToFail = 4
 
 SWEP.Animations = {
     ["ready"] = { Source = "base_ready" },
@@ -304,20 +300,19 @@ SWEP.Animations = {
         Mult = 3
     },
     ["fire"] = {
-        Source = {
-            "base_fire",
-            "base_fire2",
-            "base_fire3"
-        }
+        Source = "base_fire"
     },
     ["fire_empty"] = {
         Source = "base_firelast"
     },
     ["fire_iron"] = {
         Source = {
-            "iron_fire_1",
-            "iron_fire_2",
-            "iron_fire_3"
+            "iron_fire_a",
+            "iron_fire_b",
+            "iron_fire_c",
+            "iron_fire_d",
+            "iron_fire_e",
+            "iron_fire_f"
         }
     },
     ["fire_iron_empty"] = {
@@ -333,7 +328,7 @@ SWEP.Animations = {
         Source = "base_dryfire",
     },
     ["fix"] = {
-        Source = "base_ready",
+        Source = "jamfix",
         Time = 2
     },
     ["jam"] = {
